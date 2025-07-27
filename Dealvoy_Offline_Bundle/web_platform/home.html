@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealvoy - AI-Powered E-commerce Intelligence</title>
-    <meta name="description" content="Revolutionize your e-commerce business with 46 AI agents working 24/7. Patent-protected technology for automated profit optimization.">
+    <meta name="description" content="Decode. Discover. Dominate. - Revolutionize your e-commerce business with 46 AI agents working 24/7. Patent-protected technology for automated profit optimization.">
     <meta name="keywords" content="AI agents, e-commerce, automation, profit optimization, dealvoy">
     
     <!-- Open Graph -->
@@ -105,6 +105,71 @@
 
         .nav-link:hover {
             color: var(--primary-color);
+        }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            padding: 8px 0;
+            margin-top: 8px;
+        }
+
+        .dropdown-content a {
+            color: var(--text-primary);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--background-light);
+            color: var(--primary-color);
+        }
+
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-dropdown > .nav-link::after {
+            content: '▼';
+            font-size: 10px;
+            margin-left: 8px;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover > .nav-link::after {
+            transform: rotate(180deg);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn:focus,
+        .nav-link:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .card:hover,
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
         }
 
         .header-actions {
@@ -451,7 +516,16 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav {
-                display: none;
+                display: none; /* Hide dropdowns on mobile - could add hamburger menu */
+            }
+            
+            .header-actions {
+                gap: 8px;
+            }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 14px;
             }
             
             .hero-title {
@@ -487,15 +561,47 @@
                 </a>
                 
                 <nav class="nav">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#agents" class="nav-link">AI Agents</a>
-                    <a href="/pricing" class="nav-link">Pricing</a>
-                    <a href="/contact" class="nav-link">Contact</a>
+                    <div class="nav-dropdown">
+                        <a href="features.html" class="nav-link">Product</a>
+                        <div class="dropdown-content">
+                            <a href="features.html">Features</a>
+                            <a href="agent_manager.html">AI Agents</a>
+                            <a href="#integrations">Integrations</a>
+                            <a href="#security">Security</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#company" class="nav-link">Company</a>
+                        <div class="dropdown-content">
+                            <a href="#about">About Us</a>
+                            <a href="#team">Team</a>
+                            <a href="#careers">Careers</a>
+                            <a href="#press">Press</a>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <div class="nav-dropdown">
+                        <a href="#legal" class="nav-link">Legal</a>
+                        <div class="dropdown-content">
+                            <a href="../legal_compliance/privacy_policy.md">Privacy Policy</a>
+                            <a href="../legal_compliance/terms_of_service.md">Terms of Service</a>
+                            <a href="#compliance">Compliance</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="contact.html" class="nav-link">Support</a>
+                        <div class="dropdown-content">
+                            <a href="contact.html">Contact Us</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="#help">Help Center</a>
+                            <a href="#api-docs">API Docs</a>
+                        </div>
+                    </div>
                 </nav>
                 
                 <div class="header-actions">
-                    <a href="/auth/login.html" class="btn btn-outline">Sign In</a>
-                    <a href="/auth/register.html" class="btn btn-primary">Get Started</a>
+                    <a href="login.html" class="btn btn-outline">Sign In</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -511,7 +617,7 @@
                 </div>
                 
                 <h1 class="hero-title">46 AI Agents Working 24/7 for Your E-commerce Success</h1>
-                <p class="hero-subtitle">Revolutionary AI-powered automation system</p>
+                <p class="hero-subtitle">Decode. Discover. Dominate.</p>
                 <p class="hero-description">
                     Transform your e-commerce business with our patent-protected AI technology. 
                     46 specialized agents continuously optimize pricing, inventory, marketing, and operations 
@@ -519,7 +625,7 @@
                 </p>
                 
                 <div class="hero-cta">
-                    <a href="/auth/register.html" class="btn btn-white btn-hero">
+                    <a href="register.html" class="btn btn-white btn-hero">
                         <span class="material-icons">rocket_launch</span>
                         Start Free Trial
                     </a>
@@ -715,39 +821,39 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Product</h4>
-                    <a href="/features">Features</a>
-                    <a href="/pricing">Pricing</a>
-                    <a href="/integrations">Integrations</a>
-                    <a href="/api">API Documentation</a>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="#integrations">Integrations</a>
+                    <a href="#api">API Documentation</a>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Company</h4>
-                    <a href="/about">About Us</a>
-                    <a href="/careers">Careers</a>
-                    <a href="/press">Press</a>
-                    <a href="/contact">Contact</a>
+                    <a href="#about">About Us</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#press">Press</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Support</h4>
-                    <a href="/help">Help Center</a>
-                    <a href="/docs">Documentation</a>
-                    <a href="/community">Community</a>
-                    <a href="/status">System Status</a>
+                    <a href="#help">Help Center</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#community">Community</a>
+                    <a href="#status">System Status</a>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Legal</h4>
-                    <a href="/compliance/privacy_policy.md">Privacy Policy</a>
-                    <a href="/compliance/terms_of_service.md">Terms of Service</a>
-                    <a href="/security">Security</a>
+                    <a href="../legal_compliance/privacy_policy.md">Privacy Policy</a>
+                    <a href="../legal_compliance/terms_of_service.md">Terms of Service</a>
+                    <a href="#security">Security</a>
                     <a href="/patent">Patent Info</a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Dealvoy. All rights reserved. Protected by USPTO Patent Application #63/850,603</p>
+                <p>&copy; 2025 Dealvoy. All rights reserved. "Decode. Discover. Dominate." | Protected by USPTO Patent Application #63/850,603</p>
             </div>
         </div>
     </footer>

@@ -568,6 +568,84 @@
                 </button>
             </div>
             
+            <!-- Marketplace Configuration -->
+            <div class="marketplace-config">
+                <h3 class="filter-title">Multi-Marketplace Setup</h3>
+                <div class="marketplace-toggles">
+                    <div class="marketplace-toggle">
+                        <div class="toggle-header">
+                            <span class="marketplace-icon amazon">🛒</span>
+                            <div class="toggle-info">
+                                <h4>Amazon</h4>
+                                <p>FBA & Arbitrage</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="amazonToggle" checked onchange="toggleMarketplace('amazon', this.checked)">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-details">
+                            <div class="detail-item">
+                                <span>Active Agents:</span>
+                                <span id="amazonAgents">23</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Success Rate:</span>
+                                <span class="success-rate">94.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marketplace-toggle">
+                        <div class="toggle-header">
+                            <span class="marketplace-icon ebay">🔨</span>
+                            <div class="toggle-info">
+                                <h4>eBay</h4>
+                                <p>Auction & Fixed Price</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="ebayToggle" checked onchange="toggleMarketplace('ebay', this.checked)">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-details">
+                            <div class="detail-item">
+                                <span>Active Agents:</span>
+                                <span id="ebayAgents">18</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Success Rate:</span>
+                                <span class="success-rate">87.6%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marketplace-toggle">
+                        <div class="toggle-header">
+                            <span class="marketplace-icon walmart">🏪</span>
+                            <div class="toggle-info">
+                                <h4>Walmart</h4>
+                                <p>Marketplace Seller</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="walmartToggle" checked onchange="toggleMarketplace('walmart', this.checked)">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-details">
+                            <div class="detail-item">
+                                <span>Active Agents:</span>
+                                <span id="walmartAgents">15</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Success Rate:</span>
+                                <span class="success-rate">82.1%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Agent Cards -->
             <div class="agent-grid" id="agentGrid">
                 <!-- Intelligence Agents -->
