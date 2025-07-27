@@ -1,0 +1,77 @@
+{
+  "timestamp": 1753252872.3359098,
+  "flows": {
+    "authentication": 5,
+    "search": 8,
+    "checkout": 9,
+    "navigation": 6,
+    "error_handling": 13
+  },
+  "backend": {
+    "api_endpoints": 10,
+    "authentication": 24,
+    "data_validation": 27,
+    "caching": 26,
+    "rate_limiting": 3,
+    "logging": 50
+  },
+  "personas": {
+    "tech_savvy": {
+      "expectations": [
+        "Fast load times",
+        "Advanced features",
+        "Keyboard shortcuts"
+      ],
+      "pain_points": [
+        "Slow responses",
+        "Missing features",
+        "Complex workflows"
+      ],
+      "devices": [
+        "Desktop",
+        "Mobile"
+      ],
+      "behavior": "Explores all features, provides detailed feedback"
+    },
+    "casual_user": {
+      "expectations": [
+        "Simple interface",
+        "Clear instructions",
+        "Quick tasks"
+      ],
+      "pain_points": [
+        "Confusing navigation",
+        "Too many options",
+        "Technical jargon"
+      ],
+      "devices": [
+        "Mobile",
+        "Tablet"
+      ],
+      "behavior": "Uses basic features, expects intuitive design"
+    },
+    "business_user": {
+      "expectations": [
+        "Reliability",
+        "Bulk operations",
+        "Reporting features"
+      ],
+      "pain_points": [
+        "Downtime",
+        "Data export limits",
+        "Poor integration"
+      ],
+      "devices": [
+        "Desktop"
+      ],
+      "behavior": "Focuses on efficiency and productivity"
+    }
+  },
+  "recommendations": [
+    "Consider adding social login options and password recovery",
+    "Streamline checkout process and add progress indicators",
+    "Implement user analytics to track engagement metrics",
+    "Add accessibility features (ARIA labels, keyboard navigation)",
+    "Optimize for mobile responsiveness"
+  ]
+}

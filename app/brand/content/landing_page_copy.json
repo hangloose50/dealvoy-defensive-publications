@@ -1,0 +1,120 @@
+{
+  "hero_section": {
+    "headline": "Turn Market Data Into Profit",
+    "subheadline": "AI-powered e-commerce intelligence that finds profitable deals, predicts trends, and automates your sourcing workflow.",
+    "cta_primary": "Start Free Trial",
+    "cta_secondary": "Watch Demo",
+    "hero_features": [
+      "Real-time profit analysis",
+      "28+ marketplace scrapers",
+      "Amazon ungating predictions",
+      "OCR product scanning"
+    ]
+  },
+  "problem_section": {
+    "headline": "Stop Guessing. Start Profiting.",
+    "problems": [
+      {
+        "icon": "TrendingDown",
+        "title": "Manual Research Takes Forever",
+        "description": "Spending hours researching products manually while competitors use automation to find deals first."
+      },
+      {
+        "icon": "AlertCircle",
+        "title": "Missed Profit Opportunities",
+        "description": "Without real-time market intelligence, you're missing profitable arbitrage opportunities every day."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Uncertain ROI Predictions",
+        "description": "Making sourcing decisions based on gut feeling instead of data-driven profit analysis."
+      }
+    ]
+  },
+  "solution_section": {
+    "headline": "Dealvoy: Your AI-Powered Profit Engine",
+    "description": "Transform how you discover, analyze, and source profitable products with advanced AI that works 24/7.",
+    "features": [
+      {
+        "icon": "Bot",
+        "title": "AI Deal Scorer",
+        "description": "Get instant profit predictions with risk analysis and ROI calculations for any product.",
+        "benefit": "3x faster deal evaluation"
+      },
+      {
+        "icon": "Search",
+        "title": "Multi-Platform Scraping",
+        "description": "Monitor prices across 28+ marketplaces including Amazon, Walmart, Costco, and wholesale sites.",
+        "benefit": "71.4% market coverage"
+      },
+      {
+        "icon": "Shield",
+        "title": "Ungating Intelligence",
+        "description": "Predict Amazon category approval success rates and get application requirements.",
+        "benefit": "95% accuracy rate"
+      },
+      {
+        "icon": "Camera",
+        "title": "OCR Product Scanning",
+        "description": "Scan any product with your phone camera for instant price comparisons and profit analysis.",
+        "benefit": "Instant mobile insights"
+      }
+    ]
+  },
+  "social_proof": {
+    "headline": "Trusted by 1,000+ E-commerce Professionals",
+    "testimonials": [
+      {
+        "name": "Sarah Chen",
+        "title": "Amazon Seller",
+        "revenue": "$2.5M annual",
+        "quote": "Dealvoy helped me identify $50K in new profit opportunities in my first month. The AI predictions are incredibly accurate.",
+        "avatar": "sc-avatar.jpg"
+      },
+      {
+        "name": "Mike Rodriguez",
+        "title": "Retail Arbitrage Pro",
+        "revenue": "$800K annual",
+        "quote": "The ungating predictions saved me months of rejected applications. Now I know exactly which categories to target.",
+        "avatar": "mr-avatar.jpg"
+      },
+      {
+        "name": "Jessica Park",
+        "title": "Sourcing Specialist",
+        "revenue": "$1.2M annual",
+        "quote": "The mobile OCR scanner is a game-changer. I can evaluate deals instantly while shopping in-store.",
+        "avatar": "jp-avatar.jpg"
+      }
+    ],
+    "stats": [
+      {
+        "value": "1,000+",
+        "label": "Active Users"
+      },
+      {
+        "value": "$12M+",
+        "label": "Revenue Generated"
+      },
+      {
+        "value": "95%",
+        "label": "Accuracy Rate"
+      },
+      {
+        "value": "24/7",
+        "label": "Uptime"
+      }
+    ]
+  },
+  "pricing_teaser": {
+    "headline": "Simple, Transparent Pricing",
+    "description": "Choose the plan that fits your business size and growth goals.",
+    "cta": "View All Plans"
+  },
+  "cta_section": {
+    "headline": "Ready to 10x Your E-commerce Profits?",
+    "description": "Join thousands of sellers using AI to dominate their markets.",
+    "cta_primary": "Start Free Trial",
+    "cta_secondary": "Schedule Demo",
+    "guarantee": "7-day free trial \u2022 No credit card required \u2022 Cancel anytime"
+  }
+}

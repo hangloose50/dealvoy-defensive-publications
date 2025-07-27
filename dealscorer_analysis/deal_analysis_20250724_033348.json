@@ -1,0 +1,289 @@
+{
+  "deal_analysis": {
+    "timestamp": "2025-07-24T03:33:48.341259",
+    "total_products": 5,
+    "scored_deals": [
+      {
+        "product_id": "B08N5WRWNW",
+        "product_title": "Echo Dot (4th Gen) Smart speaker with Alexa",
+        "base_score": 10,
+        "base_reason": "High profit; Good sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "category_bonus": 0.19999999999999996,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "high_competition": -2
+        },
+        "final_score": 10,
+        "recommendation": "\ud83d\udfe2 STRONG BUY - Excellent deal with $24.99 profit potential",
+        "profit_analysis": {
+          "gross_profit": 24.990000000000002,
+          "profit_margin": 49.98999799959992,
+          "roi_percentage": 99.96000000000001,
+          "break_even_units": 1,
+          "monthly_profit_potential": 499.80000000000007
+        }
+      },
+      {
+        "product_id": "B07RFSSYBH",
+        "product_title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+        "base_score": 10,
+        "base_reason": "High profit; Excellent sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "high_competition": -2
+        },
+        "final_score": 8,
+        "recommendation": "\ud83d\udfe2 STRONG BUY - Excellent deal with $44.95 profit potential",
+        "profit_analysis": {
+          "gross_profit": 44.95,
+          "profit_margin": 49.9722067815453,
+          "roi_percentage": 99.8888888888889,
+          "break_even_units": 1,
+          "monthly_profit_potential": 2247.5
+        }
+      },
+      {
+        "product_id": "B08GGGP7VH",
+        "product_title": "Apple AirPods Pro (2nd Generation)",
+        "base_score": 10,
+        "base_reason": "High profit; Excellent sales rank; Many reviews",
+        "enhanced_factors": {
+          "category_bonus": 0.19999999999999996,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2
+        },
+        "final_score": 7.0,
+        "recommendation": "\ud83d\udfe1 CONSIDER - Good opportunity with $129.00 profit",
+        "profit_analysis": {
+          "gross_profit": 129.0,
+          "profit_margin": 51.80722891566265,
+          "roi_percentage": 107.5,
+          "break_even_units": 1,
+          "monthly_profit_potential": 6450.0
+        }
+      },
+      {
+        "product_id": "B07XJ8C8F5",
+        "product_title": "Nike Air Max 270 Running Shoes",
+        "base_score": 10,
+        "base_reason": "High profit; Good sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "category_bonus": -0.09999999999999998,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2
+        },
+        "final_score": 4.0,
+        "recommendation": "\ud83d\udfe0 CAUTION - Marginal deal, $60.00 profit but risks present",
+        "profit_analysis": {
+          "gross_profit": 60.0,
+          "profit_margin": 50.0,
+          "roi_percentage": 100.0,
+          "break_even_units": 1,
+          "monthly_profit_potential": 1200.0
+        }
+      },
+      {
+        "product_id": "B0863TXGM3",
+        "product_title": "LEGO Creator Expert Big Ben",
+        "base_score": 8,
+        "base_reason": "High profit; Poor sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2,
+          "low_demand": -2
+        },
+        "final_score": 1,
+        "recommendation": "\ud83d\udd34 AVOID - Poor deal quality, only $99.99 profit",
+        "profit_analysis": {
+          "gross_profit": 99.99000000000001,
+          "profit_margin": 39.99759990399616,
+          "roi_percentage": 66.66000000000001,
+          "break_even_units": 1,
+          "monthly_profit_potential": 499.95000000000005
+        }
+      }
+    ],
+    "summary": {
+      "excellent_deals": 2,
+      "good_deals": 1,
+      "fair_deals": 1,
+      "poor_deals": 1
+    },
+    "top_recommendations": [
+      {
+        "product_id": "B08N5WRWNW",
+        "product_title": "Echo Dot (4th Gen) Smart speaker with Alexa",
+        "base_score": 10,
+        "base_reason": "High profit; Good sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "category_bonus": 0.19999999999999996,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "high_competition": -2
+        },
+        "final_score": 10,
+        "recommendation": "\ud83d\udfe2 STRONG BUY - Excellent deal with $24.99 profit potential",
+        "profit_analysis": {
+          "gross_profit": 24.990000000000002,
+          "profit_margin": 49.98999799959992,
+          "roi_percentage": 99.96000000000001,
+          "break_even_units": 1,
+          "monthly_profit_potential": 499.80000000000007
+        }
+      },
+      {
+        "product_id": "B07RFSSYBH",
+        "product_title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+        "base_score": 10,
+        "base_reason": "High profit; Excellent sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "high_competition": -2
+        },
+        "final_score": 8,
+        "recommendation": "\ud83d\udfe2 STRONG BUY - Excellent deal with $44.95 profit potential",
+        "profit_analysis": {
+          "gross_profit": 44.95,
+          "profit_margin": 49.9722067815453,
+          "roi_percentage": 99.8888888888889,
+          "break_even_units": 1,
+          "monthly_profit_potential": 2247.5
+        }
+      },
+      {
+        "product_id": "B08GGGP7VH",
+        "product_title": "Apple AirPods Pro (2nd Generation)",
+        "base_score": 10,
+        "base_reason": "High profit; Excellent sales rank; Many reviews",
+        "enhanced_factors": {
+          "category_bonus": 0.19999999999999996,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2
+        },
+        "final_score": 7.0,
+        "recommendation": "\ud83d\udfe1 CONSIDER - Good opportunity with $129.00 profit",
+        "profit_analysis": {
+          "gross_profit": 129.0,
+          "profit_margin": 51.80722891566265,
+          "roi_percentage": 107.5,
+          "break_even_units": 1,
+          "monthly_profit_potential": 6450.0
+        }
+      },
+      {
+        "product_id": "B07XJ8C8F5",
+        "product_title": "Nike Air Max 270 Running Shoes",
+        "base_score": 10,
+        "base_reason": "High profit; Good sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "category_bonus": -0.09999999999999998,
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2
+        },
+        "final_score": 4.0,
+        "recommendation": "\ud83d\udfe0 CAUTION - Marginal deal, $60.00 profit but risks present",
+        "profit_analysis": {
+          "gross_profit": 60.0,
+          "profit_margin": 50.0,
+          "roi_percentage": 100.0,
+          "break_even_units": 1,
+          "monthly_profit_potential": 1200.0
+        }
+      },
+      {
+        "product_id": "B0863TXGM3",
+        "product_title": "LEGO Creator Expert Big Ben",
+        "base_score": 8,
+        "base_reason": "High profit; Poor sales rank; Many reviews; High rating",
+        "enhanced_factors": {
+          "market_trend": 1.0
+        },
+        "risk_assessment": {
+          "brand_restricted": -3,
+          "high_competition": -2,
+          "low_demand": -2
+        },
+        "final_score": 1,
+        "recommendation": "\ud83d\udd34 AVOID - Poor deal quality, only $99.99 profit",
+        "profit_analysis": {
+          "gross_profit": 99.99000000000001,
+          "profit_margin": 39.99759990399616,
+          "roi_percentage": 66.66000000000001,
+          "break_even_units": 1,
+          "monthly_profit_potential": 499.95000000000005
+        }
+      }
+    ],
+    "risk_analysis": {
+      "total_portfolio_value": 358.93,
+      "high_risk_percentage": 0,
+      "category_concentration": {
+        "unknown": 5
+      },
+      "recommendation": "\u26a0\ufe0f  Consider diversifying across more categories"
+    }
+  },
+  "market_insights": {
+    "timestamp": "2025-07-24T03:33:48.341321",
+    "market_conditions": {
+      "overall_sentiment": "neutral",
+      "hot_categories": [
+        "electronics",
+        "health",
+        "home"
+      ],
+      "cooling_categories": [
+        "fashion",
+        "books"
+      ],
+      "seasonal_factors": {
+        "focus": "summer_peak",
+        "opportunity": "Travel and outdoor gear"
+      }
+    },
+    "profit_opportunities": {
+      "high_margin_categories": [
+        "health",
+        "electronics"
+      ],
+      "arbitrage_hotspots": [
+        "clearance_items",
+        "seasonal_transitions"
+      ],
+      "emerging_trends": [
+        "sustainability",
+        "health_tech",
+        "remote_work"
+      ]
+    },
+    "risk_warnings": {
+      "brand_restrictions": "Increasing enforcement on major brands",
+      "map_violations": "Stricter monitoring of minimum advertised prices",
+      "market_saturation": "Competition increasing in popular categories"
+    }
+  },
+  "generated_by": "DealScorerVoyager",
+  "timestamp": "2025-07-24T03:33:48.341325"
+}

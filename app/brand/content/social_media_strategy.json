@@ -1,0 +1,39 @@
+{
+  "platforms": {
+    "linkedin": {
+      "focus": "B2B networking and thought leadership",
+      "posting_frequency": "5 posts/week",
+      "content_types": [
+        "Industry insights and trends",
+        "Success stories and case studies",
+        "Educational content and tips",
+        "Company updates and features"
+      ]
+    },
+    "twitter": {
+      "focus": "Real-time updates and community engagement",
+      "posting_frequency": "3 posts/day",
+      "content_types": [
+        "Quick tips and insights",
+        "Market alerts and trends",
+        "Community discussions",
+        "Product updates"
+      ]
+    },
+    "youtube": {
+      "focus": "Educational content and demos",
+      "posting_frequency": "2 videos/week",
+      "content_types": [
+        "Tutorial videos",
+        "Product demonstrations",
+        "Market analysis",
+        "Success story interviews"
+      ]
+    }
+  },
+  "content_templates": {
+    "tip_post": "\ud83d\udca1 Pro Tip: {tip_content}\n\n{explanation}\n\n{cta} #AmazonSelling #RetailArbitrage",
+    "case_study": "\ud83d\ude80 Success Story: {customer_name} increased profits by {percentage}% using {specific_feature}\n\n{brief_story}\n\n{cta}",
+    "market_insight": "\ud83d\udcc8 Market Alert: {trend_observation}\n\n{analysis}\n\n{actionable_advice}\n\n#EcommerceIntelligence #MarketTrends"
+  }
+}

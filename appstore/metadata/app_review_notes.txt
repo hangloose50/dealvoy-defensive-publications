@@ -1,0 +1,67 @@
+# Dealvoy - App Review Notes for Apple
+
+## App Overview
+Dealvoy is a business productivity app that helps e-commerce sellers analyze deals and identify profitable sourcing opportunities using artificial intelligence.
+
+## Key Features
+1. **Deal Analysis**: AI-powered profit calculations and ROI scoring
+2. **Market Research**: Trend analysis and competitive intelligence  
+3. **Supplier Matching**: Wholesale sourcing recommendations
+4. **Business Analytics**: Performance tracking and forecasting
+
+## Target Audience
+- Amazon FBA sellers and e-commerce entrepreneurs
+- Wholesale buyers and retail arbitrage professionals
+- Business owners seeking data-driven sourcing decisions
+
+## Monetization
+- Subscription-based SaaS model
+- Two tiers: Starter ($97/month) and Professional ($297/month)
+- 14-day free trial for new users
+- Payment processing through Stripe
+
+## Technical Architecture
+- React Native frontend with native iOS components
+- RESTful API backend for data processing
+- OpenAI GPT-4 integration for AI analysis
+- Secure authentication and data encryption
+
+## Privacy and Data
+- Minimal personal data collection (email, name, preferences)
+- No sensitive financial data stored locally
+- All communications encrypted with HTTPS
+- Compliance with GDPR and CCPA requirements
+
+## Special Permissions
+- **Camera**: Optional product photo analysis for enhanced deal scoring
+- **Photo Library**: Access to analyze product images from user's photos
+- **Network**: Required for AI analysis and real-time market data
+
+## Testing Instructions
+1. **Registration**: Use test email to create account
+2. **Free Trial**: Explore core features during 14-day trial
+3. **Deal Analysis**: Search for products to see AI scoring
+4. **Subscription**: Test billing flow with Stripe test cards
+
+## Demo Account
+- Email: demo@dealvoy.ai
+- Password: AppReview2025!
+- This account has sample data and full feature access
+
+## App Store Guidelines Compliance
+- ✅ 4.0 Design: Follows iOS Human Interface Guidelines
+- ✅ 5.1.1 Data Collection: Transparent privacy practices
+- ✅ 3.1.1 In-App Purchase: Uses Stripe for subscription billing
+- ✅ 2.1 App Completeness: Full functionality without external dependencies
+- ✅ 1.1.6 Accurate Metadata: Honest description of features and capabilities
+
+## Support and Documentation
+- In-app help system with guided tutorials
+- Customer support available at support@dealvoy.ai
+- Comprehensive FAQ and knowledge base
+- Video onboarding for new users
+
+## Business Model Verification
+Dealvoy operates as a legitimate SaaS business providing AI-powered analytics tools for e-commerce professionals. The app does not facilitate any prohibited activities and encourages legal, ethical business practices.
+
+Thank you for reviewing Dealvoy. We're committed to providing a high-quality, compliant app that helps business owners succeed through intelligent data analysis.

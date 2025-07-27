@@ -1,0 +1,5615 @@
+{
+  "timestamp": "2025-07-22T17:52:53.239075",
+  "patterns_found": [
+    {
+      "file": "conftest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "run_scrape_and_export.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "orchestrator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "bot_status_report.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "test_import_fixes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/empirediscount_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_registry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/everesttoys_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/webami_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_empirediscount_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/dollardays_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_provision.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/eedist_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_walmart_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_puzzlewarehouse_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_everesttoys_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_eedist_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_selenium.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_ebay_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/health.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/costco_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/pricemaster_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scraper_registry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_dandh_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/amazon_selenium.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/amazon_missing_upc_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_frontiercoop_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_amazon_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/logging_conf.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/distributor_template.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_pricemaster_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_scrape.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/target_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/base_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/debug_scrapers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scout_assistant.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scout_assistant.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_roundeyesupply_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_dollardays_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scraper_debug.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/dandh_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/ebay_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/orchestrator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/roundeyesupply_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_orchestration.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/sourcing_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/pipeline_adapters.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/walmart_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scout_vision.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_selenium_pipeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/main.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/test_sheet_write.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/run_selected.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/scrape.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/amazon.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/puzzlewarehouse_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/frontiercoop_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "tests/test_scout_vision.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "tests/test_amazon_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "tests/test_walmart_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Scripts/jp.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/socks.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/six.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/flask/config.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websocket/_wsdump.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/googleapiclient/http.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google_auth_oauthlib/flow.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google_auth_oauthlib/interactive.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/h11/_util.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_highlevel_open_tcp_listeners.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_socket.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_channel.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/socket.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_sync.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_highlevel_open_tcp_stream.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/s3transfer/crt.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/common.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/token.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/style.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyparsing/core.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/jinja2/lexer.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/jinja2/filters.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/categorical.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/rcmod.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/palettes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/axisgrid.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/distributions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/rsa/common.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/fontBuilder.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/agl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/werkzeug/_internal.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/werkzeug/http.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/werkzeug/exceptions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/bs4/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/_winconsole.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/core.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/types.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/parser.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/termui.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/shell_completion.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/testing.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/click/decorators.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/requests_toolbelt/_compat.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/server.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/version.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/http11.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/cli.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/headers.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/cloudflare.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/exceptions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/help.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/encryption_options.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/client_options.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/pyopenssl_context.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/daemon.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/auth_shared.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/pool_options.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/basedatatypes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/version.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/auth.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/credentials.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/credentials.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/parsers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/exceptions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/MpoImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PngImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/AvifImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/XbmImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PcxImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/SunImagePlugin.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/SunImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/SpiderImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/MpegImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/BdfFontFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/GribStubImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageStat.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PixarImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageColor.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/QoiImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/MspImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/MicImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImtImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/GifImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PalmImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageQt.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageMath.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/FontFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ExifTags.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageCms.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/FpxImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageChops.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/BufrStubImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PSDraw.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PcdImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageFilter.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageDraw2.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImagePath.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/DcxImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/JpegPresets.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/Hdf5StubImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/features.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageDraw.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageWin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/IcoImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/EpsImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/TgaImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageMorph.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/Jpeg2KImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/WalImageFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PcfFontFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/BlpImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageTk.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/GbrImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageOps.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PdfImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageShow.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageEnhance.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/WmfImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageGrab.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/WebPImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/FliImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/TiffTags.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/CurImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/GdImageFile.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/TiffImagePlugin.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/TiffImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/IptcImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImagePalette.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/BmpImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageTransform.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/IcnsImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/McIdasImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/FitsImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/XpmImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/DdsImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageSequence.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/Image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/XVThumbImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/SgiImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PsdImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/JpegImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageFont.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/ImageFont.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/PpmImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/PIL/FtexImagePlugin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/requests/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/png.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/data_utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/basevalidators.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/basevalidators.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc6955.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc3709.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc1905.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc8418.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc2315.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc5934.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc3820.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc2459.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc6170.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc5480.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc6664.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc3280.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc7030.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc2631.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyasn1_modules/rfc5280.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/httpx/_main.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/httpx/_urlparse.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/httpx/_models.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/attr/validators.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/quiver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backend_bases.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/colorbar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_cm.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/colorizer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/mathtext.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/font_manager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/font_manager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/cm.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/legend.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/figure.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_mathtext.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/offsetbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/widgets.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/dviread.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/animation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_mathtext_data.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/artist.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backend_tools.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_color_data.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/texmanager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/patches.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/stackplot.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/collections.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/text.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/markers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/layout_engine.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_animation_data.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_cm_multivar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/pyplot.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/rcsetup.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/typing.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/ticker.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/contour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/scale.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/_constrained_layout.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/colors.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/urllib3/fields.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/urllib3/_collections.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/urllib3/_request_methods.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/color.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/version.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/networks.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/dns/inet.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/dns/asyncresolver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/dns/resolver.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/dns/resolver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/black/handle_ipynb_magics.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/_version.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/unittest.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/debugging.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/python_api.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/junitxml.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/raises.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/boto3/session.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/boto3/crt.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_pytest/assertion/util.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/nanops.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/generic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/util/_print_versions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/io/common.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/test_expressions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/strings/test_cat.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/strings/test_find_replace.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/extension/test_arrow.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/extension/test_arrow.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/resample/test_resampler_grouper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/frame/test_api.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/computation/test_eval.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/arithmetic/test_datetime64.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/arithmetic/test_timedelta64.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/arithmetic/test_numeric.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/indexes/test_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/indexes/timedeltas/test_arithmetic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/scalar/timedelta/test_timedelta.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/scalar/timedelta/test_arithmetic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/scalar/timestamp/methods/test_round.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/arrays/categorical/test_warnings.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/tseries/holiday/test_holiday.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/tseries/offsets/test_ticks.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/io/excel/test_readers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/io/parser/test_skiprows.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/io/json/test_normalize.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/extension/decimal/test_decimal.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/tests/reshape/merge/test_merge.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/io/formats/style.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/io/formats/format.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/strings/accessor.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/strings/object_array.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/strings/base.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/window/rolling.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/window/expanding.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/categorical.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/_arrow_string_mixins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/timedeltas.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/string_arrow.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/masked.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/arrays/datetimelike.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/ops/missing.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/ops/docstrings.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/indexes/range.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pandas/core/indexes/category.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/dns/rdtypes/ANY/TKEY.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/v1/_hypothesis_plugin.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/v1/color.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/v1/networks.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pydantic/_internal/_git.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/urllib3/util/connection.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/urllib3/contrib/socks.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tri/_trirefine.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tri/_triinterpolate.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tri/_tricontour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/axes/_axes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/axes/_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/sphinxext/figmpl_directive.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/sphinxext/mathmpl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/sphinxext/plot_directive.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/_backend_gtk.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_template.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_qtcairo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_qt.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_gtk4agg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_gtk3agg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_cairo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_pdf.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_pgf.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_pgf.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_mixed.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_macosx.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_gtk4.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_tkcairo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_gtk3.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_wxcairo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_nbagg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_webagg_core.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_wx.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_wx.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/_backend_tk.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_svg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/_backend_pdf_ps.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_webagg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_ps.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_qtagg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/backend_agg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_determinism.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_tk.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_skew.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_artist.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_pdf.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_lines.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_multivariate_colormaps.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_ft2font.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_pgf.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_simplification.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_spines.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_mathtext.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_arrow_patches.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_streamplot.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_tightlayout.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_ps.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_animation.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_animation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_pickle.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_dates.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_table.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backends_interactive.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_subplots.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_ticker.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_scale.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_colorbar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_colors.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_usetex.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_font_manager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_polar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_agg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_quiver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_text.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_units.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_dviread.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_widgets.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_constrainedlayout.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_patheffects.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_patches.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_agg_filter.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_style.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_offsetbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_contour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_triangulation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_bbox_tight.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_inline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_png.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_transforms.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_path.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_collections.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_axes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_figure.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_legend.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_sphinxext.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_compare_images.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/tests/test_backend_svg.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/conftest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/exceptions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/compare.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/compare.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/testing/decorators.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/matplotlib/backends/qt_editor/figureoptions.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/gridfs/asynchronous/grid_file.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/gridfs/synchronous/grid_file.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/contourpy/util/mpl_renderer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/contourpy/util/bokeh_renderer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/exceptions.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/self_outdated_check.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/truststore/_macos.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/token.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/style.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/distlib/index.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/distlib/util.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/requests/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/console.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/console.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/_emoji_codes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/default_styles.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/markup.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/syntax.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/prompt.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/rich/__main__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/fields.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/request.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/_collections.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/util/connection.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/contrib/socks.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/packages/six.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/bindings.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/lexers/python.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/lexers/python.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/lexers/_mapping.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/pygments/formatters/_mapping.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_vendor/packaging/licenses/_spdx.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/network/auth.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/utils/direct_url_helpers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/utils/compatibility_tags.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/models/link.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/models/link.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/models/direct_url.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/models/pylock.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/cli/cmdoptions.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/cli/index_command.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/req/req_install.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/req/req_uninstall.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/req/constructors.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/git.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/git.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/mercurial.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/bazaar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/versioncontrol.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/versioncontrol.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/subversion.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pip/_internal/vcs/subversion.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/anyio/_core/_sockets.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/_plotly_utils/colors/_swatches.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/retries/standard.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/vendored/six.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/botocore/crt/auth.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/charset_normalizer/cli/__main__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/extras.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/core.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/fromnumeric.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/getlimits.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/einsumfunc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/_ufunc_config.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/arrayprint.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/tests/test_numpy_version.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/cb_rules.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/rules.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/symbolic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/f90mod_rules.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/use_rules.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_polynomial_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_stride_tricks_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_shape_base_impl.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_shape_base_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_index_tricks_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_twodim_base_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_function_base_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_nanfunctions_impl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/_utils_impl.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/fft/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/fft/_pocketfft.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/laguerre.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/_polybase.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/polyutils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/hermite_e.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/chebyshev.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/polynomial.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/legendre.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/hermite.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/tests/test_polynomial.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/tests/test_classes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/polynomial/tests/test_polyutils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/lib/tests/test_shape_base.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/testing/_private/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/f2py/tests/test_crackfortran.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/typing/tests/data/pass/arithmetic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/typing/tests/data/pass/ma.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_scalarmath.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_simd.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_umath.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_datetime.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_ufunc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_multiarray.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/_core/tests/test_regression.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/tests/test_core.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/tests/test_core.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/numpy/ma/tests/test_extras.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_heatmap.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_histogram2dcontour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_indicator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_sankey.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_histogram2d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_histogram.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_funnel.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_ohlc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_figurewidget.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattercarpet.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattersmith.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_choroplethmap.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_choroplethmapbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_violin.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scatter3d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_parcats.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_cone.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_treemap.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_parcoords.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_funnelarea.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scatterternary.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattermap.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_bar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_contourcarpet.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_volume.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattermapbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_isosurface.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_figure.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_candlestick.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_densitymap.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_icicle.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_table.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scatter.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_layout.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_layout.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattergl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_pie.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_choropleth.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_densitymapbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_barpolar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_box.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_sunburst.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_waterfall.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scatterpolar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_streamtube.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scatterpolargl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_carpet.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_splom.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_mesh3d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_scattergeo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_contour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/_surface.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/express/imshow_utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/express/_imshow.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_json.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_sg_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_renderers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_kaleido.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_kaleido.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/kaleido.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_defaults.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/base_renderers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_base_renderers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/io/_orca.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objects/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/renderer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/figure_factory/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/figure_factory/_ternary_contour.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/offline/offline.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/offline/offline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/mplexporter/exporter.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/mplexporter/utils.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/mplexporter/renderers/fake_renderer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/mplexporter/renderers/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/matplotlylib/mplexporter/tests/test_basic.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/streamtube/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_scene.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_xaxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_mapbox.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_map.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_polar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_template.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_modebar.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_ternary.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_legend.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_yaxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/_geo.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/mesh3d/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/cone/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/surface/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/image/_legendgrouptitle.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/image/_hoverlabel.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/image/_stream.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/scatter/_fillpattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/isosurface/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/volume/_lighting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/histogram/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/treemap/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/sunburst/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/bar/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/icicle/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/pie/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/image/legendgrouptitle/_font.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/image/hoverlabel/_font.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/funnelarea/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/barpolar/marker/_pattern.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/ternary/_baxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/ternary/_caxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/ternary/_aaxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/polar/_angularaxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/polar/_radialaxis.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/shape/_label.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/template/_data.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/map/_layer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/mapbox/_layer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/newshape/_label.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/mapbox/layer/_symbol.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/map/layer/_symbol.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/template/data/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/plotly/graph_objs/layout/template/data/_image.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/auth.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/auth.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/encryption.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/auth_aws.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/database.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/auth_oidc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/asynchronous/mongo_client.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/auth.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/auth.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/encryption.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/auth_aws.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/database.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/auth_oidc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pymongo/synchronous/mongo_client.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/axes_grid.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/axes_size.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/axes_rgb.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/axes_divider.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/mplot3d/axes3d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axisartist/tests/test_axis_artist.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axisartist/tests/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axisartist/tests/test_axislines.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axisartist/tests/test_grid_helper_curvelinear.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axisartist/tests/test_floating_axes.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/mplot3d/tests/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/mplot3d/tests/test_legend3d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/mplot3d/tests/test_axes3d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/tests/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/interpreters/nodejs.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/interpreters/chakracore.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/interpreters/chakracore.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/user_agent/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/cloudscraper/captcha/9kw.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/websockets/legacy/http.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/requests_toolbelt/auth/http_proxy_digest.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/requests_toolbelt/multipart/encoder.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/requests_toolbelt/threaded/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/bs4/tests/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/bs4/tests/test_formatter.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/bs4/builder/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/werkzeug/debug/console.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/werkzeug/debug/tbtools.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/qu2cu/qu2cu.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/misc/vector.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/misc/fixedTools.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/cu2qu/cu2qu.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/voltLib/voltToFea.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/merge/tables.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/varLib/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/varLib/interpolatableHelpers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/varLib/interpolatable.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/pens/reportLabPen.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/pens/basePen.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/pens/freetypePen.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ufoLib/validators.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ufoLib/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ufoLib/glifLib.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/unicodedata/Scripts.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/designspaceLib/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/feaLib/builder.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/feaLib/parser.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/feaLib/ast.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/woff2.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/cffLib/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/_s_b_i_x.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/C_B_D_T_.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/C_B_D_T_.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/E_B_D_T_.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/E_B_D_T_.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/_l_c_a_r.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/_g_l_y_f.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/S_V_G_.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/sbixStrike.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/E_B_L_C_.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/_h_e_a_d.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/_h_m_t_x.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/otData.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/ttLib/tables/sbixGlyph.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/fontTools/varLib/instancer/names.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/starlette/middleware/cors.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/oauth2/challenges.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/type/postal_address_pb2.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/api_core/client_options.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/service_reflection.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/symbol_database.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/runtime_version.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/internal/well_known_types.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/internal/python_message.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/protobuf/internal/message_listener.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_helpers/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_helpers/decorators.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/types/image_annotator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/types/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/types/text_annotation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/types/geometry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/types/web_detection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p1beta1/services/image_annotator/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/image_annotator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/product_search_service.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/product_search.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/text_annotation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/geometry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/types/web_detection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/pagers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/image_annotator/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1/services/product_search/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/image_annotator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/product_search_service.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/product_search.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/text_annotation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/geometry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/types/web_detection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/pagers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/image_annotator/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p3beta1/services/product_search/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/types/image_annotator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/types/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/types/text_annotation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/types/geometry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/types/web_detection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p2beta1/services/image_annotator/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/image_annotator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/product_search_service.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/product_search.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/text_annotation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/geometry.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/web_detection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/types/face.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/pagers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/async_client.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/image_annotator/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/transports/rest_base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/transports/grpc.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/transports/rest.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/transports/grpc_asyncio.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/google/cloud/vision_v1p4beta1/services/product_search/transports/base.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/_core/plot.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/_stats/regression.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/seaborn/colors/xkcd_rgb.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pyparsing/tools/cvt_pyparsing_pep8_names.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pycparser/ply/yacc.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/c_like.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/graphics.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/graphics.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/mime.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/rebol.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/phix.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/phix.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/crystal.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_sourcemod_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/erlang.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_sql_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/apdlexer.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/boa.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/configs.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/configs.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_css_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/r.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/idl.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/amdgpu.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/dsls.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/dsls.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_scilab_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_scilab_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_lilypond_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_lilypond_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/lisp.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/lisp.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/j.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_openedge_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_openedge_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/c_cpp.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/perl.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/algebra.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/typoscript.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/automation.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/automation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/html.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_php_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_php_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/shell.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/scripting.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/scripting.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_stata_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_stata_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/ruby.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/ruby.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/matlab.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/matlab.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_vim_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_vim_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/teraterm.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_cocoa_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/ncl.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/markup.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/markup.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_asy_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/igor.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/igor.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/templates.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/css.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/asm.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_lasso_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_lasso_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/installers.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/business.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/business.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/mips.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/basic.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_cl_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_mql_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/archetype.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/python.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/python.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_csound_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/unicon.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/dylan.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/jvm.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/php.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/sql.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_mapping.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/praat.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/q.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/fortran.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/javascript.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/julia.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/hexdump.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/foxpro.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/foxpro.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/dotnet.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/yang.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_scheme_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/macaulay2.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/macaulay2.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/urbi.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/haxe.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_tsql_builtins.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/lexers/_tsql_builtins.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/formatters/terminal.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/formatters/img.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/formatters/_mapping.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/material.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/friendly_grayscale.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/pastie.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/inkpot.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/gruvbox.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/monokai.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/tango.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/friendly.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/paraiso_dark.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/solarized.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/gh_dark.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/native.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/colorful.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/bw.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/emacs.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/vs.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/default.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/paraiso_light.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/lovelace.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/stata_dark.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/vim.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/borland.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/murphy.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/rainbow_dash.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/manni.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/autumn.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/perldoc.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/trac.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/arduino.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/pygments/styles/nord.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/oauth1/rfc5849/endpoints/access_token.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/openid/connect/core/request_validator.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/openid/connect/core/exceptions.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/openid/connect/core/grant_types/base.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/oauth2/rfc6749/request_validator.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/oauthlib/oauth2/rfc6749/errors.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_tests/test_highlevel_open_tcp_stream.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_tests/test_socket.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_tests/test_repl.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_core/_mock_clock.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_core/_run.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_core/_run.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_tools/mypy_annotate.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_core/_tests/test_run.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/trio/_core/_tests/test_guest_mode.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/googleapiclient/discovery_cache/file_cache.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/packaging/licenses/_spdx.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/firefox/webdriver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/options.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/options.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/alert.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/remote/remote_connection.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/remote/webelement.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/remote/webdriver.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/bidi/browsing_context.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/bidi/browsing_context.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/bidi/permissions.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/overlay.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/audits.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/device_access.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/performance_timeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/system_info.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/emulation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/page.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/page.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/browser.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/browser.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/css.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/network.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/layer_tree.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/headless_experimental.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v136/dom.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/overlay.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/audits.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/device_access.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/performance_timeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/system_info.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/emulation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/page.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/page.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/browser.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/browser.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/css.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/network.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/layer_tree.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/headless_experimental.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v138/dom.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/overlay.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/audits.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/device_access.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/performance_timeline.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/system_info.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/emulation.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/page.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/page.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/browser.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/browser.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/css.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/network.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/layer_tree.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/headless_experimental.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "venv/Lib/site-packages/selenium/webdriver/common/devtools/v137/dom.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/api/image_upload.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/services/walmart_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/services/scout_vision.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/services/google_sheets_export.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/services/scrapers/__init__.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/services/scrapers/amazon_scraper.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/schemas/pydantic/product_models.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/schemas/pydantic/api_models.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/data_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/schema_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/deploy_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/shell_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/__init__.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/prompt_voyager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/prompt_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/feedback_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/claude_voyager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/claude_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/optimizer_voyager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/agent_manager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/security_voyager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/ux_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/overseer_voyager.py",
+      "type": "ai_integration",
+      "needs_prompt": true
+    },
+    {
+      "file": "app/assistant/agents/overseer_voyager.py",
+      "type": "vision_processing",
+      "needs_prompt": true
+    }
+  ],
+  "prompts_generated": [
+    "product_identification",
+    "price_analysis",
+    "ocr_processing"
+  ],
+  "files_created": [
+    "app/prompts/product_identification.prompt",
+    "app/prompts/price_analysis.prompt",
+    "app/prompts/ocr_processing.prompt"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "timestamp": 1753252877.8872268,
+  "api_analysis": {
+    "rest_endpoints": 8,
+    "graphql_endpoints": 19,
+    "websocket_connections": 6,
+    "authentication_middleware": 23,
+    "rate_limiting": 3,
+    "input_validation": 52,
+    "error_handling": 69,
+    "async_operations": 11,
+    "database_queries": 43,
+    "caching_layers": 26
+  },
+  "potential_issues": [
+    "Blocking sleep found in empirediscount_scraper.py",
+    "Blocking sleep found in everesttoys_scraper.py",
+    "Blocking sleep found in webami_scraper.py",
+    "Blocking sleep found in dollardays_scraper.py",
+    "Blocking sleep found in eedist_scraper.py",
+    "Blocking sleep found in pricemaster_scraper.py",
+    "Blocking sleep found in amazon_selenium.py",
+    "Blocking sleep found in amazon_missing_upc_scraper.py",
+    "Potential N+1 query in check_webhook_logs.py",
+    "Blocking sleep found in http_utils.py",
+    "Blocking sleep found in amazon_quick.py",
+    "Blocking sleep found in dandh_scraper.py",
+    "Blocking sleep found in roundeyesupply_scraper.py",
+    "Potential N+1 query in webhook_export.py",
+    "Blocking sleep found in amazon.py",
+    "Blocking sleep found in puzzlewarehouse_scraper.py",
+    "Blocking sleep found in frontiercoop_scraper.py",
+    "Potential N+1 query in data_voyager.py",
+    "Blocking sleep found in deploy_voyager.py",
+    "Blocking sleep found in backend_voyager.py",
+    "Blocking sleep found in performance_voyager.py",
+    "Blocking sleep found in feedback_voyager.py",
+    "Blocking sleep found in ux_voyager.py"
+  ],
+  "database_analysis": {
+    "orm_usage": 1,
+    "raw_queries": 23,
+    "migrations": 3,
+    "indexes": 10,
+    "transactions": 8,
+    "connection_pooling": 14
+  },
+  "suggestions": [
+    "Add API versioning strategy (v1, v2, etc.)",
+    "Implement request/response logging for debugging",
+    "Add health check endpoints (/health, /status)",
+    "Set up API documentation (OpenAPI/Swagger)",
+    "Implement database connection pooling",
+    "Add monitoring and alerting for API metrics",
+    "Consider implementing CORS policies",
+    "Add request timeout handling",
+    "Implement graceful shutdown handling",
+    "Review and fix identified performance issues"
+  ]
+}

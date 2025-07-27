@@ -1,0 +1,131 @@
+﻿import os
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from dotenv import load_dotenv, find_dotenv, set_key
+from gspread.exceptions import SpreadsheetNotFound, WorksheetNotFound
+
+# Load .env if present
+dotenv = find_dotenv('.env', raise_error_if_not_found=False)
+if dotenv:
+    print(f'→ Loading .env from {dotenv}')
+    load_dotenv(dotenv, override=True)
+else:
+    print('⚠️ .env file not found; ensure it sits in project root.')
+
+# Configuration
+CRED_PATH           = os.getenv('GOOGLE_CREDS_PATH', 'credentials.json')
+SPREADSHEET_ID      = os.getenv('SPREADSHEET_ID')
+AUTO_SHEET_TITLE    = os.getenv('AUTO_SHEET_TITLE', 'SourcingMasterSheet_Auto')
+OWNER_EMAIL         = os.getenv('OWNER_EMAIL')
+DISABLE_AUTO_CREATE = os.getenv('DISABLE_AUTO_CREATE', '0').lower() in ('1','true','yes')
+
+SCOPES = [
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive'
+]
+
+def create_and_share_sheet(title: str) -> str:
+    creds = ServiceAccountCredentials.from_json_keyfile_name(CRED_PATH, SCOPES)
+    gc    = gspread.authorize(creds)
+    print(f'→ Creating new spreadsheet \"{title}\"')
+    sh = gc.create(title)
+    sh.share(OWNER_EMAIL, perm_type='user', role='writer')
+    return sh.id
+
+def ensure_sheet_tabs(sh, tabs: dict):
+    existing = {ws.title for ws in sh.worksheets()}
+    for name, headers in tabs.items():
+        if name in existing:
+            print(f'→ Found tab \"{name}\"')
+        else:
+            print(f'→ Creating tab \"{name}\"')
+            ws = sh.add_worksheet(title=name, rows='100', cols=str(max(1,len(headers))))
+            if headers:
+                ws.append_row(headers)
+
+def load_run_config(sh):
+    try:
+        ws = sh.worksheet('run_config')
+    except WorksheetNotFound:
+        return {}
+    cfg = {}
+    for row in ws.get_all_records():
+        key     = row.get('config_key')
+        val     = row.get('value')
+        enabled = str(row.get('enabled','')).lower() in ('1','true','yes')
+        if key and enabled:
+            cfg[key] = val
+    return cfg
+
+def init_dashboard():
+    global DISABLE_AUTO_CREATE
+    print(f'DEBUG: SPREADSHEET_ID={SPREADSHEET_ID}, DISABLE_AUTO_CREATE={DISABLE_AUTO_CREATE}')
+    creds = ServiceAccountCredentials.from_json_keyfile_name(CRED_PATH, SCOPES)
+    gc    = gspread.authorize(creds)
+
+    # open or create
+    try:
+        sh = gc.open_by_key(SPREADSHEET_ID)
+        print(f'✅ Opened existing sheet: {sh.title}')
+    except SpreadsheetNotFound:
+        if DISABLE_AUTO_CREATE:
+            raise
+        new_id = create_and_share_sheet(AUTO_SHEET_TITLE)
+        set_key('.env', 'SPREADSHEET_ID', new_id)
+        os.environ['SPREADSHEET_ID'] = new_id
+        sh = gc.open_by_key(new_id)
+        print(f'✅ Created + opened sheet: {sh.title} (ID: {new_id})')
+
+    # provision run_config + load toggles
+    ensure_sheet_tabs(sh, {'run_config':['config_key','value','description','enabled']})
+    cfg = load_run_config(sh)
+    if 'disable_auto_create' in cfg:
+        DISABLE_AUTO_CREATE = str(cfg['disable_auto_create']).lower() in ('1','true','yes')
+        print(f'→ override DISABLE_AUTO_CREATE={DISABLE_AUTO_CREATE}')
+
+    # main header
+    main_ws = sh.get_worksheet(0)
+    if not main_ws.row_values(1):
+        print('→ Adding main header row')
+        main_ws.append_row(['timestamp','upc','price','roi'])
+    else:
+        print(f'→ Main header exists: {main_ws.row_values(1)}')
+
+    # all tabs
+    tabs = {
+        'run_config':     ['config_key','value','description','enabled'],
+        'webhook_config': ['name','url','event','active'],
+        'settings':       ['setting','value','notes'],
+        'alerts':         ['trigger','threshold','channel','enabled'],
+        'raw_data':       ['timestamp','asin_upc','source','payload_json'],
+        'analysis':       ['metric','value','timestamp'],
+        'sources':        ['source_name','url','last_scraped'],
+        'credentials':    ['service','username','encrypted_password'],
+        'runs':           ['run_id','timestamp','status','details'],
+        'Amazon':         ['timestamp','asin','price','prime_eligible','url'],
+        'Walmart':        ['timestamp','upc','price','stock','url'],
+        'Target':         ['timestamp','upc','price','availability','url'],
+        'Kohls':          ['timestamp','upc','price','discount','url'],
+        'eBay':           ['timestamp','item_id','price','condition','url'],
+        'BestBuy':        ['timestamp','sku','price','in_stock','url'],
+        'Newegg':         ['timestamp','upc','price','availability','url'],
+        'Costco':         ['timestamp','upc','price','membership_req','url'],
+        'HomeDepot':      ['timestamp','upc','price','in_stock','url'],
+        "Lowe's":         ['timestamp','upc','price','availability','url'],
+        'Overstock':      ['timestamp','upc','price','stock','url'],
+        'Wayfair':        ['timestamp','upc','price','stock','url'],
+        'PuzzleWarehouse':['timestamp','upc','price','stock','link'],
+        'RoundEyeSupply': ['timestamp','upc','price','availability','link'],
+        'EmpireDiscount': ['timestamp','upc','price','rank','link'],
+        'EverestToys':    ['timestamp','upc','price','stock','link'],
+        'DollarDays':     ['timestamp','upc','price','link'],
+        'PriceMaster':    ['timestamp','upc','price','adder_fee','link'],
+        'FrontierCoop':   ['timestamp','upc','price','min_order_qty','link'],
+        'DandHSales':     ['timestamp','upc','price','shipping_time','link'],
+        'EEDistribution':['timestamp','upc','price','case_pack','link'],
+        'Alibaba':        ['timestamp','upc','price','moq','link'],
+        'DHGate':         ['timestamp','upc','price','moq','link']
+    }
+    ensure_sheet_tabs(sh, tabs)
+
+    return gc, sh

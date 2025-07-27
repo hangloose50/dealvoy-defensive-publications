@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-22T17:02:51.291577",
+    "voyager": "claude_voyager",
+    "version": "1.0.0"
+  },
+  "project_structure": {
+    "timestamp": "2025-07-22T17:02:51.283657",
+    "project_type": "dealvoy_ecosystem",
+    "components": [
+      {
+        "name": "app",
+        "type": "core_application",
+        "file_count": 174,
+        "python_files": 128,
+        "test_files": 21,
+        "complexity": 377,
+        "key_patterns": [
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "data_scraping",
+          "async_programming",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "web_framework",
+          "async_programming",
+          "testing_implementation",
+          "data_scraping",
+          "data_scraping",
+          "web_framework",
+          "data_scraping",
+          "data_scraping",
+          "object_oriented_design",
+          "computer_vision",
+          "data_scraping",
+          "async_programming",
+          "web_framework",
+          "data_scraping",
+          "data_scraping",
+          "web_framework",
+          "data_scraping",
+          "testing_implementation",
+          "async_programming",
+          "web_framework",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "async_programming",
+          "web_framework",
+          "testing_implementation",
+          "data_scraping",
+          "data_scraping",
+          "computer_vision",
+          "computer_vision",
+          "object_oriented_design",
+          "computer_vision",
+          "object_oriented_design",
+          "data_scraping",
+          "object_oriented_design",
+          "data_scraping",
+          "computer_vision",
+          "object_oriented_design",
+          "ai_integration",
+          "object_oriented_design",
+          "data_scraping",
+          "ai_integration",
+          "computer_vision",
+          "object_oriented_design",
+          "computer_vision",
+          "object_oriented_design",
+          "async_programming",
+          "web_framework",
+          "testing_implementation",
+          "data_scraping",
+          "ai_integration",
+          "computer_vision",
+          "object_oriented_design",
+          "computer_vision"
+        ]
+      },
+      {
+        "name": "tests",
+        "type": "testing_framework",
+        "file_count": 18,
+        "python_files": 8,
+        "test_files": 8,
+        "complexity": 32,
+        "key_patterns": [
+          "testing_implementation",
+          "testing_implementation",
+          "testing_implementation",
+          "data_scraping",
+          "testing_implementation",
+          "testing_implementation",
+          "data_scraping",
+          "testing_implementation",
+          "async_programming",
+          "testing_implementation",
+          "testing_implementation"
+        ]
+      },
+      {
+        "name": "scripts",
+        "type": "automation_tools",
+        "file_count": 1,
+        "python_files": 0,
+        "test_files": 0,
+        "complexity": 5,
+        "key_patterns": []
+      }
+    ],
+    "complexity_score": 414,
+    "recommendations": [
+      {
+        "type": "architecture",
+        "priority": "high",
+        "title": "Consider Modularization",
+        "description": "High complexity detected. Consider breaking into microservices or modules.",
+        "impact": "maintainability"
+      },
+      {
+        "type": "integration",
+        "priority": "medium",
+        "title": "Unified Data Pipeline",
+        "description": "Multiple data sources detected. Consider unified data processing pipeline.",
+        "impact": "efficiency"
+      }
+    ]
+  },
+  "flow_charts": {
+    "user_journey": {
+      "title": "Dealvoy User Journey",
+      "type": "user_flow",
+      "nodes": [
+        {
+          "id": "start",
+          "label": "User Opens App",
+          "type": "start"
+        },
+        {
+          "id": "scan",
+          "label": "Scan Product",
+          "type": "action"
+        },
+        {
+          "id": "ocr",
+          "label": "OCR Processing",
+          "type": "process"
+        },
+        {
+          "id": "identify",
+          "label": "Product Identification",
+          "type": "process"
+        },
+        {
+          "id": "search",
+          "label": "Price Search",
+          "type": "process"
+        },
+        {
+          "id": "compare",
+          "label": "Price Comparison",
+          "type": "process"
+        },
+        {
+          "id": "results",
+          "label": "Show Results",
+          "type": "output"
+        },
+        {
+          "id": "save",
+          "label": "Save Deal",
+          "type": "action"
+        },
+        {
+          "id": "end",
+          "label": "User Exits",
+          "type": "end"
+        }
+      ],
+      "edges": [
+        {
+          "from": "start",
+          "to": "scan"
+        },
+        {
+          "from": "scan",
+          "to": "ocr"
+        },
+        {
+          "from": "ocr",
+          "to": "identify"
+        },
+        {
+          "from": "identify",
+          "to": "search"
+        },
+        {
+          "from": "search",
+          "to": "compare"
+        },
+        {
+          "from": "compare",
+          "to": "results"
+        },
+        {
+          "from": "results",
+          "to": "save"
+        },
+        {
+          "from": "save",
+          "to": "end"
+        }
+      ],
+      "critical_path": [
+        "start",
+        "scan",
+        "ocr",
+        "identify",
+        "search",
+        "compare",
+        "results"
+      ]
+    },
+    "data_processing": {
+      "title": "Data Processing Pipeline",
+      "type": "data_flow",
+      "nodes": [
+        {
+          "id": "input",
+          "label": "Product Image/Text",
+          "type": "input"
+        },
+        {
+          "id": "ocr",
+          "label": "OCR Extraction",
+          "type": "process"
+        },
+        {
+          "id": "clean",
+          "label": "Data Cleaning",
+          "type": "process"
+        },
+        {
+          "id": "identify",
+          "label": "Product Matching",
+          "type": "process"
+        },
+        {
+          "id": "scrape",
+          "label": "Price Scraping",
+          "type": "process"
+        },
+        {
+          "id": "analyze",
+          "label": "Deal Analysis",
+          "type": "process"
+        },
+        {
+          "id": "store",
+          "label": "Data Storage",
+          "type": "storage"
+        },
+        {
+          "id": "output",
+          "label": "Results",
+          "type": "output"
+        }
+      ],
+      "edges": [
+        {
+          "from": "input",
+          "to": "ocr"
+        },
+        {
+          "from": "ocr",
+          "to": "clean"
+        },
+        {
+          "from": "clean",
+          "to": "identify"
+        },
+        {
+          "from": "identify",
+          "to": "scrape"
+        },
+        {
+          "from": "scrape",
+          "to": "analyze"
+        },
+        {
+          "from": "analyze",
+          "to": "store"
+        },
+        {
+          "from": "analyze",
+          "to": "output"
+        }
+      ]
+    },
+    "ai_workflow": {
+      "title": "AI Processing Workflow",
+      "type": "ai_flow",
+      "nodes": [
+        {
+          "id": "prompt",
+          "label": "Prompt Generation",
+          "type": "ai"
+        },
+        {
+          "id": "gpt",
+          "label": "GPT-4 Processing",
+          "type": "ai"
+        },
+        {
+          "id": "claude",
+          "label": "Claude Analysis",
+          "type": "ai"
+        },
+        {
+          "id": "merge",
+          "label": "Result Synthesis",
+          "type": "process"
+        },
+        {
+          "id": "validate",
+          "label": "Validation",
+          "type": "process"
+        },
+        {
+          "id": "output",
+          "label": "Final Output",
+          "type": "output"
+        }
+      ],
+      "edges": [
+        {
+          "from": "prompt",
+          "to": "gpt"
+        },
+        {
+          "from": "prompt",
+          "to": "claude"
+        },
+        {
+          "from": "gpt",
+          "to": "merge"
+        },
+        {
+          "from": "claude",
+          "to": "merge"
+        },
+        {
+          "from": "merge",
+          "to": "validate"
+        },
+        {
+          "from": "validate",
+          "to": "output"
+        }
+      ]
+    },
+    "deployment": {
+      "title": "Deployment Pipeline",
+      "type": "deployment_flow",
+      "nodes": [
+        {
+          "id": "code",
+          "label": "Code Commit",
+          "type": "start"
+        },
+        {
+          "id": "test",
+          "label": "Run Tests",
+          "type": "process"
+        },
+        {
+          "id": "build",
+          "label": "Build App",
+          "type": "process"
+        },
+        {
+          "id": "staging",
+          "label": "Deploy Staging",
+          "type": "deployment"
+        },
+        {
+          "id": "validate",
+          "label": "Validation Tests",
+          "type": "process"
+        },
+        {
+          "id": "production",
+          "label": "Deploy Production",
+          "type": "deployment"
+        },
+        {
+          "id": "monitor",
+          "label": "Monitor",
+          "type": "monitoring"
+        }
+      ],
+      "edges": [
+        {
+          "from": "code",
+          "to": "test"
+        },
+        {
+          "from": "test",
+          "to": "build"
+        },
+        {
+          "from": "build",
+          "to": "staging"
+        },
+        {
+          "from": "staging",
+          "to": "validate"
+        },
+        {
+          "from": "validate",
+          "to": "production"
+        },
+        {
+          "from": "production",
+          "to": "monitor"
+        }
+      ]
+    }
+  },
+  "task_breakdowns": {
+    "scoutvision_ocr": {
+      "goal": "Implement ScoutVision OCR Integration",
+      "phases": [
+        {
+          "phase": "1. Foundation",
+          "tasks": [
+            "Install Tesseract and OpenCV dependencies",
+            "Set up camera access permissions",
+            "Create base OCR processing class",
+            "Implement image preprocessing pipeline"
+          ],
+          "estimated_hours": 8
+        },
+        {
+          "phase": "2. Core OCR",
+          "tasks": [
+            "Integrate Tesseract OCR engine",
+            "Implement text extraction and cleaning",
+            "Add barcode/UPC detection",
+            "Create confidence scoring system"
+          ],
+          "estimated_hours": 12
+        },
+        {
+          "phase": "3. Product Recognition",
+          "tasks": [
+            "Implement product matching logic",
+            "Connect to existing scraper registry",
+            "Add price lookup integration",
+            "Create result validation system"
+          ],
+          "estimated_hours": 10
+        },
+        {
+          "phase": "4. Testing & Polish",
+          "tasks": [
+            "Create comprehensive test suite",
+            "Add error handling and fallbacks",
+            "Optimize performance for mobile",
+            "Document API and usage"
+          ],
+          "estimated_hours": 6
+        }
+      ],
+      "total_estimated_hours": 36,
+      "dependencies": [
+        "camera_permissions",
+        "tesseract_installation",
+        "existing_scrapers"
+      ],
+      "success_criteria": [
+        "OCR accuracy > 85% on product labels",
+        "Processing time < 3 seconds per image",
+        "Successful product identification > 70%",
+        "Robust error handling for edge cases"
+      ]
+    }
+  },
+  "strategic_summary": {
+    "complexity_level": "high",
+    "development_priority": "scoutvision_integration",
+    "risk_factors": [
+      "high_complexity"
+    ],
+    "success_probability": 90
+  }
+}

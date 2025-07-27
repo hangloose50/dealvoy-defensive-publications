@@ -1,0 +1,9 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amazonscrapertoolkit"
+version = "0.1.0"
+packages = ["amazonscrapertoolkit", "amazonscrapertoolkit.app", "amazonscrapertoolkit.app.archive", "utils"]

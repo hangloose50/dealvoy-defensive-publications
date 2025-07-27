@@ -1,0 +1,62 @@
+{
+  "strategy": {
+    "primary_keywords": [
+      "amazon arbitrage",
+      "retail arbitrage",
+      "amazon ungating",
+      "e-commerce sourcing",
+      "amazon seller tools",
+      "profit calculator"
+    ],
+    "content_pillars": [
+      "Educational (40%): How-to guides and tutorials",
+      "Industry insights (25%): Market trends and analysis",
+      "Case studies (20%): Customer success stories",
+      "Product updates (15%): New features and improvements"
+    ],
+    "posting_frequency": "3 posts per week",
+    "target_word_count": "1,500-2,500 words"
+  },
+  "content_ideas": [
+    {
+      "title": "Complete Guide to Amazon Ungating in 2024",
+      "category": "Educational",
+      "keywords": [
+        "amazon ungating",
+        "category approval"
+      ],
+      "estimated_traffic": "15K/month",
+      "difficulty": "Medium"
+    },
+    {
+      "title": "How to Calculate True Profit Margins for Amazon FBA",
+      "category": "Educational",
+      "keywords": [
+        "amazon profit calculator",
+        "fba fees"
+      ],
+      "estimated_traffic": "8K/month",
+      "difficulty": "Low"
+    },
+    {
+      "title": "The Rise of AI in E-commerce: 2024 Trends Report",
+      "category": "Industry insights",
+      "keywords": [
+        "ai ecommerce",
+        "market trends"
+      ],
+      "estimated_traffic": "12K/month",
+      "difficulty": "High"
+    },
+    {
+      "title": "Case Study: How Mike Scaled from $10K to $100K Using Dealvoy",
+      "category": "Case studies",
+      "keywords": [
+        "amazon success story",
+        "arbitrage case study"
+      ],
+      "estimated_traffic": "5K/month",
+      "difficulty": "Low"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-07-24T04:17:41.521485",
+  "brand_assets_created": {
+    "brand_guidelines": "app/brand/brand_guidelines.json",
+    "landing_page_copy": "app/brand/content/landing_page_copy.json",
+    "pricing_strategy": "app/brand/content/pricing_strategy.json",
+    "faq_content": "app/brand/content/faq_content.json",
+    "email_templates": "app/brand/content/email_templates.json",
+    "blog_calendar": "app/brand/content/blog_content_calendar.json",
+    "social_strategy": "app/brand/content/social_media_strategy.json"
+  },
+  "content_stats": {
+    "landing_sections": 6,
+    "pricing_tiers": 3,
+    "faq_categories": 4,
+    "email_templates": 5,
+    "blog_ideas": 4,
+    "social_platforms": 3
+  },
+  "brand_summary": {
+    "name": "Dealvoy",
+    "tagline": "AI-Powered E-commerce Intelligence",
+    "value_prop": "Discover profitable deals, optimize pricing, and automate your e-commerce business with advanced AI and real-time market intelligence.",
+    "primary_color": "#3b82f6",
+    "target_ltv": "$2,400"
+  }
+}

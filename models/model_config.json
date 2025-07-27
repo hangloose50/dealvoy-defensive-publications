@@ -1,0 +1,106 @@
+{
+  "gpt-4-turbo": {
+    "provider": "openai",
+    "cost_per_1k_tokens": 0.03,
+    "context_limit": 128000,
+    "best_for": [
+      "complex_reasoning",
+      "code_generation",
+      "analysis",
+      "user_tasks",
+      "user_tasks",
+      "customer_support",
+      "deal_analysis",
+      "product_analysis",
+      "ungating_analysis",
+      "scraper_tasks",
+      "ai_assistance",
+      "chat_responses",
+      "data_analysis",
+      "complex_reasoning",
+      "code_generation"
+    ],
+    "backup": "gpt-3.5-turbo",
+    "priority": 1
+  },
+  "gpt-4": {
+    "provider": "openai",
+    "cost_per_1k_tokens": 0.03,
+    "context_limit": 8000,
+    "best_for": [
+      "user_interactions",
+      "customer_support",
+      "deal_analysis",
+      "user_tasks",
+      "customer_support",
+      "deal_analysis",
+      "product_analysis",
+      "ungating_analysis",
+      "scraper_tasks",
+      "ai_assistance",
+      "chat_responses",
+      "data_analysis",
+      "complex_reasoning",
+      "code_generation"
+    ],
+    "backup": "gpt-4-turbo",
+    "priority": 1
+  },
+  "gpt-3.5-turbo": {
+    "provider": "openai",
+    "cost_per_1k_tokens": 0.002,
+    "context_limit": 16000,
+    "best_for": [
+      "simple_tasks",
+      "chat",
+      "quick_responses"
+    ],
+    "backup": "claude-3-haiku",
+    "priority": 3
+  },
+  "claude-3-opus": {
+    "provider": "anthropic",
+    "cost_per_1k_tokens": 0.075,
+    "context_limit": 200000,
+    "best_for": [
+      "dev_ops",
+      "agent_coordination",
+      "system_analysis"
+    ],
+    "backup": "gpt-4-turbo",
+    "priority": 4
+  },
+  "claude-3-sonnet": {
+    "provider": "anthropic",
+    "cost_per_1k_tokens": 0.015,
+    "context_limit": 200000,
+    "best_for": [
+      "balanced_tasks",
+      "code_review",
+      "documentation"
+    ],
+    "backup": "gpt-4-turbo"
+  },
+  "claude-3-haiku": {
+    "provider": "anthropic",
+    "cost_per_1k_tokens": 0.0025,
+    "context_limit": 200000,
+    "best_for": [
+      "fast_responses",
+      "simple_analysis",
+      "low_cost"
+    ],
+    "backup": "gpt-3.5-turbo"
+  },
+  "llama-3-70b": {
+    "provider": "local",
+    "cost_per_1k_tokens": 0.0,
+    "context_limit": 8000,
+    "best_for": [
+      "privacy",
+      "offline",
+      "cost_free"
+    ],
+    "backup": "gpt-3.5-turbo"
+  }
+}

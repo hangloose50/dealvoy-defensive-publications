@@ -1,0 +1,58 @@
+{
+  "welcome_series": [
+    {
+      "subject": "Welcome to Dealvoy - Your AI profit engine awaits",
+      "template": "welcome_1",
+      "send_delay": 0,
+      "content": {
+        "headline": "Welcome to the future of e-commerce sourcing!",
+        "body": "Hi {first_name},\n\nWelcome to Dealvoy! You've just joined thousands of successful sellers who use AI to find profitable deals faster than ever.\n\nHere's what you can do right now:\n\u2022 Upload your first product for profit analysis\n\u2022 Connect your Amazon seller account\n\u2022 Try our mobile OCR scanner\n\nYour 7-day trial starts now - let's make it count!",
+        "cta": "Start Your First Scan"
+      }
+    },
+    {
+      "subject": "\ud83c\udfaf Found 12 profitable deals in your niche",
+      "template": "welcome_2",
+      "send_delay": 2,
+      "content": {
+        "headline": "Your personalized deal alerts are ready",
+        "body": "Based on your account setup, we've found 12 potential deals with 20%+ profit margins in your target categories.\n\nOur AI identified:\n\u2022 3 ungated opportunities\n\u2022 5 low-competition products\n\u2022 4 trending items with rising demand\n\nThese deals won't last long - check them out now!",
+        "cta": "View My Deals"
+      }
+    },
+    {
+      "subject": "\ud83d\udca1 Pro tip: How Sarah made $50K in her first month",
+      "template": "welcome_3",
+      "send_delay": 5,
+      "content": {
+        "headline": "Success story: From $0 to $50K profit",
+        "body": "Sarah was skeptical about AI-powered sourcing until she tried Dealvoy.\n\nHer secret? She used our ungating predictions to focus on categories with 90%+ approval rates, then scaled with our bulk analysis tools.\n\nResult: $50,000 profit in month 1.\n\nWant to replicate her success? Here's her exact strategy...",
+        "cta": "Get Sarah's Strategy"
+      }
+    }
+  ],
+  "trial_conversion": [
+    {
+      "subject": "\u23f0 Your trial ends tomorrow - Lock in 50% off",
+      "template": "trial_ending",
+      "trigger": "trial_ends_1_day",
+      "content": {
+        "headline": "Don't lose access to your profit engine",
+        "body": "Your 7-day trial ends tomorrow at midnight.\n\nAs a thank you for trying Dealvoy, upgrade now and get 50% off your first 3 months.\n\nThat's just $48.50/month for Professional (normally $97).\n\nThis offer expires when your trial ends.",
+        "cta": "Claim 50% Discount"
+      }
+    }
+  ],
+  "retention": [
+    {
+      "subject": "\ud83d\udcca Your monthly profit report is ready",
+      "template": "monthly_report",
+      "trigger": "monthly",
+      "content": {
+        "headline": "Here's how much you've earned with Dealvoy this month",
+        "body": "Profit found: ${monthly_profit}\nDeals analyzed: {deals_count}\nTime saved: {hours_saved} hours\n\nTop performing category: {top_category}\nBest deal: {best_deal} (+{best_margin}% margin)\n\nKeep up the great work!",
+        "cta": "View Full Report"
+      }
+    }
+  ]
+}

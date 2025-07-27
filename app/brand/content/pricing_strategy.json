@@ -1,0 +1,88 @@
+{
+  "strategy": {
+    "model": "Freemium with usage-based scaling",
+    "target_ltv": "$2,400",
+    "target_cac": "$200",
+    "ltv_cac_ratio": "12:1",
+    "monthly_churn_target": "5%"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "price": 0,
+      "billing": "Free Forever",
+      "target_audience": "New sellers testing the platform",
+      "features": [
+        "100 product scans/month",
+        "Basic profit calculator",
+        "5 scraper sources",
+        "Email support",
+        "Mobile OCR (limited)"
+      ],
+      "limitations": [
+        "No ungating predictions",
+        "No bulk operations",
+        "Basic analytics only"
+      ],
+      "cta": "Get Started Free"
+    },
+    {
+      "name": "Professional",
+      "price": 97,
+      "billing": "per month",
+      "target_audience": "Growing sellers and serious arbitragers",
+      "features": [
+        "5,000 product scans/month",
+        "AI deal scoring",
+        "15 scraper sources",
+        "Ungating predictions",
+        "Bulk operations",
+        "Advanced analytics",
+        "Priority support",
+        "Mobile app",
+        "API access (1,000 calls/month)"
+      ],
+      "popular": true,
+      "cta": "Start 7-Day Trial"
+    },
+    {
+      "name": "Enterprise",
+      "price": 297,
+      "billing": "per month",
+      "target_audience": "High-volume sellers and agencies",
+      "features": [
+        "Unlimited product scans",
+        "All AI features",
+        "28+ scraper sources",
+        "Custom integrations",
+        "White-label options",
+        "Dedicated account manager",
+        "Phone + email support",
+        "API access (unlimited)",
+        "Custom reporting",
+        "Team collaboration tools"
+      ],
+      "cta": "Contact Sales"
+    }
+  ],
+  "add_ons": [
+    {
+      "name": "Additional API Calls",
+      "price": 0.01,
+      "unit": "per call",
+      "description": "Extra API usage beyond plan limits"
+    },
+    {
+      "name": "Custom Scraper Development",
+      "price": 500,
+      "unit": "one-time",
+      "description": "Build custom scrapers for niche platforms"
+    },
+    {
+      "name": "Dedicated Infrastructure",
+      "price": 200,
+      "unit": "per month",
+      "description": "Isolated processing for enterprise security"
+    }
+  ]
+}

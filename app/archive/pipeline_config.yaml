@@ -1,0 +1,16 @@
+spreadsheet_key: 1Y1M_meATekPWVReHOhyeiuLAVh8bk5Ve1BJg3451V8Y
+credentials_file: credentials.json
+
+search_terms:
+  - usb+charger
+  - gaming+keyboard
+  - wireless+headphones
+
+retailers:
+  amazon:
+    pages: 1
+    upc_workers: 5
+
+worksheets:
+  complete: "Amazon"
+  missing_upc: "Amazon Missing UPC"

@@ -1,0 +1,66 @@
+{
+  "api_version": "2023-10-16",
+  "currency": "usd",
+  "billing_cycle": "monthly",
+  "trial_period_days": 7,
+  "grace_period_days": 3,
+  "webhook_endpoints": [
+    "customer.subscription.created",
+    "customer.subscription.updated",
+    "customer.subscription.deleted",
+    "invoice.payment_succeeded",
+    "invoice.payment_failed",
+    "customer.created",
+    "customer.updated"
+  ],
+  "product_catalog": {
+    "starter": {
+      "stripe_product_id": "prod_starter",
+      "price_id": "price_starter_monthly",
+      "amount": 0,
+      "interval": "month",
+      "features": [
+        "100 product scans/month",
+        "Basic profit calculator",
+        "5 scraper sources",
+        "Email support"
+      ]
+    },
+    "professional": {
+      "stripe_product_id": "prod_professional",
+      "price_id": "price_professional_monthly",
+      "amount": 9700,
+      "interval": "month",
+      "trial_period_days": 7,
+      "features": [
+        "5,000 product scans/month",
+        "AI deal scoring",
+        "15 scraper sources",
+        "Ungating predictions",
+        "Priority support",
+        "API access"
+      ]
+    },
+    "enterprise": {
+      "stripe_product_id": "prod_enterprise",
+      "price_id": "price_enterprise_monthly",
+      "amount": 29700,
+      "interval": "month",
+      "features": [
+        "Unlimited product scans",
+        "All AI features",
+        "28+ scraper sources",
+        "Custom integrations",
+        "Dedicated support",
+        "API access (unlimited)"
+      ]
+    }
+  },
+  "usage_based_pricing": {
+    "api_calls": {
+      "price_id": "price_api_calls",
+      "unit_amount": 1,
+      "billing_scheme": "per_unit"
+    }
+  }
+}

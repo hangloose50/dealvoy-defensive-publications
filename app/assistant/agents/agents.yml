@@ -1,0 +1,277 @@
+PatentVoyager:
+  enabled: false
+  priority: low
+  timeout: 600
+  retry_count: 1
+  description: Drafts patent content and claims (manual, GPT-assisted)
+PatentResearchVoyager:
+  enabled: false
+  priority: low
+  timeout: 600
+  retry_count: 1
+  description: Analyzes IP landscape, prior art, and legal risks
+PromptVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Auto-generates smart .prompt files from codebase analysis
+ShellVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Creates UI shells (SwiftUI/React/HTML) with routing
+SchemaVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Generates Pydantic/SQL/JSON schemas from data patterns
+UXVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Simulates user flows and detects UX issues
+ClaudeVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Strategic analysis and flow planning coordination
+FeedbackVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: User interaction metrics and ML training data
+PatchVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Automated fix application from test failures
+DeployVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Deployment to TestFlight/App Store/staging
+CodeVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Deep code analysis, documentation, and refactoring
+SecurityVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Security scanning and vulnerability detection
+PerformanceVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Performance monitoring and optimization
+ComplianceVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: License auditing and compliance verification
+DataVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Dataset drift and ETL pipeline health monitoring
+OptimizerVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: AI model and prompt optimization
+OverseerVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Monitors and maintains other Voyager agents
+ScoutVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Computer vision and OCR capabilities
+
+ClaimOptimizerVoyager:
+  enabled: false
+  priority: low
+  timeout: 600
+  retry_count: 1
+  description: Refines patent claims for strength and scope
+
+DiagramVoyager:
+  enabled: false
+  priority: low
+  timeout: 600
+  retry_count: 1
+  description: Auto-generates claim flowcharts in Markdown/Mermaid.js
+
+RedFlagVoyager:
+  enabled: false
+  priority: low
+  timeout: 600
+  retry_count: 1
+  description: Scans patent drafts for risky/legal landmine terms
+
+ModelVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Advanced AI model management and orchestration
+
+CustomerVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Customer experience and feedback analysis
+
+BackendVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Backend architecture and API enhancement
+
+TrendVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Market trend analysis and forecasting
+
+WorkflowVoyager:
+  enabled: true
+  priority: high
+  timeout: 600
+  retry_count: 1
+  description: Cross-agent workflow orchestration and automation
+
+DealScorerVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: AI-powered deal scoring and profit analysis for e-commerce arbitrage
+
+UngatingVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Amazon ungating prediction and application automation
+
+ScraperInfrastructureVoyager:
+  enabled: true
+  priority: high
+  timeout: 600
+  retry_count: 1
+  description: Comprehensive analysis of 50+ scraper ecosystem and e-commerce intelligence
+
+WebVoyager:
+  enabled: true
+  priority: high
+  timeout: 600
+  retry_count: 1
+  description: Builds web dashboard UI with Next.js/React components and responsive interfaces
+
+BrandVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Generates marketing content, landing pages, pricing strategy, and brand assets
+
+StripeVoyager:
+  enabled: false
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Configures Stripe payment infrastructure, subscription management, and billing webhooks (disabled by default for security)
+
+AdminVoyager:
+  enabled: true
+  priority: high
+  timeout: 600
+  retry_count: 1
+  description: Generates backend admin panels, user management interfaces, and system monitoring dashboards
+
+# AI Intelligence Layer - 9 Core Systems
+TrendAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Market trend analysis with Amazon trends, social signals, Google trends, and competitor monitoring
+
+SupplierMatchAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Intelligent wholesale supplier matching with reliability scoring and payment terms analysis
+
+CategoryRecommenderAIVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Smart product category recommendations with profit margin analysis and seasonal patterns
+
+DealExplainerAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Intelligent deal analysis with profitability breakdown and risk assessment
+
+ProductClusterAIVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Product relationship mapping and bundling opportunities with cross-sell analysis
+
+RiskForecasterAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Predictive risk analysis with multi-factor forecasting and mitigation strategies
+
+BrandRelationshipAIVoyager:
+  enabled: true
+  priority: normal
+  timeout: 300
+  retry_count: 1
+  description: Brand partnership analysis with feasibility scoring and portfolio optimization
+
+CashflowPredictorAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 300
+  retry_count: 1
+  description: Advanced financial forecasting with scenario modeling and cash flow optimization
+
+AutoOptimizerAIVoyager:
+  enabled: true
+  priority: high
+  timeout: 600
+  retry_count: 1
+  description: Autonomous system optimization with performance monitoring and self-improvement algorithms

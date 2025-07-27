@@ -1,0 +1,70 @@
+{
+  "general": [
+    {
+      "question": "What is Dealvoy?",
+      "answer": "Dealvoy is an AI-powered e-commerce intelligence platform that helps sellers find profitable deals, analyze market trends, and automate sourcing workflows across 28+ marketplaces."
+    },
+    {
+      "question": "How accurate are the profit predictions?",
+      "answer": "Our AI models achieve 95% accuracy in profit predictions by analyzing historical data, current market conditions, and competitor pricing in real-time."
+    },
+    {
+      "question": "Which marketplaces do you support?",
+      "answer": "We scrape data from 28+ sources including Amazon, Walmart, Costco, Target, eBay, and major wholesale distributors, covering 71.4% of the e-commerce market."
+    },
+    {
+      "question": "Is there a mobile app?",
+      "answer": "Yes! Our mobile app includes OCR scanning, allowing you to analyze products instantly by taking a photo while shopping in-store."
+    }
+  ],
+  "pricing": [
+    {
+      "question": "Is there a free trial?",
+      "answer": "Yes, we offer a 7-day free trial for Professional and Enterprise plans. The Starter plan is free forever with usage limits."
+    },
+    {
+      "question": "Can I cancel anytime?",
+      "answer": "Absolutely. You can cancel your subscription at any time from your dashboard. No contracts or cancellation fees."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards (Visa, MasterCard, American Express) and PayPal through our secure Stripe integration."
+    },
+    {
+      "question": "Do you offer refunds?",
+      "answer": "We offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your first month's payment."
+    }
+  ],
+  "technical": [
+    {
+      "question": "Do you have an API?",
+      "answer": "Yes, we provide a comprehensive REST API for integrating Dealvoy data into your existing workflows and applications."
+    },
+    {
+      "question": "How often is data updated?",
+      "answer": "Pricing data is updated every 15 minutes for major marketplaces and hourly for smaller sources. Inventory data is refreshed in real-time."
+    },
+    {
+      "question": "Is my data secure?",
+      "answer": "Yes, we use enterprise-grade security including AES-256 encryption, SOC 2 compliance, and regular security audits to protect your data."
+    },
+    {
+      "question": "Can I export my data?",
+      "answer": "Yes, you can export all your data in CSV, JSON, or Excel formats. We also support automated exports via webhooks."
+    }
+  ],
+  "amazon_specific": [
+    {
+      "question": "How do ungating predictions work?",
+      "answer": "Our AI analyzes your seller history, product categories, and Amazon's approval patterns to predict your success rate for ungating applications."
+    },
+    {
+      "question": "Do you provide ungating application help?",
+      "answer": "Yes, we provide detailed requirements, document templates, and step-by-step guidance for each category ungating process."
+    },
+    {
+      "question": "Can you help with Amazon compliance?",
+      "answer": "Our platform flags potential compliance issues and provides guidance, but we recommend consulting with Amazon specialists for complex cases."
+    }
+  ]
+}

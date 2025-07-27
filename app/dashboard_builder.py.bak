@@ -1,0 +1,74 @@
+﻿import os
+print("🔑 SPREADSHEET_ID:", os.getenv("SPREADSHEET_ID"))
+from dotenv import load_dotenv
+import gspread
+
+load_dotenv()
+import json
+from google.oauth2.service_account import Credentials
+
+with open('credentials.json', 'r', encoding='utf-8-sig') as f:
+    info = json.load(f)
+
+scopes = [
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive.file'
+]
+scopes = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file"
+]
+creds = Credentials.from_service_account_info(info, scopes=scopes)
+gc = gspread.Client(auth=creds)
+sh = gc.open_by_key(os.environ["SPREADSHEET_ID"])
+
+all_top_items = []
+
+for ws in sh.worksheets():
+    title = ws.title
+    if title == 'Dashboard': continue
+
+    try:
+        records = ws.get_all_records()
+    except Exception:
+        print(f"⚠️ Skipping malformed sheet: {title}")
+        continue
+
+    valid = []
+    for r in records:
+        try:
+            # Flexible field fallback
+            price  = float(r.get("price") or r.get("distributor_price") or 0)
+            aprice = float(r.get("amazon_price") or r.get("retail_price") or 0)
+        except:
+            continue
+
+        if price > 0 and aprice > 0:
+            margin = round((aprice - price) / price, 3)
+            if margin >= 0.3:
+                r["Margin"] = margin
+                r["Source"] = title
+                valid.append(r)
+
+    if valid:
+        valid.sort(key=lambda x: x["Margin"], reverse=True)
+        top_n = max(1, round(0.03 * len(valid)))
+        all_top_items.extend(valid[:top_n])
+
+# Sort across sources
+all_top_items.sort(key=lambda x: x["Margin"], reverse=True)
+
+if all_top_items:
+    headers = list(all_top_items[0].keys())
+    rows = [headers] + [ [r.get(h, "") for h in headers] for r in all_top_items[:100] ]
+
+    try:
+        dash = sh.worksheet("Dashboard")
+        dash.clear()
+    except gspread.exceptions.WorksheetNotFound:
+        dash = sh.add_worksheet("Dashboard", rows=1000, cols=len(headers))
+
+    dash.update(rows)
+    print("✅ Dashboard updated with top 3% ROI items.")
+else:
+    print("⚠️ No valid items above 30% ROI found.")

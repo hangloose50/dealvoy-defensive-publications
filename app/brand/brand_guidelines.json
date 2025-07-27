@@ -1,0 +1,36 @@
+{
+  "brand_name": "Dealvoy",
+  "tagline": "AI-Powered E-commerce Intelligence",
+  "value_proposition": "Discover profitable deals, optimize pricing, and automate your e-commerce business with advanced AI and real-time market intelligence.",
+  "target_audience": {
+    "primary": "E-commerce entrepreneurs and Amazon sellers",
+    "secondary": "Retail arbitrage specialists and sourcing professionals",
+    "demographics": "Business owners aged 25-45 with 6-figure+ revenue goals"
+  },
+  "brand_voice": {
+    "tone": "Professional, confident, data-driven",
+    "personality": "Expert advisor, trustworthy, innovative",
+    "style": "Clear, actionable, results-focused"
+  },
+  "color_palette": {
+    "primary": "#3b82f6",
+    "secondary": "#10b981",
+    "accent": "#f59e0b",
+    "neutral": "#6b7280",
+    "success": "#059669",
+    "warning": "#d97706",
+    "error": "#dc2626"
+  },
+  "typography": {
+    "primary_font": "Inter",
+    "secondary_font": "Roboto Mono",
+    "heading_weights": [
+      "600",
+      "700"
+    ],
+    "body_weights": [
+      "400",
+      "500"
+    ]
+  }
+}

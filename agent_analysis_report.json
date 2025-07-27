@@ -1,0 +1,382 @@
+{
+  "analysis_timestamp": "2025-07-26T18:57:12.510948",
+  "summary": {
+    "total_agents": 46,
+    "functional": 38,
+    "empty": 8,
+    "missing_class": 0,
+    "missing_run_method": 0,
+    "errors": 0
+  },
+  "categories": {
+    "success": [
+      "ab_price_tester",
+      "api_gateway_monitor",
+      "app_store_prep_bot",
+      "auto_optimizer_ai",
+      "backup_orchestrator_ai",
+      "branch_cleaner",
+      "brand_relationship_ai",
+      "build_bot",
+      "bundle_optimizer",
+      "cache_optimizer_ai",
+      "cashflow_predictor_ai",
+      "category_ai",
+      "claude_bridge_agent",
+      "competitor_intel_ai",
+      "customer_voyager",
+      "database_optimizer_ai",
+      "email_scraper_bot",
+      "export_master",
+      "forecasting_engine_ai",
+      "git_hook_verifier",
+      "inventory_optimizer_ai",
+      "latency_tracker_ai",
+      "listing_perfectionist",
+      "llm_budgeter_ai",
+      "load_balancer_ai",
+      "log_parser_ai",
+      "market_gap_finder",
+      "model_switcher",
+      "model_voyager",
+      "network_monitor_ai",
+      "performance_analyzer_ai",
+      "predictive_maintenance_ai",
+      "quality_assurance_bot",
+      "repricing_strategist_ai",
+      "resource_allocator_ai",
+      "supplier_match",
+      "trend_ai",
+      "ui_compliance_bot"
+    ],
+    "empty": [
+      "label_generator",
+      "overseer_voyager",
+      "product_cluster_ai",
+      "prompt_tuner",
+      "risk_forecaster_ai",
+      "scan_flow_tester",
+      "security_scanner_ai",
+      "upc_verifier_ai"
+    ],
+    "no_class": [],
+    "no_run_method": [],
+    "error": []
+  },
+  "detailed_results": [
+    {
+      "status": "success",
+      "agent_name": "ab_price_tester",
+      "class_name": "ABPriceTester",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "api_gateway_monitor",
+      "class_name": "APIGatewayMonitor",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "app_store_prep_bot",
+      "class_name": "AppStorePrepBot",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "auto_optimizer_ai",
+      "class_name": "AutoOptimizerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "backup_orchestrator_ai",
+      "class_name": "BackupOrchestratorAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "branch_cleaner",
+      "class_name": "BranchCleaner",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "brand_relationship_ai",
+      "class_name": "BrandRelationshipAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "build_bot",
+      "class_name": "BuildBot",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "bundle_optimizer",
+      "class_name": "BundleOptimizer",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "cache_optimizer_ai",
+      "class_name": "CacheOptimizerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "cashflow_predictor_ai",
+      "class_name": "CashflowPredictorAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "category_ai",
+      "class_name": "CategoryAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "claude_bridge_agent",
+      "class_name": "ClaudeBridgeAgent",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "competitor_intel_ai",
+      "class_name": "CompetitorIntelAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "customer_voyager",
+      "class_name": "CustomerVoyager",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "database_optimizer_ai",
+      "class_name": "DatabaseOptimizerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "email_scraper_bot",
+      "class_name": "EmailScraperBot",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "export_master",
+      "class_name": "ExportMaster",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "forecasting_engine_ai",
+      "class_name": "ForecastingEngineAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "git_hook_verifier",
+      "class_name": "GitHookVerifier",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "inventory_optimizer_ai",
+      "class_name": "InventoryOptimizerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "empty",
+      "agent_name": "label_generator",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "success",
+      "agent_name": "latency_tracker_ai",
+      "class_name": "LatencyTrackerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "listing_perfectionist",
+      "class_name": "ListingPerfectionist",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "llm_budgeter_ai",
+      "class_name": "LLMBudgeterAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "load_balancer_ai",
+      "class_name": "LoadBalancerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "log_parser_ai",
+      "class_name": "LogParserAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "market_gap_finder",
+      "class_name": "MarketGapFinder",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "model_switcher",
+      "class_name": "ModelSwitcher",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "model_voyager",
+      "class_name": "ModelVoyager",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "network_monitor_ai",
+      "class_name": "NetworkMonitorAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "empty",
+      "agent_name": "overseer_voyager",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "success",
+      "agent_name": "performance_analyzer_ai",
+      "class_name": "PerformanceAnalyzerAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "predictive_maintenance_ai",
+      "class_name": "PredictiveMaintenanceAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "empty",
+      "agent_name": "product_cluster_ai",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "empty",
+      "agent_name": "prompt_tuner",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "success",
+      "agent_name": "quality_assurance_bot",
+      "class_name": "QualityAssuranceBot",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "repricing_strategist_ai",
+      "class_name": "RepricingStrategistAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "resource_allocator_ai",
+      "class_name": "ResourceAllocatorAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "empty",
+      "agent_name": "risk_forecaster_ai",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "empty",
+      "agent_name": "scan_flow_tester",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "empty",
+      "agent_name": "security_scanner_ai",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    },
+    {
+      "status": "success",
+      "agent_name": "supplier_match",
+      "class_name": "SupplierMatch",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "trend_ai",
+      "class_name": "TrendAI",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "success",
+      "agent_name": "ui_compliance_bot",
+      "class_name": "UIComplianceBot",
+      "has_run_method": true,
+      "result_type": "dict"
+    },
+    {
+      "status": "empty",
+      "agent_name": "upc_verifier_ai",
+      "file_size": 0,
+      "error": "File is empty or too small"
+    }
+  ]
+}

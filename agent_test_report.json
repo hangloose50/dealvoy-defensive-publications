@@ -1,0 +1,288 @@
+{
+  "test_timestamp": "2025-07-26T11:29:40.176566",
+  "summary": {
+    "total_agents": 46,
+    "success_count": 0,
+    "warning_count": 0,
+    "error_count": 46,
+    "success_rate": 0.0
+  },
+  "detailed_results": [
+    {
+      "status": "error",
+      "agent_name": "ab_price_tester",
+      "class_found": false,
+      "error": "Class Abpricetester not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "api_gateway_monitor",
+      "class_found": false,
+      "error": "Class Apigatewaymonitor not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "app_store_prep_bot",
+      "class_found": false,
+      "error": "Class Appstoreprepbot not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "auto_optimizer_ai",
+      "class_found": false,
+      "error": "Class Autooptimizerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "backup_orchestrator_ai",
+      "class_found": false,
+      "error": "Class Backuporchestratorai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "branch_cleaner",
+      "class_found": false,
+      "error": "Class Branchcleaner not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "brand_relationship_ai",
+      "class_found": false,
+      "error": "Class Brandrelationshipai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "build_bot",
+      "class_found": false,
+      "error": "Class Buildbot not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "bundle_optimizer",
+      "class_found": false,
+      "error": "Class Bundleoptimizer not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "cache_optimizer_ai",
+      "class_found": false,
+      "error": "Class Cacheoptimizerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "cashflow_predictor_ai",
+      "class_found": false,
+      "error": "Class Cashflowpredictorai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "category_ai",
+      "class_found": false,
+      "error": "Class Categoryai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "claude_bridge_agent",
+      "class_found": false,
+      "error": "Class Claudebridgeagent not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "competitor_intel_ai",
+      "class_found": false,
+      "error": "Class Competitorintelai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "customer_voyager",
+      "class_found": false,
+      "error": "Class Customervoyager not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "database_optimizer_ai",
+      "class_found": false,
+      "error": "Class Databaseoptimizerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "email_scraper_bot",
+      "class_found": false,
+      "error": "Class Emailscraperbot not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "export_master",
+      "class_found": false,
+      "error": "Class Exportmaster not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "forecasting_engine_ai",
+      "class_found": false,
+      "error": "Class Forecastingengineai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "git_hook_verifier",
+      "class_found": false,
+      "error": "Class Githookverifier not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "inventory_optimizer_ai",
+      "class_found": false,
+      "error": "Class Inventoryoptimizerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "label_generator",
+      "class_found": false,
+      "error": "Class Labelgenerator not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "latency_tracker_ai",
+      "class_found": false,
+      "error": "Class Latencytrackerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "listing_perfectionist",
+      "class_found": false,
+      "error": "Class Listingperfectionist not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "llm_budgeter_ai",
+      "class_found": false,
+      "error": "Class Llmbudgeterai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "load_balancer_ai",
+      "class_found": false,
+      "error": "Class Loadbalancerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "log_parser_ai",
+      "class_found": false,
+      "error": "Class Logparserai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "market_gap_finder",
+      "class_found": false,
+      "error": "Class Marketgapfinder not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "model_switcher",
+      "class_found": false,
+      "error": "Class Modelswitcher not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "model_voyager",
+      "class_found": false,
+      "error": "Class Modelvoyager not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "network_monitor_ai",
+      "class_found": false,
+      "error": "Class Networkmonitorai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "overseer_voyager",
+      "class_found": false,
+      "error": "Class Overseervoyager not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "performance_analyzer_ai",
+      "class_found": false,
+      "error": "Class Performanceanalyzerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "predictive_maintenance_ai",
+      "class_found": false,
+      "error": "Class Predictivemaintenanceai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "product_cluster_ai",
+      "class_found": false,
+      "error": "Class Productclusterai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "prompt_tuner",
+      "class_found": false,
+      "error": "Class Prompttuner not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "quality_assurance_bot",
+      "class_found": false,
+      "error": "Class Qualityassurancebot not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "repricing_strategist_ai",
+      "class_found": false,
+      "error": "Class Repricingstrategistai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "resource_allocator_ai",
+      "class_found": false,
+      "error": "Class Resourceallocatorai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "risk_forecaster_ai",
+      "class_found": false,
+      "error": "Class Riskforecasterai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "scan_flow_tester",
+      "class_found": false,
+      "error": "Class Scanflowtester not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "security_scanner_ai",
+      "class_found": false,
+      "error": "Class Securityscannerai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "supplier_match",
+      "class_found": false,
+      "error": "Class Suppliermatch not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "trend_ai",
+      "class_found": false,
+      "error": "Class Trendai not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "ui_compliance_bot",
+      "class_found": false,
+      "error": "Class Uicompliancebot not found"
+    },
+    {
+      "status": "error",
+      "agent_name": "upc_verifier_ai",
+      "class_found": false,
+      "error": "Class Upcverifierai not found"
+    }
+  ]
+}

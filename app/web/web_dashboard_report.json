@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-07-24T04:20:35.973082",
+  "framework": "Next.js 14",
+  "components_created": 9,
+  "pages_created": 8,
+  "files": {
+    "config": [
+      "app/web/next.config.js",
+      "app/web/package.json",
+      "app/web/tailwind.config.js"
+    ],
+    "components": [
+      "app/web/components/DashboardLayout.tsx",
+      "app/web/components/ScraperControl.tsx",
+      "app/web/components/AnalyticsOverview.tsx"
+    ],
+    "pages": [
+      "app/web/pages/dashboard/index.tsx"
+    ],
+    "documentation": [
+      "app/web/README.md",
+      "app/web/.env.example"
+    ]
+  },
+  "next_steps": [
+    "Run 'npm install' in the web directory",
+    "Set up environment variables from .env.example",
+    "Configure Supabase and Stripe integrations",
+    "Run 'npm run dev' to start development server",
+    "Customize components for your brand",
+    "Deploy to Vercel or preferred platform"
+  ]
+}

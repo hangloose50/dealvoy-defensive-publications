@@ -1,0 +1,75 @@
+# Set up paths
+$projectRoot = "$PWD"
+$scoutPath = Join-Path $projectRoot "amazonscrapertoolkit\scout_assistant.py"
+$mainPath = Join-Path $projectRoot "amazonscrapertoolkit\main.py"
+
+# Define scout_assistant.py content
+$scoutContent = @'
+import re
+
+def parse_prompt(prompt: str) -> dict:
+    prompt = prompt.lower()
+    result = {
+        "sources": [],
+        "filters": {},
+        "exclusions": []
+    }
+
+    known_sources = [
+        "amazon", "walmart", "costco", "target", "ebay",
+        "dandh", "eedist", "frontiercoop", "empirediscount", "everesttoys"
+    ]
+
+    for source in known_sources:
+        if source in prompt:
+            result["sources"].append(source)
+
+    price_match = re.search(r"(under|below|less than)\\s*\\$?(\\d+)", prompt)
+    if price_match:
+        result["filters"]["max_price"] = float(price_match.group(2))
+
+    roi_match = re.search(r"(roi|return).*(>|greater than|over)\\s*(\\d+)%?", prompt)
+    if roi_match:
+        result["filters"]["min_roi"] = float(roi_match.group(3)) / 100.0
+
+    for source in known_sources:
+        if f"without {source}" in prompt:
+            result["exclusions"].append(source)
+
+    return result
+'@
+
+# Write scout_assistant.py
+$scoutDir = Split-Path $scoutPath -Parent
+if (-Not (Test-Path $scoutDir)) { New-Item -Path $scoutDir -ItemType Directory -Force }
+$scoutContent | Out-File -FilePath $scoutPath -Encoding UTF8 -Force
+Write-Host "✅ scout_assistant.py updated" -ForegroundColor Green
+
+# Append route to main.py (skip if already there)
+$mainContent = Get-Content $mainPath -Raw
+if ($mainContent -notmatch "/scout") {
+    Add-Content $mainPath @'
+from fastapi import Request
+from uuid import uuid4
+from app.scout_assistant import parse_prompt
+
+@app.post("/scout")
+async def scout_handler(req: Request, db=Depends(get_db)):
+    body = await req.json()
+    prompt = body.get("prompt", "")
+    webhook_id = uuid4()
+    parsed = parse_prompt(prompt)
+    test_upcs = ["123456789012", "987654321098"]
+    result = run_all_scrapers(webhook_id, test_upcs, db)
+    return {
+        "input": prompt,
+        "parsed": parsed,
+        "result": result
+    }
+'@
+    Write-Host "✅ /scout route appended to main.py" -ForegroundColor Green
+} else {
+    Write-Host "✅ /scout route already exists in main.py" -ForegroundColor Yellow
+}
+
+Write-Host "`n🎯 Scout Assistant setup complete!"

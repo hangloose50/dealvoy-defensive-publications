@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealvoy Agent Manager</title>
+  <style>
+    body { 
+      background: #0a2239; 
+      color: #fff; 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+    }
+    .header { 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { 
+      font-size: 2.5rem; 
+      margin: 0; 
+      letter-spacing: 2px; 
+    }
+    .header p { 
+      font-size: 1.2rem; 
+      color: #b3c7e6; 
+      margin: 10px 0; 
+    }
+    .controls { 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+    .controls button { 
+      background: #6ec1e4; 
+      color: #0a2239; 
+      border: none; 
+      border-radius: 6px; 
+      padding: 10px 20px; 
+      margin: 0 10px; 
+      cursor: pointer; 
+      font-size: 1rem; 
+    }
+    .controls button:hover { 
+      background: #4fa3d1; 
+    }
+    .agents-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+      gap: 20px; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+    .agent-card { 
+      background: #16324f; 
+      border-radius: 12px; 
+      padding: 20px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .agent-info h3 { 
+      color: #6ec1e4; 
+      margin: 0 0 10px 0; 
+      font-size: 1.1rem; 
+    }
+    .agent-info p { 
+      color: #b3c7e6; 
+      margin: 0; 
+      font-size: 0.9rem; 
+    }
+    .toggle-switch { 
+      position: relative; 
+      width: 60px; 
+      height: 30px; 
+    }
+    .toggle-switch input { 
+      opacity: 0; 
+      width: 0; 
+      height: 0; 
+    }
+    .slider { 
+      position: absolute; 
+      cursor: pointer; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background-color: #ccc; 
+      transition: .4s; 
+      border-radius: 30px; 
+    }
+    .slider:before { 
+      position: absolute; 
+      content: ""; 
+      height: 22px; 
+      width: 22px; 
+      left: 4px; 
+      bottom: 4px; 
+      background-color: white; 
+      transition: .4s; 
+      border-radius: 50%; 
+    }
+    input:checked + .slider { 
+      background-color: #6ec1e4; 
+    }
+    input:checked + .slider:before { 
+      transform: translateX(30px); 
+    }
+    .admin-only { 
+      opacity: 0.5; 
+      pointer-events: none; 
+    }
+    .category { 
+      margin-bottom: 30px; 
+    }
+    .category h2 { 
+      color: #6ec1e4; 
+      border-bottom: 2px solid #6ec1e4; 
+      padding-bottom: 10px; 
+      margin-bottom: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Dealvoy Agent Manager</h1>
+    <p>Control and Monitor 41 AI Agents | Patent Pending</p>
+  </div>
+  
+  <div class="controls">
+    <button onclick="enableAll()">Enable All</button>
+    <button onclick="disableAll()">Disable All</button>
+    <button onclick="filterCategory('core')">Core Only</button>
+    <button onclick="filterCategory('infra')">Infrastructure Only</button>
+    <button onclick="showAll()">Show All</button>
+  </div>
+
+  <div class="category">
+    <h2>Core Intelligence Agents (14)</h2>
+    <div class="agents-grid" id="core-agents">
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>ModelVoyager</h3>
+          <p>GPT model optimization and prompt caching</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>CategoryAI</h3>
+          <p>Product categorization and niche detection</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>TrendAI</h3>
+          <p>Real-time viral product detection</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>SupplierMatch</h3>
+          <p>Supplier intelligence and optimization</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>LabelGenerator</h3>
+          <p>International compliance documentation</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>UPCVerifierAI</h3>
+          <p>UPC/barcode verification and validation</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Infrastructure & Automation Agents (17)</h2>
+    <div class="agents-grid" id="infra-agents">
+      <div class="agent-card admin-only">
+        <div class="agent-info">
+          <h3>BuildBot</h3>
+          <p>Build system automation (ADMIN ONLY)</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>ScanFlowTester</h3>
+          <p>Computer vision processing validation</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card admin-only">
+        <div class="agent-info">
+          <h3>ModelSwitcher</h3>
+          <p>Dynamic AI model selection (ADMIN ONLY)</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Advanced Optimization Agents (10)</h2>
+    <div class="agents-grid" id="advanced-agents">
+      <div class="agent-card admin-only">
+        <div class="agent-info">
+          <h3>AutoOptimizerAI</h3>
+          <p>Autonomous system optimization (ADMIN ONLY)</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="agent-card">
+        <div class="agent-info">
+          <h3>CustomerVoyager</h3>
+          <p>Customer sentiment analysis</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function enableAll() {
+      const toggles = document.querySelectorAll('input[type="checkbox"]:not([disabled])');
+      toggles.forEach(toggle => toggle.checked = true);
+    }
+    
+    function disableAll() {
+      const toggles = document.querySelectorAll('input[type="checkbox"]:not([disabled])');
+      toggles.forEach(toggle => toggle.checked = false);
+    }
+    
+    function filterCategory(category) {
+      const allCategories = document.querySelectorAll('.category');
+      allCategories.forEach(cat => cat.style.display = 'none');
+      
+      if (category === 'core') {
+        document.querySelector('.category:nth-of-type(1)').style.display = 'block';
+      } else if (category === 'infra') {
+        document.querySelector('.category:nth-of-type(2)').style.display = 'block';
+      }
+    }
+    
+    function showAll() {
+      const allCategories = document.querySelectorAll('.category');
+      allCategories.forEach(cat => cat.style.display = 'block');
+    }
+  </script>
+</body>
+</html>
