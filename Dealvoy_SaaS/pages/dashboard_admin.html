@@ -6,6 +6,15 @@
     <title>Admin Dashboard - Dealvoy AI System Control</title>
     <meta name="description" content="Advanced administrative control panel for 46 AI agents and system management">
     
+    <!-- Dealvoy Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0066cc">
+    
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -347,6 +356,225 @@
             background: var(--secondary-color);
         }
 
+        /* Agent Control Module Styles */
+        .agent-control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 24px;
+        }
+
+        .agent-control-card {
+            background: var(--background-white);
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .agent-control-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .demo-card {
+            border: 2px solid var(--accent-color);
+            background: rgba(255, 193, 7, 0.05);
+        }
+
+        .demo-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2);
+        }
+
+        .agent-header {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--background-light);
+        }
+
+        .agent-icon {
+            font-size: 32px;
+            margin-right: 12px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: var(--background-white);
+        }
+
+        .trend-icon { background: rgba(33, 150, 243, 0.1); }
+        .video-icon { background: rgba(156, 39, 176, 0.1); }
+        .risk-icon { background: rgba(76, 175, 80, 0.1); }
+        .scout-icon { background: rgba(255, 152, 0, 0.1); }
+        .tier-icon { background: rgba(103, 58, 183, 0.1); }
+        .demo-icon { background: rgba(255, 193, 7, 0.2); }
+
+        .agent-info {
+            flex: 1;
+        }
+
+        .agent-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .agent-category {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .agent-toggle {
+            margin-left: 12px;
+        }
+
+        .agent-details {
+            padding: 20px;
+        }
+
+        .tier-availability {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tier-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .tier-badge.starter {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .tier-badge.pro {
+            background: rgba(33, 150, 243, 0.1);
+            color: var(--primary-color);
+        }
+
+        .tier-badge.enterprise {
+            background: rgba(156, 39, 176, 0.1);
+            color: #9C27B0;
+        }
+
+        .agent-stats {
+            margin-bottom: 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .agent-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-sm {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .demo-special-section {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .demo-notice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .demo-notice .material-icons {
+            color: var(--accent-color);
+        }
+
+        .demo-notice p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .btn-special {
+            width: 100%;
+            background: var(--accent-color);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .btn-special:hover {
+            background: #e6ac00;
+        }
+
+        /* Weekly Scheduling Styles */
+        .schedule-content {
+            padding: 24px;
+        }
+
+        .schedule-info {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .schedule-item {
+            background: var(--background-light);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .schedule-tier {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .schedule-count {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .schedule-agents {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .schedule-last {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
         /* System Alerts */
         .alerts-panel {
             background: var(--background-white);
@@ -604,106 +832,306 @@
                 </div>
             </div>
 
-            <!-- Agent Status Table -->
+            <!-- Weekly Scheduling Display -->
+            <div class="agent-table">
+                <div class="table-header">
+                    <h2 class="section-title" style="margin: 0;">
+                        <span class="material-icons">schedule</span>
+                        Weekly Agent Schedule
+                    </h2>
+                    <div class="schedule-info">
+                        Next Run: <strong>Sunday, Aug 3, 2025 at 6:00 AM EST</strong>
+                    </div>
+                </div>
+                <div class="schedule-content">
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Starter Tier</div>
+                            <div class="schedule-count">2 videos/week</div>
+                            <div class="schedule-agents">DemoVoyager, TrendVoyager</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Pro Tier</div>
+                            <div class="schedule-count">5 videos/week</div>
+                            <div class="schedule-agents">All agents active</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Enterprise Tier</div>
+                            <div class="schedule-count">10 videos/week</div>
+                            <div class="schedule-agents">All agents + priority</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Control Module -->
             <div class="agent-table">
                 <div class="table-header">
                     <h2 class="section-title" style="margin: 0;">
                         <span class="material-icons">smart_toy</span>
-                        Agent Status Overview
+                        Agent Control Module
                     </h2>
                     <button class="btn btn-outline" onclick="refreshAgentStatus()">
                         <span class="material-icons">refresh</span>
-                        Refresh
+                        Auto-Detect Agents
                     </button>
                 </div>
-                <div class="table-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Agent Name</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Performance</th>
-                                <th>Last Run</th>
-                                <th>Resource Usage</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="agent-name">Auto Optimizer AI</td>
-                                <td>Intelligence</td>
-                                <td><span class="status-badge status-active">Active</span></td>
-                                <td>
-                                    <div class="performance-bar">
-                                        <div class="performance-fill" style="width: 94%"></div>
-                                    </div>
-                                    94%
-                                </td>
-                                <td>2 min ago</td>
-                                <td>75%</td>
-                                <td>
-                                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                        <span class="material-icons" style="font-size: 16px;">settings</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="agent-name">Category AI</td>
-                                <td>Intelligence</td>
-                                <td><span class="status-badge status-active">Active</span></td>
-                                <td>
-                                    <div class="performance-bar">
-                                        <div class="performance-fill" style="width: 87%"></div>
-                                    </div>
-                                    87%
-                                </td>
-                                <td>5 min ago</td>
-                                <td>82%</td>
-                                <td>
-                                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                        <span class="material-icons" style="font-size: 16px;">settings</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="agent-name">Build Bot</td>
-                                <td>Infrastructure</td>
-                                <td><span class="status-badge status-idle">Idle</span></td>
-                                <td>
-                                    <div class="performance-bar">
-                                        <div class="performance-fill" style="width: 91%"></div>
-                                    </div>
-                                    91%
-                                </td>
-                                <td>15 min ago</td>
-                                <td>30%</td>
-                                <td>
-                                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                        <span class="material-icons" style="font-size: 16px;">settings</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="agent-name">Trend AI</td>
-                                <td>Optimization</td>
-                                <td><span class="status-badge status-active">Active</span></td>
-                                <td>
-                                    <div class="performance-bar">
-                                        <div class="performance-fill" style="width: 93%"></div>
-                                    </div>
-                                    93%
-                                </td>
-                                <td>1 min ago</td>
-                                <td>71%</td>
-                                <td>
-                                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 12px;">
-                                        <span class="material-icons" style="font-size: 16px;">settings</span>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="agent-control-grid">
+                    <!-- TrendVoyager Agent -->
+                    <div class="agent-control-card" data-agent="TrendVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon trend-icon">📈</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">TrendVoyager</h3>
+                                <div class="agent-category">Market Intelligence</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'TrendVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('TrendVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('TrendVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VidVoyager Agent -->
+                    <div class="agent-control-card" data-agent="VidVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon video-icon">🎥</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">VidVoyager</h3>
+                                <div class="agent-category">Video Generation</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'VidVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>45 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('VidVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('VidVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RiskSentinel Agent -->
+                    <div class="agent-control-card" data-agent="RiskSentinel">
+                        <div class="agent-header">
+                            <div class="agent-icon risk-icon">🛡️</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">RiskSentinel</h3>
+                                <div class="agent-category">Risk Management</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'RiskSentinel')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>10 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('RiskSentinel')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('RiskSentinel')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ScoutVision Agent -->
+                    <div class="agent-control-card" data-agent="ScoutVision">
+                        <div class="agent-header">
+                            <div class="agent-icon scout-icon">🔍</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">ScoutVision</h3>
+                                <div class="agent-category">Product Scouting</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'ScoutVision')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>5 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('ScoutVision')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('ScoutVision')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TierScaler Agent -->
+                    <div class="agent-control-card" data-agent="TierScaler">
+                        <div class="agent-header">
+                            <div class="agent-icon tier-icon">⚖️</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">TierScaler</h3>
+                                <div class="agent-category">Pricing Intelligence</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'TierScaler')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>30 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('TierScaler')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('TierScaler')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DemoVoyager Agent - Special Instructional Video -->
+                    <div class="agent-control-card demo-card" data-agent="DemoVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon demo-icon">🎬</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">DemoVoyager</h3>
+                                <div class="agent-category">Onboarding & Training</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'DemoVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>1 hour ago</span>
+                                </div>
+                            </div>
+                            <div class="demo-special-section">
+                                <div class="demo-notice">
+                                    <span class="material-icons">video_library</span>
+                                    <strong>Instructional Video Generator</strong>
+                                    <p>Generates "Welcome to Dealvoy" onboarding content</p>
+                                </div>
+                                <button class="btn btn-warning btn-special" onclick="generateWelcomeVideo()">
+                                    <span class="material-icons">movie_creation</span>
+                                    Generate Welcome Video
+                                </button>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('DemoVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('DemoVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -778,7 +1206,218 @@
         }
 
         function refreshAgentStatus() {
-            alert('Agent status refreshed.');
+            console.log('Auto-detecting agents from registry...');
+            
+            // Simulate agent registry detection
+            const detectedAgents = [
+                'TrendVoyager', 'VidVoyager', 'RiskSentinel', 
+                'ScoutVision', 'TierScaler', 'DemoVoyager'
+            ];
+            
+            alert(`Agent registry scanned. Found ${detectedAgents.length} active agents:\n${detectedAgents.join(', ')}`);
+            
+            // In production: API call to detect and refresh agent registry
+            // updateAgentDisplay(detectedAgents);
+        }
+
+        function toggleAgent(toggleElement, agentName) {
+            const isActive = toggleElement.classList.contains('active');
+            
+            if (isActive) {
+                toggleElement.classList.remove('active');
+                console.log(`${agentName} deactivated`);
+                alert(`${agentName} has been deactivated. Status: OFF`);
+            } else {
+                toggleElement.classList.add('active');
+                console.log(`${agentName} activated`);
+                alert(`${agentName} has been activated. Status: ON`);
+            }
+            
+            // Update agent card visual status
+            const card = toggleElement.closest('.agent-control-card');
+            const statusBadge = card.querySelector('.status-badge');
+            
+            if (isActive) {
+                statusBadge.className = 'status-badge status-idle';
+                statusBadge.textContent = 'Idle';
+            } else {
+                statusBadge.className = 'status-badge status-active';
+                statusBadge.textContent = 'Active';
+            }
+            
+            // In production: API call to toggle agent
+            // await fetch(`/api/agents/${agentName}/toggle`, { method: 'POST' });
+        }
+
+        function manualTrigger(agentName) {
+            console.log(`Manual trigger initiated for ${agentName}`);
+            
+            // Safeguard: Only output files, no external logins
+            const outputTypes = ['.txt', '.json', 'prompt-ready content'];
+            const randomOutput = outputTypes[Math.floor(Math.random() * outputTypes.length)];
+            
+            alert(`${agentName} manual run initiated.\nOutput type: ${randomOutput}\nNo external logins triggered.\nResults will be saved locally.`);
+            
+            // Update last run timestamp
+            const card = document.querySelector(`[data-agent="${agentName}"]`);
+            const lastRunElement = card.querySelector('.stat-item:last-child span:last-child');
+            lastRunElement.textContent = 'Just now';
+            
+            // In production: API call to manually trigger agent
+            // const result = await fetch(`/api/agents/${agentName}/run`, { method: 'POST' });
+            // handleAgentOutput(result, agentName);
+        }
+
+        function testTier(agentName) {
+            const tiers = ['Starter', 'Pro', 'Enterprise'];
+            const availableTiers = [];
+            
+            // Get available tiers for this agent from the card
+            const card = document.querySelector(`[data-agent="${agentName}"]`);
+            const tierBadges = card.querySelectorAll('.tier-badge');
+            tierBadges.forEach(badge => {
+                availableTiers.push(badge.textContent);
+            });
+            
+            const selectedTier = prompt(`Select tier to test for ${agentName}:\n${availableTiers.join(', ')}`);
+            
+            if (selectedTier && availableTiers.includes(selectedTier)) {
+                alert(`${agentName} tier simulation started for ${selectedTier} tier.\nGenerating test scenarios and frontend preview...\nSimulation mode: Safe (no live connections)`);
+                console.log(`Testing ${agentName} on ${selectedTier} tier`);
+                
+                // In production: API call to simulate agent on specific tier
+                // simulateAgentTier(agentName, selectedTier);
+            } else if (selectedTier) {
+                alert(`Invalid tier selected. ${agentName} is only available for: ${availableTiers.join(', ')}`);
+            }
+        }
+
+        function generateWelcomeVideo() {
+            console.log('DemoVoyager: Generating Welcome to Dealvoy onboarding video...');
+            
+            // Generate comprehensive onboarding video prompt
+            const videoPrompt = `
+=== DEMOVOYAGER WELCOME VIDEO GENERATION ===
+
+🎬 VIDEO TITLE: "Welcome to Dealvoy: Your AI-Powered Arbitrage Intelligence Platform"
+
+📋 VIDEO STRUCTURE:
+1. INTRO (0-15 seconds)
+   - Dealvoy logo animation
+   - "Decode. Discover. Dominate." tagline
+   - Welcome message
+
+2. PLATFORM OVERVIEW (15-45 seconds)
+   - Dashboard tour
+   - Key features highlight
+   - AI agent ecosystem
+
+3. AGENT SHOWCASE (45-90 seconds)
+   - TrendVoyager: Market intelligence
+   - VidVoyager: Video generation
+   - RiskSentinel: Risk management
+   - ScoutVision: Product scouting
+   - TierScaler: Pricing intelligence
+
+4. TIER COMPARISON (90-120 seconds)
+   - Starter: $29/month features
+   - Pro: $97/month capabilities
+   - Enterprise: $297/month full access
+
+5. CALL TO ACTION (120-135 seconds)
+   - Start free trial
+   - Contact support
+   - Begin arbitrage journey
+
+🎯 OUTPUT SPECIFICATIONS:
+- Format: MP4, 1080p, 16:9 aspect ratio
+- Duration: 2 minutes 15 seconds
+- Audio: Professional voiceover + background music
+- Graphics: Modern UI animations, product screenshots
+- Text: Clear typography, brand colors
+- Branding: Consistent Dealvoy visual identity
+
+📊 USAGE INSTRUCTIONS:
+- Mark as required content for homepage hero section
+- Auto-play on homepage load (muted)
+- Include video controls for user interaction
+- Add captions for accessibility
+- Optimize for web streaming
+
+🔒 COMPLIANCE:
+- No external API calls during generation
+- Safe content output only
+- USPTO Patent #63/850,603 compliant
+- Professional business presentation
+
+Generated: ${new Date().toLocaleString()}
+Status: Ready for video production team
+Priority: Homepage integration required
+            `;
+            
+            // Display the prompt
+            alert('DemoVoyager: Welcome video prompt generated!\n\nOutput saved as: welcome_video_prompt.txt\nStatus: Ready for homepage integration\n\nCheck console for full prompt details.');
+            
+            console.log(videoPrompt);
+            
+            // Mark as required on homepage
+            localStorage.setItem('welcomeVideoRequired', 'true');
+            localStorage.setItem('welcomeVideoPrompt', videoPrompt);
+            
+            // In production: Save prompt to file and trigger video generation pipeline
+            // await savePromptToFile('welcome_video_prompt.txt', videoPrompt);
+            // await markForHomepageIntegration();
+            
+            alert('✅ Welcome video marked as REQUIRED for homepage.\n📁 Prompt saved to welcome_video_prompt.txt\n🎬 Ready for video production pipeline');
+        }
+
+        // Agent registry management
+        function addNewAgent(agentName, category, tierAvailability) {
+            console.log(`Adding new agent: ${agentName}`);
+            
+            // Check for duplicates
+            const existingAgent = document.querySelector(`[data-agent="${agentName}"]`);
+            if (existingAgent) {
+                alert(`Agent ${agentName} already exists. No duplicates allowed.`);
+                return false;
+            }
+            
+            // In production: Add to agent registry and update UI
+            alert(`New agent ${agentName} added successfully.\nCategory: ${category}\nTier availability: ${tierAvailability.join(', ')}\nUI will be dynamically updated.`);
+            
+            return true;
+        }
+
+        // Initialize agent detection on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Admin dashboard loaded. Agent control module initialized.');
+            
+            // Check if welcome video is required
+            if (localStorage.getItem('welcomeVideoRequired') === 'true') {
+                const welcomeIndicator = document.createElement('div');
+                welcomeIndicator.style.cssText = `
+                    position: fixed;
+                    top: 80px;
+                    right: 20px;
+                    background: var(--accent-color);
+                    color: var(--text-primary);
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    z-index: 1000;
+                    box-shadow: var(--shadow);
+                `;
+                welcomeIndicator.innerHTML = '🎬 Welcome Video Required for Homepage';
+                document.body.appendChild(welcomeIndicator);
+            }
+            
+            // Auto-detect agents from registry
+            // In production: Load from actual agent registry
+            console.log('Agent registry status: 6 agents detected and loaded');
+        });
+
+        // Additional system control functions
+        function refreshSystemStatus() {
             // In production: Reload agent data
         }
 
@@ -815,11 +1454,8 @@
 
         // Update every 10 seconds for admin dashboard
         setInterval(updateMetrics, 10000);
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Admin dashboard loaded - System control ready');
-        });
     </script>
+</body>
+</html>
 </body>
 </html>

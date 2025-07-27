@@ -1,0 +1,20 @@
+
+=== DEMOVOYAGER WELCOME VIDEO GENERATION ===
+
+🎬 VIDEO TITLE: 'Welcome to Dealvoy: Your AI-Powered Arbitrage Intelligence Platform'
+
+📋 VIDEO STRUCTURE:
+1. INTRO (0-15 seconds) - Dealvoy logo animation + 'Decode. Discover. Dominate.'
+2. PLATFORM OVERVIEW (15-45 seconds) - Dashboard tour + AI agent ecosystem  
+3. AGENT SHOWCASE (45-90 seconds) - TrendVoyager, VidVoyager, RiskSentinel, etc.
+4. TIER COMPARISON (90-120 seconds) - Starter $29, Pro $97, Enterprise $297
+5. CALL TO ACTION (120-135 seconds) - Start free trial
+
+🎯 OUTPUT: MP4, 1080p, 2:15 duration, Professional voiceover
+📊 USAGE: Homepage hero section auto-play (muted)
+🔒 COMPLIANCE: USPTO Patent #63/850,603 compliant
+
+Generated: Sun Jul 27 07:35:37 EST 2025
+Status: Ready for homepage integration
+Priority: Homepage integration required
+

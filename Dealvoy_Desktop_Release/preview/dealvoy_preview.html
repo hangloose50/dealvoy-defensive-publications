@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealvoy App Preview - Decode. Discover. Dominate.</title>
+    <meta name="description" content="Interactive preview of the Dealvoy mobile app with 46 AI agents for retail arbitrage">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .preview-header {
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .preview-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .preview-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .preview-slogan {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .preview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .phone-mockup {
+            position: relative;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .phone-frame {
+            width: 300px;
+            height: 600px;
+            background: #333;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .app-header {
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .app-content {
+            padding: 20px;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .agent-card {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .agent-card:hover {
+            transform: scale(1.05);
+        }
+
+        .agent-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .agent-name {
+            font-size: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .agent-status {
+            font-size: 8px;
+            color: #28a745;
+            margin-top: 2px;
+        }
+
+        .features-panel {
+            flex: 1;
+        }
+
+        .feature-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            space-y: 10px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background 0.2s;
+        }
+
+        .feature-item:hover {
+            background: #e9ecef;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .marketplace-toggles {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .marketplace-toggle {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .marketplace-logo {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .marketplace-name {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .marketplace-status {
+            font-size: 10px;
+            color: #28a745;
+            margin-top: 5px;
+        }
+
+        .demo-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .demo-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .patent-notice {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0066cc;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .preview-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .phone-frame {
+                width: 250px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1 class="preview-title">📱 Dealvoy Mobile App Preview</h1>
+            <p class="preview-subtitle">AI-Powered Retail Arbitrage Platform</p>
+            <div class="preview-slogan">Decode. Discover. Dominate.</div>
+        </div>
+
+        <div class="preview-content">
+            <!-- Phone Mockup -->
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            🤖 Dealvoy - 46 AI Agents
+                        </div>
+                        <div class="app-content">
+                            <!-- Agent Grid -->
+                            <div class="agent-grid">
+                                <div class="agent-card">
+                                    <div class="agent-icon">🔍</div>
+                                    <div class="agent-name">Scanner AI</div>
+                                    <div class="agent-status">● Active</div>
+                                </div>
+                                <div class="agent-card">
+                                    <div class="agent-icon">💰</div>
+                                    <div class="agent-name">ROI Calculator</div>
+                                    <div class="agent-status">● Active</div>
+                                </div>
+                                <div class="agent-card">
+                                    <div class="agent-icon">📊</div>
+                                    <div class="agent-name">Trend AI</div>
+                                    <div class="agent-status">● Active</div>
+                                </div>
+                                <div class="agent-card">
+                                    <div class="agent-icon">🎯</div>
+                                    <div class="agent-name">Auto Optimizer</div>
+                                    <div class="agent-status">● Active</div>
+                                </div>
+                            </div>
+
+                            <!-- Stats Bar -->
+                            <div class="stats-bar">
+                                <div class="stat-item">
+                                    <div class="stat-value">127</div>
+                                    <div class="stat-label">Products</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">+34%</div>
+                                    <div class="stat-label">Avg ROI</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">94%</div>
+                                    <div class="stat-label">Success</div>
+                                </div>
+                            </div>
+
+                            <!-- Marketplace Toggles -->
+                            <div class="marketplace-toggles">
+                                <div class="marketplace-toggle">
+                                    <div class="marketplace-logo">🛒</div>
+                                    <div class="marketplace-name">Amazon</div>
+                                    <div class="marketplace-status">● Active</div>
+                                </div>
+                                <div class="marketplace-toggle">
+                                    <div class="marketplace-logo">🔨</div>
+                                    <div class="marketplace-name">eBay</div>
+                                    <div class="marketplace-status">● Active</div>
+                                </div>
+                                <div class="marketplace-toggle">
+                                    <div class="marketplace-logo">🏪</div>
+                                    <div class="marketplace-name">Walmart</div>
+                                    <div class="marketplace-status">● Active</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Panel -->
+            <div class="features-panel">
+                <div class="feature-section">
+                    <h2 class="section-title">
+                        🧠 Arbitrage Intelligence V1
+                    </h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">📦</div>
+                            <span><strong>Product Memory Library</strong> - Store & filter all scanned products</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <span><strong>AI Recommendations</strong> - Buy/Watch/Avoid signals with confidence</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">📈</div>
+                            <span><strong>Sales Rank Tracker</strong> - Historical trends with real-time alerts</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🛍️</div>
+                            <span><strong>Multi-Marketplace ROI</strong> - Amazon, eBay, Walmart comparison</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🔍</div>
+                            <span><strong>Auto Supplier Discovery</strong> - 10+ new sources weekly</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h2 class="section-title">
+                        🤖 46 AI Agents
+                    </h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">🔍</div>
+                            <span><strong>Intelligence Agents:</strong> Scanner, Trend, Auto Optimizer</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <span><strong>Financial Agents:</strong> ROI Calculator, Profit Analyzer</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <span><strong>Analytics Agents:</strong> Sales Tracker, Rank Monitor</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <span><strong>Security Agents:</strong> Compliance, Risk Assessment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="demo-buttons">
+                    <a href="/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_Offline_Bundle/index.html" class="demo-btn btn-primary">
+                        🌐 Web Platform Demo
+                    </a>
+                    <button onclick="launchSimulator()" class="demo-btn btn-secondary">
+                        📱 Launch iOS Simulator
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="patent-notice">
+            🛡️ Protected by USPTO Patent #63/850,603 | AI-Powered Retail Arbitrage Intelligence System
+        </div>
+    </div>
+
+    <script>
+        function launchSimulator() {
+            alert('🚀 To launch iOS Simulator:\n\n1. Open Terminal in VS Code\n2. Navigate to DealvoyApp folder\n3. Run: npm install\n4. Run: npx pod-install\n5. Run: npx react-native run-ios\n\nOr run: open -a Simulator first if needed');
+        }
+
+        // Simulate real-time updates
+        setInterval(() => {
+            const statValues = document.querySelectorAll('.stat-value');
+            statValues.forEach(stat => {
+                if (stat.textContent.includes('%')) {
+                    const currentValue = parseFloat(stat.textContent.replace('%', '').replace('+', ''));
+                    const newValue = currentValue + (Math.random() - 0.5) * 2;
+                    stat.textContent = (newValue > 0 ? '+' : '') + newValue.toFixed(1) + '%';
+                }
+            });
+        }, 5000);
+
+        // Add interaction effects
+        document.querySelectorAll('.agent-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.background = '#e3f2fd';
+                setTimeout(() => {
+                    card.style.background = 'white';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+  "suppliers": [
+    {
+      "name": "Amazon Business",
+      "domain": "business.amazon.com",
+      "category": "general",
+      "supplier_type": "retailer",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": true,
+      "trust_score": 0.95,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://business.amazon.com",
+        "email": "business@amazon.com",
+        "phone": "1-888-280-4331"
+      },
+      "marketplace_presence": ["amazon", "own_website"],
+      "estimated_inventory_size": "massive",
+      "avg_response_time": "instant"
+    },
+    {
+      "name": "Walmart Business",
+      "domain": "business.walmart.com",
+      "category": "general",
+      "supplier_type": "retailer",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": true,
+      "trust_score": 0.92,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://business.walmart.com",
+        "email": "business@walmart.com",
+        "phone": "1-800-925-6278"
+      },
+      "marketplace_presence": ["walmart", "own_website"],
+      "estimated_inventory_size": "massive",
+      "avg_response_time": "instant"
+    },
+    {
+      "name": "Costco Business Center",
+      "domain": "costcobusinesscenter.com",
+      "category": "general",
+      "supplier_type": "wholesaler",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.89,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://costcobusinesscenter.com",
+        "email": "business@costco.com",
+        "phone": "1-800-774-2678"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "large",
+      "avg_response_time": "1-2 hours"
+    },
+    {
+      "name": "Best Buy Business",
+      "domain": "business.bestbuy.com",
+      "category": "electronics",
+      "supplier_type": "retailer",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": true,
+      "trust_score": 0.88,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://business.bestbuy.com",
+        "email": "business@bestbuy.com",
+        "phone": "1-866-574-2378"
+      },
+      "marketplace_presence": ["own_website", "amazon"],
+      "estimated_inventory_size": "large",
+      "avg_response_time": "30 minutes"
+    },
+    {
+      "name": "Office Depot Business Solutions",
+      "domain": "business.officedepot.com",
+      "category": "office",
+      "supplier_type": "retailer",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.82,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://business.officedepot.com",
+        "email": "business@officedepot.com",
+        "phone": "1-800-463-3768"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-4 hours"
+    },
+    {
+      "name": "Tech Direct Supply",
+      "domain": "techdirectsupply.com",
+      "category": "electronics",
+      "supplier_type": "distributor",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.75,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://techdirectsupply.com",
+        "email": "contact@techdirectsupply.com",
+        "phone": "TBD"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-3 days"
+    },
+    {
+      "name": "Home Goods Wholesale",
+      "domain": "homegoodswholesale.com",
+      "category": "home",
+      "supplier_type": "wholesaler",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.75,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://homegoodswholesale.com",
+        "email": "contact@homegoodswholesale.com",
+        "phone": "TBD"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-3 days"
+    },
+    {
+      "name": "Beauty Source Direct",
+      "domain": "beautysourcedirect.com",
+      "category": "health",
+      "supplier_type": "distributor",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.75,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://beautysourcedirect.com",
+        "email": "contact@beautysourcedirect.com",
+        "phone": "TBD"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-3 days"
+    },
+    {
+      "name": "Toy Liquidation Outlet",
+      "domain": "toyliquidationoutlet.com",
+      "category": "toys",
+      "supplier_type": "liquidation",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.75,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://toyliquidationoutlet.com",
+        "email": "contact@toyliquidationoutlet.com",
+        "phone": "TBD"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-3 days"
+    },
+    {
+      "name": "Fashion Forward Supply",
+      "domain": "fashionforwardsupply.com",
+      "category": "clothing",
+      "supplier_type": "wholesaler",
+      "price_visibility": true,
+      "shipping_usa": true,
+      "api_available": false,
+      "trust_score": 0.75,
+      "discovered_date": "2025-07-27T10:00:00Z",
+      "last_validated": "2025-07-27T10:00:00Z",
+      "contact_info": {
+        "website": "https://fashionforwardsupply.com",
+        "email": "contact@fashionforwardsupply.com",
+        "phone": "TBD"
+      },
+      "marketplace_presence": ["own_website"],
+      "estimated_inventory_size": "medium",
+      "avg_response_time": "2-3 days"
+    }
+  ],
+  "discovery_settings": {
+    "weekly_target": 10,
+    "validation_enabled": true,
+    "auto_append": true,
+    "last_discovery": "2025-07-27T10:00:00Z",
+    "total_discovered": 10
+  }
+}

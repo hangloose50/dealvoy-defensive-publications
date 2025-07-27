@@ -1,0 +1,55 @@
+{
+  "archiveInfo": {
+    "title": "VidVoyager Video Prompt Archive",
+    "description": "Auto-generated weekly video prompts stored for customer access",
+    "lastUpdated": "2025-07-27T19:45:00Z",
+    "totalPrompts": 3
+  },
+  "videoPrompts": [
+    {
+      "agent": "VidVoyager",
+      "tier": "Pro",
+      "timestamp": "2025-07-27T08:30:00Z",
+      "outputType": "video-prompt.txt",
+      "archivePath": "/customer_portal/video_library/2025-07-27_VidVoyager_Pro_video_prompt.txt",
+      "status": "archived",
+      "prompt": "Create a 60-second product showcase video for trending kitchen gadgets. Focus on air fryer accessories with high ROI potential. Include price comparison overlays and call-to-action for arbitrage opportunities.",
+      "metadata": {
+        "category": "Kitchen & Home",
+        "estimatedROI": "45-60%",
+        "targetMarketplaces": ["Amazon", "eBay", "Walmart"],
+        "seasonality": "Summer cooking trends"
+      }
+    },
+    {
+      "agent": "VidVoyager", 
+      "tier": "Elite",
+      "timestamp": "2025-07-26T14:15:00Z",
+      "outputType": "video-prompt.txt",
+      "archivePath": "/customer_portal/video_library/2025-07-26_VidVoyager_Elite_video_prompt.txt",
+      "status": "archived",
+      "prompt": "Generate promotional video content for back-to-school electronics. Target tablets, headphones, and accessories with verified profit margins. Include competitor analysis and pricing strategy overlays.",
+      "metadata": {
+        "category": "Electronics",
+        "estimatedROI": "35-50%", 
+        "targetMarketplaces": ["Amazon", "eBay", "Mercari"],
+        "seasonality": "Back-to-school August rush"
+      }
+    },
+    {
+      "agent": "VidVoyager",
+      "tier": "Premium", 
+      "timestamp": "2025-07-25T10:45:00Z",
+      "outputType": "video-prompt.txt",
+      "archivePath": "/customer_portal/video_library/2025-07-25_VidVoyager_Premium_video_prompt.txt",
+      "status": "archived",
+      "prompt": "Create explainer video for fitness equipment arbitrage opportunities. Focus on resistance bands, yoga mats, and small workout gear with consistent demand patterns.",
+      "metadata": {
+        "category": "Sports & Fitness",
+        "estimatedROI": "25-40%",
+        "targetMarketplaces": ["Amazon", "eBay"],
+        "seasonality": "Year-round demand"
+      }
+    }
+  ]
+}

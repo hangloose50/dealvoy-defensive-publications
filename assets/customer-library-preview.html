@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Video Library - Dealvoy</title>
+    
+    <!-- Dealvoy Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .library-header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .library-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .library-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .library-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .library-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 8px 0 0 #3b82f6, 16px 0 0 #8b5cf6;
+        }
+
+        .library-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .library-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .library-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .filter-button {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button.active {
+            background: #0066cc;
+            border-color: #0066cc;
+            color: white;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 180px;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(0,102,204,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .play-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 102, 204, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-icon:hover {
+            background: #0066cc;
+            transform: scale(1.1);
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .video-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .video-date {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .video-duration {
+            font-size: 12px;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 12px;
+            color: #666;
+        }
+
+        .video-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .video-tag {
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .agent-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .agent-icon {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .welcome-featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .featured-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .featured-text {
+            flex: 1;
+        }
+
+        .featured-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .featured-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .featured-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .featured-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .archive-status {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .status-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .status-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .status-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .status-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+
+        .status-label {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Library Header -->
+    <header class="library-header">
+        <div class="header-content">
+            <div class="library-logo">
+                <div class="library-icon">D</div>
+                <div>
+                    <div class="library-title">Video Library</div>
+                    <div class="library-subtitle">AI-Generated Content Archive</div>
+                </div>
+            </div>
+            
+            <div class="library-stats">
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Total Videos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">AI Agents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8.5h</div>
+                    <div class="stat-label">Total Runtime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Week 29</div>
+                    <div class="stat-label">Latest Batch</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Featured Welcome Video -->
+        <div class="welcome-featured">
+            <div class="featured-content">
+                <div class="featured-icon">🎬</div>
+                <div class="featured-text">
+                    <div class="featured-title">Welcome to Dealvoy</div>
+                    <div class="featured-subtitle">Your comprehensive introduction to AI-powered e-commerce intelligence</div>
+                    <a href="#" class="featured-button">
+                        <span class="material-icons">play_arrow</span>
+                        Watch Introduction
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Controls -->
+        <div class="content-header">
+            <h2 class="section-title">Archived Content</h2>
+            <div class="filter-controls">
+                <button class="filter-button active">All Videos</button>
+                <button class="filter-button">VidVoyager</button>
+                <button class="filter-button">TrendVoyager</button>
+                <button class="filter-button">DemoVoyager</button>
+            </div>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid">
+            <!-- VidVoyager Video 1 -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">V</div>
+                        VidVoyager
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Weekly Market Trends Analysis</div>
+                    <div class="video-description">Deep dive into e-commerce trends, consumer behavior patterns, and emerging opportunities for Week 29.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 20, 2025
+                        </div>
+                        <div class="video-duration">15:30</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Trends</span>
+                        <span class="video-tag">Weekly</span>
+                        <span class="video-tag">Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TrendVoyager Video -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">T</div>
+                        TrendVoyager
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Product Opportunity Scanner</div>
+                    <div class="video-description">Automated scanning results revealing high-potential products and market gaps for profitable arbitrage.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 21, 2025
+                        </div>
+                        <div class="video-duration">12:45</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Products</span>
+                        <span class="video-tag">Opportunities</span>
+                        <span class="video-tag">Scanner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VidVoyager Video 2 -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">V</div>
+                        VidVoyager
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Competitive Intelligence Report</div>
+                    <div class="video-description">Comprehensive analysis of competitor strategies, pricing moves, and market positioning insights.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 22, 2025
+                        </div>
+                        <div class="video-duration">18:20</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Competition</span>
+                        <span class="video-tag">Intelligence</span>
+                        <span class="video-tag">Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DemoVoyager Video -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">D</div>
+                        DemoVoyager
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Platform Navigation Guide</div>
+                    <div class="video-description">Step-by-step walkthrough of Dealvoy's 46 AI agents and how to maximize their potential for your business.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 23, 2025
+                        </div>
+                        <div class="video-duration">22:15</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Tutorial</span>
+                        <span class="video-tag">Navigation</span>
+                        <span class="video-tag">Guide</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RiskSentinel Video -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">R</div>
+                        RiskSentinel
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Risk Assessment & Mitigation</div>
+                    <div class="video-description">Automated risk analysis covering market volatility, supplier reliability, and inventory management strategies.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 24, 2025
+                        </div>
+                        <div class="video-duration">14:10</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Risk</span>
+                        <span class="video-tag">Assessment</span>
+                        <span class="video-tag">Mitigation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ScoutVision Video -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="agent-badge">
+                        <div class="agent-icon">S</div>
+                        ScoutVision
+                    </div>
+                    <div class="play-icon">
+                        <span class="material-icons">play_arrow</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Market Scout Intelligence</div>
+                    <div class="video-description">Advanced scouting report on emerging markets, consumer shifts, and untapped niches ready for exploitation.</div>
+                    <div class="video-meta">
+                        <div class="video-date">
+                            <span class="material-icons" style="font-size: 14px;">schedule</span>
+                            Jul 25, 2025
+                        </div>
+                        <div class="video-duration">16:55</div>
+                    </div>
+                    <div class="video-tags">
+                        <span class="video-tag">Scouting</span>
+                        <span class="video-tag">Markets</span>
+                        <span class="video-tag">Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Archive Status -->
+        <div class="archive-status">
+            <div class="status-header">
+                <div class="status-icon">
+                    <span class="material-icons">archive</span>
+                </div>
+                <div class="status-title">Auto-Archive System Status</div>
+            </div>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-number">✓</div>
+                    <div class="status-label">VidVoyager Integration</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-number">24/7</div>
+                    <div class="status-label">Monitoring Active</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-number">100%</div>
+                    <div class="status-label">Archive Success Rate</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-number">JSON</div>
+                    <div class="status-label">Index Format</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
