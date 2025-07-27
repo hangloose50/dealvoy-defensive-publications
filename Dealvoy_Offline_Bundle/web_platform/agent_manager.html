@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Manager - Dealvoy AI Control Center</title>
+    <meta name="description" content="Advanced management interface for 46 AI agents with real-time monitoring and control">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --danger-color: #F44336;
+            --warning-color: #FF9800;
+            --info-color: #2196F3;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--background-light);
+        }
+
+        /* Main Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            padding: 24px 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 20px;
+            height: fit-content;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-section {
+            margin-bottom: 24px;
+        }
+
+        .filter-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+        }
+
+        .filter-checkbox {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .filter-checkbox.checked {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .filter-checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* Agent Grid */
+        .agent-section {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .agent-count {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .bulk-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .agent-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+            background: var(--background-white);
+        }
+
+        .agent-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .agent-info {
+            flex: 1;
+        }
+
+        .agent-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .agent-category {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .agent-toggle {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background: var(--border-color);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .agent-toggle.active {
+            background: var(--secondary-color);
+        }
+
+        .agent-toggle::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .agent-toggle.active::before {
+            transform: translateX(20px);
+        }
+
+        .agent-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .status-active {
+            background: var(--secondary-color);
+        }
+
+        .status-idle {
+            background: var(--warning-color);
+        }
+
+        .status-error {
+            background: var(--danger-color);
+        }
+
+        .status-text {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .agent-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .performance-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        .performance-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            transition: width 0.3s;
+        }
+
+        .agent-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: transparent;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .action-btn:hover {
+            background: var(--background-light);
+        }
+
+        .action-btn.primary {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .action-btn.primary:hover {
+            background: #0052a3;
+        }
+
+        /* Category Badges */
+        .category-intelligence {
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .category-infrastructure {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--secondary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .category-optimization {
+            background: rgba(255, 193, 7, 0.1);
+            color: var(--accent-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .sidebar {
+                order: 2;
+            }
+            
+            .agent-section {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bulk-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/pages/home.html" class="logo">
+                    <span class="material-icons">smart_toy</span>
+                    <span class="logo-text">Dealvoy</span>
+                </a>
+                
+                <div class="header-actions">
+                    <a href="/pages/dashboard_user.html" class="btn btn-outline">
+                        <span class="material-icons">dashboard</span>
+                        Dashboard
+                    </a>
+                    <button class="btn btn-primary" onclick="runAllAgents()">
+                        <span class="material-icons">play_arrow</span>
+                        Run All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">
+                <span class="material-icons">tune</span>
+                Filters
+            </h2>
+            
+            <!-- Search -->
+            <div class="filter-section">
+                <div class="filter-title">Search Agents</div>
+                <input type="text" class="search-box" placeholder="Search by name..." id="searchInput">
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="filter-section">
+                <div class="filter-title">Category</div>
+                <div class="filter-group">
+                    <div class="filter-item">
+                        <div class="filter-checkbox checked" data-filter="all"></div>
+                        <label class="filter-label">All Categories</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-filter="intelligence"></div>
+                        <label class="filter-label">Intelligence (16)</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-filter="infrastructure"></div>
+                        <label class="filter-label">Infrastructure (15)</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-filter="optimization"></div>
+                        <label class="filter-label">Optimization (15)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status Filter -->
+            <div class="filter-section">
+                <div class="filter-title">Status</div>
+                <div class="filter-group">
+                    <div class="filter-item">
+                        <div class="filter-checkbox checked" data-status="all"></div>
+                        <label class="filter-label">All Status</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-status="active"></div>
+                        <label class="filter-label">Active (43)</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-status="idle"></div>
+                        <label class="filter-label">Idle (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-checkbox" data-status="error"></div>
+                        <label class="filter-label">Error (1)</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Agent Grid -->
+        <section class="agent-section">
+            <div class="section-header">
+                <div>
+                    <h1 class="section-title">Agent Manager</h1>
+                    <p class="agent-count">46 AI agents • 43 active • Protected by USPTO #63/850,603</p>
+                </div>
+            </div>
+            
+            <!-- Bulk Actions -->
+            <div class="bulk-actions">
+                <button class="btn btn-primary" onclick="startAllAgents()">
+                    <span class="material-icons">play_arrow</span>
+                    Start All
+                </button>
+                <button class="btn btn-outline" onclick="stopAllAgents()">
+                    <span class="material-icons">stop</span>
+                    Stop All
+                </button>
+                <button class="btn btn-outline" onclick="restartAllAgents()">
+                    <span class="material-icons">refresh</span>
+                    Restart All
+                </button>
+                <button class="btn btn-outline" onclick="exportAgentData()">
+                    <span class="material-icons">download</span>
+                    Export Data
+                </button>
+            </div>
+            
+            <!-- Agent Cards -->
+            <div class="agent-grid" id="agentGrid">
+                <!-- Intelligence Agents -->
+                <div class="agent-card" data-category="intelligence" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">Auto Optimizer AI</div>
+                            <div class="agent-category category-intelligence">Intelligence</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 2 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">94%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">75%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 94%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agent-card" data-category="intelligence" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">Category AI</div>
+                            <div class="agent-category category-intelligence">Intelligence</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 5 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">87%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">82%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 87%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agent-card" data-category="intelligence" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">Cash Flow Predictor AI</div>
+                            <div class="agent-category category-intelligence">Intelligence</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 1 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">92%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">68%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 92%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Agents -->
+                <div class="agent-card" data-category="infrastructure" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">API Gateway Monitor</div>
+                            <div class="agent-category category-infrastructure">Infrastructure</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 1 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">89%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 89%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agent-card" data-category="infrastructure" data-status="idle">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">Build Bot</div>
+                            <div class="agent-category category-infrastructure">Infrastructure</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-idle"></div>
+                        <span class="status-text">Idle</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 15 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">91%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 91%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Optimization Agents -->
+                <div class="agent-card" data-category="optimization" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">Trend AI</div>
+                            <div class="agent-category category-optimization">Optimization</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 2 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">93%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">71%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 93%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agent-card" data-category="optimization" data-status="active">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <div class="agent-name">A/B Price Tester</div>
+                            <div class="agent-category category-optimization">Optimization</div>
+                        </div>
+                        <div class="agent-toggle active" onclick="toggleAgent(this)"></div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-dot status-active"></div>
+                        <span class="status-text">Active</span>
+                        <span style="margin-left: auto; font-size: 12px; color: var(--text-secondary);">Last run: 4 min ago</span>
+                    </div>
+                    <div class="agent-metrics">
+                        <div class="metric">
+                            <div class="metric-value">85%</div>
+                            <div class="metric-label">Performance</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">55%</div>
+                            <div class="metric-label">Resource</div>
+                        </div>
+                    </div>
+                    <div class="performance-bar">
+                        <div class="performance-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="action-btn primary">
+                            <span class="material-icons" style="font-size: 14px;">play_arrow</span>
+                            Run
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">settings</span>
+                            Config
+                        </button>
+                        <button class="action-btn">
+                            <span class="material-icons" style="font-size: 14px;">analytics</span>
+                            Logs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Agent Management Functions
+        function toggleAgent(toggle) {
+            toggle.classList.toggle('active');
+            const isActive = toggle.classList.contains('active');
+            console.log(`Agent ${isActive ? 'enabled' : 'disabled'}`);
+        }
+
+        function runAllAgents() {
+            if (confirm('Run all 46 AI agents? This will start a complete optimization cycle.')) {
+                alert('All agents started successfully!');
+                // In production: API call to start all agents
+            }
+        }
+
+        function startAllAgents() {
+            runAllAgents();
+        }
+
+        function stopAllAgents() {
+            if (confirm('Stop all agents? This will halt all AI operations.')) {
+                alert('All agents stopped.');
+                // In production: API call to stop all agents
+            }
+        }
+
+        function restartAllAgents() {
+            if (confirm('Restart all agents? This may take a few minutes.')) {
+                alert('All agents restarting...');
+                // In production: API call to restart all agents
+            }
+        }
+
+        function exportAgentData() {
+            alert('Exporting agent data...');
+            // In production: Generate and download agent data export
+        }
+
+        // Filter Functions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', filterAgents);
+
+            // Filter checkboxes
+            const checkboxes = document.querySelectorAll('.filter-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('click', function() {
+                    // Handle exclusive selection for category and status filters
+                    const filterType = this.dataset.filter || this.dataset.status;
+                    const isAll = filterType === 'all';
+                    
+                    if (isAll) {
+                        // Uncheck all other checkboxes in this group
+                        const siblings = this.parentElement.parentElement.querySelectorAll('.filter-checkbox');
+                        siblings.forEach(cb => cb.classList.remove('checked'));
+                        this.classList.add('checked');
+                    } else {
+                        // Check this one and uncheck "All"
+                        const allCheckbox = this.parentElement.parentElement.querySelector('[data-filter="all"], [data-status="all"]');
+                        if (allCheckbox) allCheckbox.classList.remove('checked');
+                        this.classList.toggle('checked');
+                    }
+                    
+                    filterAgents();
+                });
+            });
+        });
+
+        function filterAgents() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilters = Array.from(document.querySelectorAll('[data-filter].checked')).map(cb => cb.dataset.filter);
+            const statusFilters = Array.from(document.querySelectorAll('[data-status].checked')).map(cb => cb.dataset.status);
+            
+            const agentCards = document.querySelectorAll('.agent-card');
+            
+            agentCards.forEach(card => {
+                const agentName = card.querySelector('.agent-name').textContent.toLowerCase();
+                const category = card.dataset.category;
+                const status = card.dataset.status;
+                
+                const matchesSearch = agentName.includes(searchTerm);
+                const matchesCategory = categoryFilters.length === 0 || categoryFilters.includes('all') || categoryFilters.includes(category);
+                const matchesStatus = statusFilters.length === 0 || statusFilters.includes('all') || statusFilters.includes(status);
+                
+                if (matchesSearch && matchesCategory && matchesStatus) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize
+        console.log('Agent Manager loaded - 46 agents ready for management');
+    </script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealvoy - AI-Powered E-commerce Intelligence</title>
+    <meta name="description" content="Revolutionize your e-commerce business with 46 AI agents working 24/7. Patent-protected technology for automated profit optimization.">
+    <meta name="keywords" content="AI agents, e-commerce, automation, profit optimization, dealvoy">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dealvoy - 46 AI Agents for E-commerce Success">
+    <meta property="og:description" content="Patent-protected AI technology with 46 specialized agents for automated profit optimization">
+    <meta property="og:image" content="/assets/dealvoy-og-image.png">
+    <meta property="og:url" content="https://dealvoy.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --danger-color: #F44336;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052a3;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 80px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--background-light);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color), #0052a3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .feature-icon .material-icons {
+            color: white;
+            font-size: 32px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Agent Categories */
+        .agent-categories {
+            background: var(--background-light);
+            padding: 80px 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .category-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .category-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .category-examples {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #004499 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-description {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .patent-notice {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="material-icons">smart_toy</span>
+                    <div>
+                        <div class="logo-text">Dealvoy</div>
+                        <div class="logo-subtitle">AI-Powered Intelligence</div>
+                    </div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#agents" class="nav-link">AI Agents</a>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="/auth/login.html" class="btn btn-outline">Sign In</a>
+                    <a href="/auth/register.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="material-icons">security</span>
+                    USPTO Patent Protected #63/850,603
+                </div>
+                
+                <h1 class="hero-title">46 AI Agents Working 24/7 for Your E-commerce Success</h1>
+                <p class="hero-subtitle">Revolutionary AI-powered automation system</p>
+                <p class="hero-description">
+                    Transform your e-commerce business with our patent-protected AI technology. 
+                    46 specialized agents continuously optimize pricing, inventory, marketing, and operations 
+                    to maximize your profits around the clock.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="/auth/register.html" class="btn btn-white btn-hero">
+                        <span class="material-icons">rocket_launch</span>
+                        Start Free Trial
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-hero">
+                        <span class="material-icons">play_arrow</span>
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">46</div>
+                    <div class="stat-label">AI Agents</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">91.7%</div>
+                    <div class="stat-label">Avg Performance</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Intelligent Automation at Scale</h2>
+                <p class="section-description">
+                    Our AI agents work together to create a comprehensive automation ecosystem 
+                    that optimizes every aspect of your e-commerce operations.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3 class="feature-title">Dynamic Pricing Optimization</h3>
+                    <p class="feature-description">
+                        AI-powered pricing strategies that automatically adjust based on market conditions, 
+                        competitor analysis, and demand patterns to maximize profit margins.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">inventory</span>
+                    </div>
+                    <h3 class="feature-title">Intelligent Inventory Management</h3>
+                    <p class="feature-description">
+                        Predictive inventory optimization that prevents stockouts and overstock situations 
+                        through advanced demand forecasting and supplier integration.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <h3 class="feature-title">Real-time Market Intelligence</h3>
+                    <p class="feature-description">
+                        Continuous market monitoring and competitive analysis to identify trends, 
+                        opportunities, and threats before your competition.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3 class="feature-title">Enterprise Security</h3>
+                    <p class="feature-description">
+                        Military-grade security with patent protection, ensuring your business data 
+                        and AI strategies remain completely secure and confidential.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">speed</span>
+                    </div>
+                    <h3 class="feature-title">Lightning-Fast Performance</h3>
+                    <p class="feature-description">
+                        Optimized infrastructure delivering real-time insights and automated actions 
+                        with minimal latency for maximum competitive advantage.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">integration_instructions</span>
+                    </div>
+                    <h3 class="feature-title">Seamless Integrations</h3>
+                    <p class="feature-description">
+                        Connect with Amazon, Walmart, eBay, and 50+ other platforms through 
+                        our comprehensive API integrations and automated workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Categories -->
+    <section class="agent-categories" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">46 Specialized AI Agents</h2>
+                <p class="section-description">
+                    Our comprehensive AI agent ecosystem covers every aspect of e-commerce operations
+                </p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-number">16</div>
+                    <h3 class="category-title">Intelligence Agents</h3>
+                    <p class="category-description">
+                        Core AI systems for optimization, categorization, forecasting, and content generation
+                    </p>
+                    <p class="category-examples">
+                        Auto Optimizer AI • Category AI • Cash Flow Predictor • Claude Bridge • Database Optimizer
+                    </p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-number">15</div>
+                    <h3 class="category-title">Infrastructure Agents</h3>
+                    <p class="category-description">
+                        System monitoring, automation, security, and performance optimization
+                    </p>
+                    <p class="category-examples">
+                        API Gateway Monitor • Build Bot • Cache Optimizer • Load Balancer • Security Scanner
+                    </p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-number">15</div>
+                    <h3 class="category-title">Optimization Agents</h3>
+                    <p class="category-description">
+                        Advanced optimization for pricing, trends, performance, and competitive intelligence
+                    </p>
+                    <p class="category-examples">
+                        A/B Price Tester • Trend AI • Competitor Intel • Repricing Strategist • Performance Analyzer
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your E-commerce Business?</h2>
+            <p class="cta-description">
+                Join thousands of successful e-commerce businesses leveraging the power of 46 AI agents. 
+                Start your free trial today and see the difference automated intelligence can make.
+            </p>
+            <div class="hero-cta">
+                <a href="/auth/register.html" class="btn btn-white btn-hero">
+                    <span class="material-icons">rocket_launch</span>
+                    Start Free Trial
+                </a>
+                <a href="/contact" class="btn btn-outline btn-hero">
+                    <span class="material-icons">support_agent</span>
+                    Talk to Sales
+                </a>
+            </div>
+            
+            <div class="patent-notice">
+                🛡️ Patent Protected Technology - USPTO Application #63/850,603 - All Rights Reserved
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="/features">Features</a>
+                    <a href="/pricing">Pricing</a>
+                    <a href="/integrations">Integrations</a>
+                    <a href="/api">API Documentation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="/about">About Us</a>
+                    <a href="/careers">Careers</a>
+                    <a href="/press">Press</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/help">Help Center</a>
+                    <a href="/docs">Documentation</a>
+                    <a href="/community">Community</a>
+                    <a href="/status">System Status</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="/compliance/privacy_policy.md">Privacy Policy</a>
+                    <a href="/compliance/terms_of_service.md">Terms of Service</a>
+                    <a href="/security">Security</a>
+                    <a href="/patent">Patent Info</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dealvoy. All rights reserved. Protected by USPTO Patent Application #63/850,603</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = 'var(--background-white)';
+            }
+        });
+    </script>
+</body>
+</html>

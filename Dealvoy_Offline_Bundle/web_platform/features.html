@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Dealvoy AI Platform</title>
+    <meta name="description" content="Explore 46 AI agents for automated e-commerce optimization. Patented technology for maximum ROI.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), #0052a3);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary-color), #388e3c);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-white);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--background-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* Features Grid */
+        .features-section {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon .material-icons {
+            color: white;
+            font-size: 28px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .feature-list .material-icons {
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+
+        /* Categories Section */
+        .categories-section {
+            padding: 80px 0;
+            background: var(--background-white);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 40px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .category-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-icon .material-icons {
+            font-size: 36px;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .category-count {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .category-agents {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .agent-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .agent-item:last-child {
+            border-bottom: none;
+        }
+
+        .agent-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .agent-status {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--secondary-color);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .benefits-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .benefits-list .material-icons {
+            font-size: 20px;
+            color: var(--secondary-color);
+            margin-top: 2px;
+        }
+
+        .benefits-visual {
+            position: relative;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        .roi-metric {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .roi-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/pages/home.html" class="logo">
+                    <span class="material-icons">smart_toy</span>
+                    <span class="logo-text">Dealvoy</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="/pages/home.html" class="nav-link">Home</a>
+                    <a href="/pages/features.html" class="nav-link active">Features</a>
+                    <a href="/pages/pricing.html" class="nav-link">Pricing</a>
+                    <a href="/pages/faq.html" class="nav-link">FAQ</a>
+                    <a href="/pages/contact.html" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="/pages/dashboard_user.html" class="btn btn-outline">Dashboard</a>
+                    <a href="/pages/pricing.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">46 AI Agents Working for You</h1>
+            <p class="hero-subtitle">Explore our comprehensive suite of AI-powered e-commerce optimization tools</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">46</div>
+                    <div class="stat-label">AI Agents</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">ROI Increase</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            <p class="section-subtitle">Everything you need to maximize your e-commerce potential</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3 class="feature-title">Intelligent Price Optimization</h3>
+                    <p class="feature-description">AI-powered dynamic pricing that maximizes profit while staying competitive in real-time.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>Real-time competitor analysis</li>
+                        <li><span class="material-icons">check</span>Demand forecasting</li>
+                        <li><span class="material-icons">check</span>Profit margin optimization</li>
+                        <li><span class="material-icons">check</span>A/B price testing</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">inventory_2</span>
+                    </div>
+                    <h3 class="feature-title">Inventory Management</h3>
+                    <p class="feature-description">Predictive inventory control that prevents stockouts and reduces carrying costs.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>Automated reordering</li>
+                        <li><span class="material-icons">check</span>Demand prediction</li>
+                        <li><span class="material-icons">check</span>Seasonal adjustments</li>
+                        <li><span class="material-icons">check</span>Multi-warehouse optimization</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3 class="feature-title">Revenue Analytics</h3>
+                    <p class="feature-description">Deep insights into your business performance with actionable recommendations.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>Real-time dashboards</li>
+                        <li><span class="material-icons">check</span>Predictive analytics</li>
+                        <li><span class="material-icons">check</span>Performance alerts</li>
+                        <li><span class="material-icons">check</span>Custom reporting</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">auto_fix_high</span>
+                    </div>
+                    <h3 class="feature-title">Listing Optimization</h3>
+                    <p class="feature-description">AI-enhanced product listings that improve visibility and conversion rates.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>SEO optimization</li>
+                        <li><span class="material-icons">check</span>Keyword research</li>
+                        <li><span class="material-icons">check</span>Image optimization</li>
+                        <li><span class="material-icons">check</span>Content generation</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3 class="feature-title">Risk Management</h3>
+                    <p class="feature-description">Comprehensive protection against market volatility and business risks.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>Market risk assessment</li>
+                        <li><span class="material-icons">check</span>Fraud detection</li>
+                        <li><span class="material-icons">check</span>Compliance monitoring</li>
+                        <li><span class="material-icons">check</span>Automated alerts</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">rocket_launch</span>
+                    </div>
+                    <h3 class="feature-title">Growth Acceleration</h3>
+                    <p class="feature-description">Strategic tools and insights to scale your business rapidly and efficiently.</p>
+                    <ul class="feature-list">
+                        <li><span class="material-icons">check</span>Market expansion analysis</li>
+                        <li><span class="material-icons">check</span>Product opportunity detection</li>
+                        <li><span class="material-icons">check</span>Competitive intelligence</li>
+                        <li><span class="material-icons">check</span>Growth forecasting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">AI Agent Categories</h2>
+            <p class="section-subtitle">Our 46 specialized agents organized by function</p>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3 class="category-title">Intelligence Agents</h3>
+                    <p class="category-count">16 specialized AI agents</p>
+                    <div class="category-agents">
+                        <div class="agent-item">
+                            <span class="agent-name">Price Intelligence AI</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Market Trend Analyzer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Demand Forecaster</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Competitor Monitor</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-icons">build</span>
+                    </div>
+                    <h3 class="category-title">Infrastructure Agents</h3>
+                    <p class="category-count">15 system management agents</p>
+                    <div class="category-agents">
+                        <div class="agent-item">
+                            <span class="agent-name">API Gateway Monitor</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Database Optimizer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Security Scanner</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Performance Monitor</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <span class="material-icons">tune</span>
+                    </div>
+                    <h3 class="category-title">Optimization Agents</h3>
+                    <p class="category-count">15 performance optimization agents</p>
+                    <div class="category-agents">
+                        <div class="agent-item">
+                            <span class="agent-name">Listing Optimizer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Image Enhancer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">SEO Optimizer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                        <div class="agent-item">
+                            <span class="agent-name">Conversion Optimizer</span>
+                            <div class="agent-status">
+                                <span class="status-dot"></span>
+                                Active
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefits-content">
+                    <h3>Why Choose Dealvoy?</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="material-icons">verified</span>
+                            <strong>Patent-Protected Technology:</strong> Our AI system is protected by USPTO #63/850,603, ensuring you have access to cutting-edge, proprietary algorithms.
+                        </li>
+                        <li>
+                            <span class="material-icons">speed</span>
+                            <strong>Real-Time Processing:</strong> All 46 agents work continuously, providing instant insights and automated actions 24/7.
+                        </li>
+                        <li>
+                            <span class="material-icons">integration_instructions</span>
+                            <strong>Seamless Integration:</strong> Easy setup with major e-commerce platforms like Amazon, Shopify, and WooCommerce.
+                        </li>
+                        <li>
+                            <span class="material-icons">support_agent</span>
+                            <strong>Expert Support:</strong> Dedicated AI specialists to help you maximize your ROI and optimize performance.
+                        </li>
+                        <li>
+                            <span class="material-icons">lock</span>
+                            <strong>Enterprise Security:</strong> Bank-level encryption and compliance with GDPR, CCPA, and SOC 2 standards.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="benefits-visual">
+                    <div class="roi-metric">300%</div>
+                    <div class="roi-label">Average ROI Increase</div>
+                    <p style="margin-top: 20px; opacity: 0.9;">Our customers see an average 300% increase in ROI within the first 90 days of implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Business?</h2>
+            <p class="cta-subtitle">Join thousands of successful sellers using Dealvoy's AI-powered platform</p>
+            
+            <div class="cta-actions">
+                <a href="/pages/pricing.html" class="btn btn-white">
+                    <span class="material-icons">rocket_launch</span>
+                    Start Free Trial
+                </a>
+                <a href="/pages/contact.html" class="btn btn-outline-white">
+                    <span class="material-icons">support_agent</span>
+                    Schedule Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize features page
+        console.log('Features page loaded - 46 AI agents ready for deployment');
+        
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
