@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Dealvoy AI</title>
+    <meta name="description" content="Monitor your 46 AI agents and e-commerce performance in real-time">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --danger-color: #F44336;
+            --warning-color: #FF9800;
+            --info-color: #2196F3;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 16px;
+            background: var(--background-light);
+            border-radius: 8px;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--background-light);
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            padding: 24px 0;
+        }
+
+        .dashboard-header {
+            margin-bottom: 32px;
+        }
+
+        .welcome-text {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: var(--background-white);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .stat-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-change {
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .positive {
+            color: var(--secondary-color);
+        }
+
+        .negative {
+            color: var(--danger-color);
+        }
+
+        /* Agent Status */
+        .section {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .agent-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            transition: all 0.2s;
+        }
+
+        .agent-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .agent-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .agent-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .status-active {
+            background: var(--secondary-color);
+        }
+
+        .status-idle {
+            background: var(--warning-color);
+        }
+
+        .status-error {
+            background: var(--danger-color);
+        }
+
+        .agent-metrics {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .performance-bar {
+            width: 100%;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            margin: 8px 0;
+            overflow: hidden;
+        }
+
+        .performance-fill {
+            height: 100%;
+            background: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        /* Recent Activity */
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-title {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .activity-time {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Quick Actions */
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .action-button {
+            background: var(--background-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .action-button:hover {
+            background: var(--background-white);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .action-icon {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .action-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .action-description {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .actions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .welcome-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/pages/home.html" class="logo">
+                    <span class="material-icons">smart_toy</span>
+                    <span class="logo-text">Dealvoy</span>
+                </a>
+                
+                <div class="user-menu">
+                    <div class="user-info">
+                        <div class="user-avatar">JD</div>
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">John Doe</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">Pro Plan</div>
+                        </div>
+                    </div>
+                    <a href="/pages/agent_manager.html" class="btn btn-outline">
+                        <span class="material-icons">settings</span>
+                        Manage
+                    </a>
+                    <a href="/auth/logout.html" class="btn btn-outline">
+                        <span class="material-icons">logout</span>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1 class="welcome-text">Welcome back, John! 👋</h1>
+                <p class="subtitle">Your 46 AI agents are working hard to optimize your e-commerce success</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Active Agents</div>
+                        <div class="stat-icon" style="background: rgba(76, 175, 80, 0.1); color: var(--secondary-color);">
+                            <span class="material-icons">smart_toy</span>
+                        </div>
+                    </div>
+                    <div class="stat-value">43/46</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons" style="font-size: 12px;">trending_up</span>
+                        +2 from yesterday
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Avg Performance</div>
+                        <div class="stat-icon" style="background: rgba(0, 102, 204, 0.1); color: var(--primary-color);">
+                            <span class="material-icons">analytics</span>
+                        </div>
+                    </div>
+                    <div class="stat-value">91.7%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons" style="font-size: 12px;">trending_up</span>
+                        +3.2% this week
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Revenue Impact</div>
+                        <div class="stat-icon" style="background: rgba(255, 193, 7, 0.1); color: var(--accent-color);">
+                            <span class="material-icons">monetization_on</span>
+                        </div>
+                    </div>
+                    <div class="stat-value">$24,567</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons" style="font-size: 12px;">trending_up</span>
+                        +18.3% this month
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">System Uptime</div>
+                        <div class="stat-icon" style="background: rgba(76, 175, 80, 0.1); color: var(--secondary-color);">
+                            <span class="material-icons">schedule</span>
+                        </div>
+                    </div>
+                    <div class="stat-value">99.8%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons" style="font-size: 12px;">check_circle</span>
+                        Excellent
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Status Overview -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Top Performing Agents</h2>
+                    <a href="/pages/agent_manager.html" class="btn btn-outline">View All</a>
+                </div>
+                
+                <div class="agent-grid">
+                    <div class="agent-card">
+                        <div class="agent-header">
+                            <div class="agent-name">Auto Optimizer AI</div>
+                            <div class="agent-status">
+                                <div class="status-dot status-active"></div>
+                                Active
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 94%"></div>
+                        </div>
+                        <div class="agent-metrics">
+                            <span>Performance: 94%</span>
+                            <span>Last run: 2 min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="agent-card">
+                        <div class="agent-header">
+                            <div class="agent-name">Claude Bridge Agent</div>
+                            <div class="agent-status">
+                                <div class="status-dot status-active"></div>
+                                Active
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 96%"></div>
+                        </div>
+                        <div class="agent-metrics">
+                            <span>Performance: 96%</span>
+                            <span>Last run: 1 min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="agent-card">
+                        <div class="agent-header">
+                            <div class="agent-name">Cash Flow Predictor</div>
+                            <div class="agent-status">
+                                <div class="status-dot status-active"></div>
+                                Active
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 92%"></div>
+                        </div>
+                        <div class="agent-metrics">
+                            <span>Performance: 92%</span>
+                            <span>Last run: 3 min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="agent-card">
+                        <div class="agent-header">
+                            <div class="agent-name">Trend AI</div>
+                            <div class="agent-status">
+                                <div class="status-dot status-active"></div>
+                                Active
+                            </div>
+                        </div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 93%"></div>
+                        </div>
+                        <div class="agent-metrics">
+                            <span>Performance: 93%</span>
+                            <span>Last run: 1 min ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Activity</h2>
+                </div>
+                
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: rgba(76, 175, 80, 0.1); color: var(--secondary-color);">
+                            <span class="material-icons">check_circle</span>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Auto Optimizer AI completed optimization cycle</div>
+                            <div class="activity-time">2 minutes ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: rgba(0, 102, 204, 0.1); color: var(--primary-color);">
+                            <span class="material-icons">trending_up</span>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Repricing Strategist updated 247 product prices</div>
+                            <div class="activity-time">5 minutes ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: rgba(255, 193, 7, 0.1); color: var(--accent-color);">
+                            <span class="material-icons">analytics</span>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Market Intelligence update: 15 new opportunities identified</div>
+                            <div class="activity-time">12 minutes ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: rgba(76, 175, 80, 0.1); color: var(--secondary-color);">
+                            <span class="material-icons">inventory</span>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Inventory Optimizer prevented 3 stockouts</div>
+                            <div class="activity-time">18 minutes ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Quick Actions</h2>
+                </div>
+                
+                <div class="actions-grid">
+                    <a href="/pages/agent_manager.html" class="action-button">
+                        <div class="action-icon">
+                            <span class="material-icons">settings</span>
+                        </div>
+                        <div class="action-title">Manage Agents</div>
+                        <div class="action-description">Configure and monitor all 46 AI agents</div>
+                    </a>
+
+                    <a href="#" class="action-button">
+                        <div class="action-icon">
+                            <span class="material-icons">assessment</span>
+                        </div>
+                        <div class="action-title">View Reports</div>
+                        <div class="action-description">Detailed performance analytics</div>
+                    </a>
+
+                    <a href="#" class="action-button">
+                        <div class="action-icon">
+                            <span class="material-icons">play_arrow</span>
+                        </div>
+                        <div class="action-title">Run All Agents</div>
+                        <div class="action-description">Execute complete optimization cycle</div>
+                    </a>
+
+                    <a href="/pricing" class="action-button">
+                        <div class="action-icon">
+                            <span class="material-icons">upgrade</span>
+                        </div>
+                        <div class="action-title">Upgrade Plan</div>
+                        <div class="action-description">Unlock advanced features</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simulate real-time updates
+        function updateMetrics() {
+            // This would connect to real-time API in production
+            console.log('Updating metrics...');
+        }
+
+        // Update every 30 seconds
+        setInterval(updateMetrics, 30000);
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Dashboard loaded - 46 agents monitoring');
+        });
+    </script>
+</body>
+</html>
