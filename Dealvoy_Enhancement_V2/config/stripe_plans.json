@@ -1,0 +1,52 @@
+{
+  "tiers": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price": 0,
+      "stripe_id": null,
+      "features": ["Basic arbitrage tools", "Limited sources", "Community support"],
+      "video": false
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price": 29,
+      "stripe_id": "price_ProPlan",
+      "features": ["All Starter features", "Advanced analytics", "Priority support", "More sources"],
+      "video": false
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "price": null,
+      "stripe_id": null,
+      "features": ["All Pro features", "Dedicated agent", "Custom integrations", "Unlimited sources"],
+      "video": false
+    },
+    {
+      "id": "titan",
+      "name": "Titan",
+      "price": 99,
+      "stripe_id": "price_TitanPlan",
+      "features": ["Video generation", "Multi-market comparison", "Ungating & ROI AI", "All Enterprise features"],
+      "video": true
+    },
+    {
+      "id": "odyssey",
+      "name": "Odyssey",
+      "price": 199,
+      "stripe_id": "price_OdysseyPlan",
+      "features": ["White-label", "API keys", "Team accounts", "All Titan features"],
+      "video": true
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "price": null,
+      "stripe_id": null,
+      "features": ["All Odyssey features", "Dedicated support", "Custom integrations", "Unlimited agents"],
+      "video": true
+    }
+  ]
+}

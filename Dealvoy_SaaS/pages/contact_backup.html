@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dealvoy AI Platform</title>
+    <meta name="description" content="Get in touch with Dealvoy support team. Schedule demos, ask questions, or get help with our 46 AI agents.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), #0052a3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-white);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--background-white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .form-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .info-card {
+            background: var(--background-white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .info-icon .material-icons {
+            color: white;
+            font-size: 24px;
+        }
+
+        .info-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .info-description {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .info-detail {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        /* Support Hours */
+        .support-hours {
+            background: var(--background-light);
+            padding: 60px 0;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .hours-card {
+            background: var(--background-white);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .hours-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hours-time {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .hours-status {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 16px;
+        }
+
+        .status-open {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .status-closed {
+            background: rgba(244, 67, 54, 0.1);
+            color: #f44336;
+        }
+
+        /* FAQ CTA */
+        .faq-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .faq-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .faq-subtitle {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/pages/home.html" class="logo">
+                    <span class="material-icons">smart_toy</span>
+                    <span class="logo-text">Dealvoy</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="/pages/home.html" class="nav-link">Home</a>
+                    <a href="/pages/features.html" class="nav-link">Features</a>
+                    <a href="/pages/pricing.html" class="nav-link">Pricing</a>
+                    <a href="/pages/faq.html" class="nav-link">FAQ</a>
+                    <a href="/pages/contact.html" class="nav-link active">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="/pages/dashboard_user.html" class="btn btn-outline">Dashboard</a>
+                    <a href="/pages/pricing.html" class="btn btn-primary">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-subtitle">We're here to help you succeed with Dealvoy's AI platform</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2 class="form-title">Send us a Message</h2>
+            <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+            
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company" class="form-label">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <select id="subject" name="subject" class="form-select" required>
+                        <option value="">Select a topic...</option>
+                        <option value="demo">Schedule a Demo</option>
+                        <option value="support">Technical Support</option>
+                        <option value="sales">Sales Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="billing">Billing Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">
+                    <span class="material-icons" style="margin-right: 8px;">send</span>
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">email</span>
+                </div>
+                <h3 class="info-title">Email Support</h3>
+                <p class="info-description">Get detailed answers to your questions</p>
+                <div class="info-detail">support@dealvoy.ai</div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">phone</span>
+                </div>
+                <h3 class="info-title">Phone Support</h3>
+                <p class="info-description">Speak directly with our team</p>
+                <div class="info-detail">+1 (555) DEALVOY</div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">chat</span>
+                </div>
+                <h3 class="info-title">Live Chat</h3>
+                <p class="info-description">Instant support during business hours</p>
+                <button class="btn btn-primary" onclick="openChat()" style="margin-top: 12px;">Start Chat</button>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">
+                    <span class="material-icons">location_on</span>
+                </div>
+                <h3 class="info-title">Headquarters</h3>
+                <p class="info-description">Visit us in person</p>
+                <div class="info-detail">
+                    123 Innovation Drive<br>
+                    Tech Valley, CA 94043<br>
+                    United States
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Hours -->
+    <section class="support-hours">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 20px;">Support Hours</h2>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 18px;">Our team is available to help you succeed</p>
+            
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3 class="hours-title">Email Support</h3>
+                    <div class="hours-time">Monday - Friday: 24/7</div>
+                    <div class="hours-time">Weekends: 24/7</div>
+                    <span class="hours-status status-open">Always Available</span>
+                </div>
+
+                <div class="hours-card">
+                    <h3 class="hours-title">Live Chat</h3>
+                    <div class="hours-time">Monday - Friday: 9 AM - 6 PM PT</div>
+                    <div class="hours-time">Weekends: 10 AM - 4 PM PT</div>
+                    <span class="hours-status status-open">Currently Open</span>
+                </div>
+
+                <div class="hours-card">
+                    <h3 class="hours-title">Phone Support</h3>
+                    <div class="hours-time">Monday - Friday: 8 AM - 8 PM PT</div>
+                    <div class="hours-time">Weekends: Closed</div>
+                    <span class="hours-status status-open">Currently Open</span>
+                </div>
+
+                <div class="hours-card">
+                    <h3 class="hours-title">Enterprise Support</h3>
+                    <div class="hours-time">24/7/365</div>
+                    <div class="hours-time">Dedicated account manager</div>
+                    <span class="hours-status status-open">Always Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ CTA -->
+    <section class="faq-cta">
+        <div class="container">
+            <h2 class="faq-title">Looking for Quick Answers?</h2>
+            <p class="faq-subtitle">Check out our comprehensive FAQ section for instant answers to common questions</p>
+            
+            <a href="/pages/faq.html" class="btn btn-white">
+                <span class="material-icons">help</span>
+                Browse FAQ
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Form Submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Show loading state
+            const submitBtn = form.querySelector('.form-submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="material-icons">hourglass_empty</span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (in production: send to backend)
+            setTimeout(() => {
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+            
+            console.log('Form submitted:', Object.fromEntries(formData));
+        }
+
+        // Chat Function
+        function openChat() {
+            alert('Live chat opening... (In production: integrate with chat system)');
+        }
+
+        // Update support hours status (simplified example)
+        function updateSupportStatus() {
+            const now = new Date();
+            const hour = now.getHours();
+            const day = now.getDay();
+            
+            // Live Chat status (9 AM - 6 PM PT, Mon-Fri)
+            const chatCard = document.querySelectorAll('.hours-card')[1];
+            const chatStatus = chatCard.querySelector('.hours-status');
+            
+            if (day >= 1 && day <= 5 && hour >= 9 && hour <= 18) {
+                chatStatus.textContent = 'Currently Open';
+                chatStatus.className = 'hours-status status-open';
+            } else {
+                chatStatus.textContent = 'Currently Closed';
+                chatStatus.className = 'hours-status status-closed';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSupportStatus();
+            console.log('Contact page loaded - Ready to help customers');
+        });
+    </script>
+</body>
+</html>

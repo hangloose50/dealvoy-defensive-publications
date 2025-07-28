@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Dealvoy AI System Control</title>
+    <meta name="description" content="Advanced administrative control panel for 46 AI agents and system management">
+    
+    <!-- Dealvoy Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0066cc">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --danger-color: #F44336;
+            --warning-color: #FF9800;
+            --info-color: #2196F3;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --background-dark: #1a1a1a;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background-dark);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .admin-badge {
+            background: var(--danger-color);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .admin-menu {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .emergency-button {
+            background: var(--danger-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .emergency-button:hover {
+            background: #d32f2f;
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            padding: 24px 0;
+        }
+
+        .dashboard-header {
+            margin-bottom: 32px;
+        }
+
+        .admin-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .system-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+        }
+
+        /* Critical Metrics */
+        .critical-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .metric-card {
+            background: var(--background-white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .metric-card.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .metric-card.danger {
+            border-left-color: var(--danger-color);
+        }
+
+        .metric-card.success {
+            border-left-color: var(--secondary-color);
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .metric-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .metric-icon {
+            font-size: 20px;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .metric-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* System Controls */
+        .control-panel {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .control-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: var(--background-light);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-label {
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 24px;
+            background: var(--border-color);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: var(--primary-color);
+        }
+
+        .toggle-switch::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch.active::before {
+            transform: translateX(26px);
+        }
+
+        /* Agent Status Table */
+        .agent-table {
+            background: var(--background-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .table-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table-content {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: var(--background-light);
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        .agent-name {
+            font-weight: 500;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-active {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .status-idle {
+            background: rgba(255, 152, 0, 0.1);
+            color: var(--warning-color);
+        }
+
+        .status-error {
+            background: rgba(244, 67, 54, 0.1);
+            color: var(--danger-color);
+        }
+
+        .performance-bar {
+            width: 60px;
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .performance-fill {
+            height: 100%;
+            background: var(--secondary-color);
+        }
+
+        /* Agent Control Module Styles */
+        .agent-control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 24px;
+        }
+
+        .agent-control-card {
+            background: var(--background-white);
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .agent-control-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .demo-card {
+            border: 2px solid var(--accent-color);
+            background: rgba(255, 193, 7, 0.05);
+        }
+
+        .demo-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2);
+        }
+
+        .agent-header {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--background-light);
+        }
+
+        .agent-icon {
+            font-size: 32px;
+            margin-right: 12px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: var(--background-white);
+        }
+
+        .trend-icon { background: rgba(33, 150, 243, 0.1); }
+        .video-icon { background: rgba(156, 39, 176, 0.1); }
+        .risk-icon { background: rgba(76, 175, 80, 0.1); }
+        .scout-icon { background: rgba(255, 152, 0, 0.1); }
+        .tier-icon { background: rgba(103, 58, 183, 0.1); }
+        .demo-icon { background: rgba(255, 193, 7, 0.2); }
+
+        .agent-info {
+            flex: 1;
+        }
+
+        .agent-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .agent-category {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .agent-toggle {
+            margin-left: 12px;
+        }
+
+        .agent-details {
+            padding: 20px;
+        }
+
+        .tier-availability {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tier-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .tier-badge.starter {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .tier-badge.pro {
+            background: rgba(33, 150, 243, 0.1);
+            color: var(--primary-color);
+        }
+
+        .tier-badge.enterprise {
+            background: rgba(156, 39, 176, 0.1);
+            color: #9C27B0;
+        }
+
+        .agent-stats {
+            margin-bottom: 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .agent-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-sm {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .demo-special-section {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .demo-notice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .demo-notice .material-icons {
+            color: var(--accent-color);
+        }
+
+        .demo-notice p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .btn-special {
+            width: 100%;
+            background: var(--accent-color);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .btn-special:hover {
+            background: #e6ac00;
+        }
+
+        /* Weekly Scheduling Styles */
+        .schedule-content {
+            padding: 24px;
+        }
+
+        .schedule-info {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .schedule-item {
+            background: var(--background-light);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .schedule-tier {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .schedule-count {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .schedule-agents {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .schedule-last {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* System Alerts */
+        .alerts-panel {
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .alert-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .alert-error {
+            background: rgba(244, 67, 54, 0.1);
+            border: 1px solid rgba(244, 67, 54, 0.2);
+        }
+
+        .alert-warning {
+            background: rgba(255, 152, 0, 0.1);
+            border: 1px solid rgba(255, 152, 0, 0.2);
+        }
+
+        .alert-info {
+            background: rgba(33, 150, 243, 0.1);
+            border: 1px solid rgba(33, 150, 243, 0.2);
+        }
+
+        .alert-icon {
+            font-size: 20px;
+        }
+
+        .alert-content {
+            flex: 1;
+        }
+
+        .alert-title {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .alert-time {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .resolve-button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .btn-warning {
+            background: var(--warning-color);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .critical-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/pages/home.html" class="logo">
+                    <span class="material-icons">admin_panel_settings</span>
+                    <span class="logo-text">Dealvoy</span>
+                    <span class="admin-badge">ADMIN</span>
+                </a>
+                
+                <div class="admin-menu">
+                    <button class="emergency-button" onclick="emergencyStop()">
+                        <span class="material-icons">emergency</span>
+                        Emergency Stop
+                    </button>
+                    <a href="/pages/dashboard_user.html" class="btn btn-outline" style="color: white; border-color: white;">
+                        <span class="material-icons">dashboard</span>
+                        User View
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1 class="admin-title">System Control Center</h1>
+                <div class="system-status">
+                    <div class="status-indicator"></div>
+                    <span>All systems operational • 46 agents active • Uptime: 99.8%</span>
+                </div>
+            </div>
+
+            <!-- Critical Metrics -->
+            <div class="critical-metrics">
+                <div class="metric-card success">
+                    <div class="metric-header">
+                        <div class="metric-title">Active Agents</div>
+                        <span class="material-icons metric-icon" style="color: var(--secondary-color);">smart_toy</span>
+                    </div>
+                    <div class="metric-value">43/46</div>
+                    <div class="metric-subtitle">3 in maintenance mode</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-title">System Performance</div>
+                        <span class="material-icons metric-icon" style="color: var(--primary-color);">speed</span>
+                    </div>
+                    <div class="metric-value">91.7%</div>
+                    <div class="metric-subtitle">Above target (90%)</div>
+                </div>
+
+                <div class="metric-card warning">
+                    <div class="metric-header">
+                        <div class="metric-title">Resource Usage</div>
+                        <span class="material-icons metric-icon" style="color: var(--warning-color);">memory</span>
+                    </div>
+                    <div class="metric-value">78%</div>
+                    <div class="metric-subtitle">Approaching threshold</div>
+                </div>
+
+                <div class="metric-card success">
+                    <div class="metric-header">
+                        <div class="metric-title">Total Users</div>
+                        <span class="material-icons metric-icon" style="color: var(--info-color);">people</span>
+                    </div>
+                    <div class="metric-value">1,247</div>
+                    <div class="metric-subtitle">342 premium users</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-title">API Requests</div>
+                        <span class="material-icons metric-icon" style="color: var(--primary-color);">api</span>
+                    </div>
+                    <div class="metric-value">2.4M</div>
+                    <div class="metric-subtitle">Last 24 hours</div>
+                </div>
+
+                <div class="metric-card danger">
+                    <div class="metric-header">
+                        <div class="metric-title">Critical Alerts</div>
+                        <span class="material-icons metric-icon" style="color: var(--danger-color);">warning</span>
+                    </div>
+                    <div class="metric-value">2</div>
+                    <div class="metric-subtitle">Require attention</div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="runAllAgents()">
+                    <span class="material-icons">play_arrow</span>
+                    Run All Agents
+                </button>
+                <button class="btn btn-warning" onclick="restartSystem()">
+                    <span class="material-icons">refresh</span>
+                    Restart System
+                </button>
+                <button class="btn btn-outline" onclick="exportLogs()">
+                    <span class="material-icons">download</span>
+                    Export Logs
+                </button>
+                <button class="btn btn-outline" onclick="backupSystem()">
+                    <span class="material-icons">backup</span>
+                    Backup System
+                </button>
+            </div>
+
+            <!-- System Controls -->
+            <div class="control-panel">
+                <h2 class="section-title">
+                    <span class="material-icons">settings</span>
+                    System Controls
+                </h2>
+                <div class="control-grid">
+                    <div class="control-item">
+                        <span class="control-label">Maintenance Mode</span>
+                        <div class="toggle-switch" onclick="toggleMaintenanceMode(this)"></div>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-label">Auto Scaling</span>
+                        <div class="toggle-switch active" onclick="toggleAutoScaling(this)"></div>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-label">Debug Logging</span>
+                        <div class="toggle-switch" onclick="toggleDebugLogging(this)"></div>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-label">Real-time Monitoring</span>
+                        <div class="toggle-switch active" onclick="toggleMonitoring(this)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Scheduling Display -->
+            <div class="agent-table">
+                <div class="table-header">
+                    <h2 class="section-title" style="margin: 0;">
+                        <span class="material-icons">schedule</span>
+                        Weekly Agent Schedule
+                    </h2>
+                    <div class="schedule-info">
+                        Next Run: <strong>Sunday, Aug 3, 2025 at 6:00 AM EST</strong>
+                    </div>
+                </div>
+                <div class="schedule-content">
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Starter Tier</div>
+                            <div class="schedule-count">2 videos/week</div>
+                            <div class="schedule-agents">DemoVoyager, TrendVoyager</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Pro Tier</div>
+                            <div class="schedule-count">5 videos/week</div>
+                            <div class="schedule-agents">All agents active</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-tier">Enterprise Tier</div>
+                            <div class="schedule-count">10 videos/week</div>
+                            <div class="schedule-agents">All agents + priority</div>
+                            <div class="schedule-last">Last: July 20, 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Control Module -->
+            <div class="agent-table">
+                <div class="table-header">
+                    <h2 class="section-title" style="margin: 0;">
+                        <span class="material-icons">smart_toy</span>
+                        Agent Control Module
+                    </h2>
+                    <button class="btn btn-outline" onclick="refreshAgentStatus()">
+                        <span class="material-icons">refresh</span>
+                        Auto-Detect Agents
+                    </button>
+                </div>
+                <div class="agent-control-grid">
+                    <!-- TrendVoyager Agent -->
+                    <div class="agent-control-card" data-agent="TrendVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon trend-icon">📈</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">TrendVoyager</h3>
+                                <div class="agent-category">Market Intelligence</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'TrendVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('TrendVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('TrendVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VidVoyager Agent -->
+                    <div class="agent-control-card" data-agent="VidVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon video-icon">🎥</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">VidVoyager</h3>
+                                <div class="agent-category">Video Generation</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'VidVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>45 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('VidVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('VidVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RiskSentinel Agent -->
+                    <div class="agent-control-card" data-agent="RiskSentinel">
+                        <div class="agent-header">
+                            <div class="agent-icon risk-icon">🛡️</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">RiskSentinel</h3>
+                                <div class="agent-category">Risk Management</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'RiskSentinel')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>10 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('RiskSentinel')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('RiskSentinel')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ScoutVision Agent -->
+                    <div class="agent-control-card" data-agent="ScoutVision">
+                        <div class="agent-header">
+                            <div class="agent-icon scout-icon">🔍</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">ScoutVision</h3>
+                                <div class="agent-category">Product Scouting</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'ScoutVision')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>5 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('ScoutVision')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('ScoutVision')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TierScaler Agent -->
+                    <div class="agent-control-card" data-agent="TierScaler">
+                        <div class="agent-header">
+                            <div class="agent-icon tier-icon">⚖️</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">TierScaler</h3>
+                                <div class="agent-category">Pricing Intelligence</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'TierScaler')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>30 min ago</span>
+                                </div>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('TierScaler')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('TierScaler')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DemoVoyager Agent - Special Instructional Video -->
+                    <div class="agent-control-card demo-card" data-agent="DemoVoyager">
+                        <div class="agent-header">
+                            <div class="agent-icon demo-icon">🎬</div>
+                            <div class="agent-info">
+                                <h3 class="agent-name">DemoVoyager</h3>
+                                <div class="agent-category">Onboarding & Training</div>
+                            </div>
+                            <div class="agent-toggle">
+                                <div class="toggle-switch active" onclick="toggleAgent(this, 'DemoVoyager')"></div>
+                            </div>
+                        </div>
+                        <div class="agent-details">
+                            <div class="tier-availability">
+                                <span class="tier-badge starter">Starter</span>
+                                <span class="tier-badge pro">Pro</span>
+                                <span class="tier-badge enterprise">Enterprise</span>
+                            </div>
+                            <div class="agent-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Status:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Last Run:</span>
+                                    <span>1 hour ago</span>
+                                </div>
+                            </div>
+                            <div class="demo-special-section">
+                                <div class="demo-notice">
+                                    <span class="material-icons">video_library</span>
+                                    <strong>Instructional Video Generator</strong>
+                                    <p>Generates "Welcome to Dealvoy" onboarding content</p>
+                                </div>
+                                <button class="btn btn-warning btn-special" onclick="generateWelcomeVideo()">
+                                    <span class="material-icons">movie_creation</span>
+                                    Generate Welcome Video
+                                </button>
+                            </div>
+                            <div class="agent-actions">
+                                <button class="btn btn-sm btn-primary" onclick="manualTrigger('DemoVoyager')">
+                                    <span class="material-icons">play_arrow</span>
+                                    Manual Run
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="testTier('DemoVoyager')">
+                                    <span class="material-icons">science</span>
+                                    Test Tier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Alerts -->
+            <div class="alerts-panel">
+                <h2 class="section-title">
+                    <span class="material-icons">notifications</span>
+                    System Alerts
+                </h2>
+                
+                <div class="alert-item alert-error">
+                    <span class="material-icons alert-icon" style="color: var(--danger-color);">error</span>
+                    <div class="alert-content">
+                        <div class="alert-title">API Rate Limit Exceeded</div>
+                        <div class="alert-time">Walmart integration - 5 minutes ago</div>
+                    </div>
+                    <button class="resolve-button">Resolve</button>
+                </div>
+
+                <div class="alert-item alert-warning">
+                    <span class="material-icons alert-icon" style="color: var(--warning-color);">warning</span>
+                    <div class="alert-content">
+                        <div class="alert-title">High Resource Usage</div>
+                        <div class="alert-time">Category AI agent - 12 minutes ago</div>
+                    </div>
+                    <button class="resolve-button">Resolve</button>
+                </div>
+
+                <div class="alert-item alert-info">
+                    <span class="material-icons alert-icon" style="color: var(--info-color);">info</span>
+                    <div class="alert-content">
+                        <div class="alert-title">System Backup Completed</div>
+                        <div class="alert-time">Automated backup - 1 hour ago</div>
+                    </div>
+                    <button class="resolve-button">Mark Read</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // System Control Functions
+        function emergencyStop() {
+            if (confirm('This will immediately stop all 46 agents. Are you sure?')) {
+                alert('Emergency stop initiated. All agents stopped.');
+                // In production: API call to stop all agents
+            }
+        }
+
+        function runAllAgents() {
+            if (confirm('Run all 46 agents? This will start a complete optimization cycle.')) {
+                alert('All agents started successfully.');
+                // In production: API call to start all agents
+            }
+        }
+
+        function restartSystem() {
+            if (confirm('Restart the entire system? Downtime: ~2 minutes.')) {
+                alert('System restart initiated.');
+                // In production: API call to restart system
+            }
+        }
+
+        function exportLogs() {
+            alert('Downloading system logs...');
+            // In production: Generate and download logs
+        }
+
+        function backupSystem() {
+            alert('System backup started...');
+            // In production: Initiate backup process
+        }
+
+        function refreshAgentStatus() {
+            console.log('Auto-detecting agents from registry...');
+            
+            // Simulate agent registry detection
+            const detectedAgents = [
+                'TrendVoyager', 'VidVoyager', 'RiskSentinel', 
+                'ScoutVision', 'TierScaler', 'DemoVoyager'
+            ];
+            
+            alert(`Agent registry scanned. Found ${detectedAgents.length} active agents:\n${detectedAgents.join(', ')}`);
+            
+            // In production: API call to detect and refresh agent registry
+            // updateAgentDisplay(detectedAgents);
+        }
+
+        function toggleAgent(toggleElement, agentName) {
+            const isActive = toggleElement.classList.contains('active');
+            
+            if (isActive) {
+                toggleElement.classList.remove('active');
+                console.log(`${agentName} deactivated`);
+                alert(`${agentName} has been deactivated. Status: OFF`);
+            } else {
+                toggleElement.classList.add('active');
+                console.log(`${agentName} activated`);
+                alert(`${agentName} has been activated. Status: ON`);
+            }
+            
+            // Update agent card visual status
+            const card = toggleElement.closest('.agent-control-card');
+            const statusBadge = card.querySelector('.status-badge');
+            
+            if (isActive) {
+                statusBadge.className = 'status-badge status-idle';
+                statusBadge.textContent = 'Idle';
+            } else {
+                statusBadge.className = 'status-badge status-active';
+                statusBadge.textContent = 'Active';
+            }
+            
+            // In production: API call to toggle agent
+            // await fetch(`/api/agents/${agentName}/toggle`, { method: 'POST' });
+        }
+
+        function manualTrigger(agentName) {
+            console.log(`Manual trigger initiated for ${agentName}`);
+            
+            // Safeguard: Only output files, no external logins
+            const outputTypes = ['.txt', '.json', 'prompt-ready content'];
+            const randomOutput = outputTypes[Math.floor(Math.random() * outputTypes.length)];
+            
+            alert(`${agentName} manual run initiated.\nOutput type: ${randomOutput}\nNo external logins triggered.\nResults will be saved locally.`);
+            
+            // Update last run timestamp
+            const card = document.querySelector(`[data-agent="${agentName}"]`);
+            const lastRunElement = card.querySelector('.stat-item:last-child span:last-child');
+            lastRunElement.textContent = 'Just now';
+            
+            // In production: API call to manually trigger agent
+            // const result = await fetch(`/api/agents/${agentName}/run`, { method: 'POST' });
+            // handleAgentOutput(result, agentName);
+        }
+
+        function testTier(agentName) {
+            const tiers = ['Starter', 'Pro', 'Enterprise'];
+            const availableTiers = [];
+            
+            // Get available tiers for this agent from the card
+            const card = document.querySelector(`[data-agent="${agentName}"]`);
+            const tierBadges = card.querySelectorAll('.tier-badge');
+            tierBadges.forEach(badge => {
+                availableTiers.push(badge.textContent);
+            });
+            
+            const selectedTier = prompt(`Select tier to test for ${agentName}:\n${availableTiers.join(', ')}`);
+            
+            if (selectedTier && availableTiers.includes(selectedTier)) {
+                alert(`${agentName} tier simulation started for ${selectedTier} tier.\nGenerating test scenarios and frontend preview...\nSimulation mode: Safe (no live connections)`);
+                console.log(`Testing ${agentName} on ${selectedTier} tier`);
+                
+                // In production: API call to simulate agent on specific tier
+                // simulateAgentTier(agentName, selectedTier);
+            } else if (selectedTier) {
+                alert(`Invalid tier selected. ${agentName} is only available for: ${availableTiers.join(', ')}`);
+            }
+        }
+
+        function generateWelcomeVideo() {
+            console.log('DemoVoyager: Generating Welcome to Dealvoy onboarding video...');
+            
+            // Generate comprehensive onboarding video prompt
+            const videoPrompt = `
+=== DEMOVOYAGER WELCOME VIDEO GENERATION ===
+
+🎬 VIDEO TITLE: "Welcome to Dealvoy: Your AI-Powered Arbitrage Intelligence Platform"
+
+📋 VIDEO STRUCTURE:
+1. INTRO (0-15 seconds)
+   - Dealvoy logo animation
+   - "Decode. Discover. Dominate." tagline
+   - Welcome message
+
+2. PLATFORM OVERVIEW (15-45 seconds)
+   - Dashboard tour
+   - Key features highlight
+   - AI agent ecosystem
+
+3. AGENT SHOWCASE (45-90 seconds)
+   - TrendVoyager: Market intelligence
+   - VidVoyager: Video generation
+   - RiskSentinel: Risk management
+   - ScoutVision: Product scouting
+   - TierScaler: Pricing intelligence
+
+4. TIER COMPARISON (90-120 seconds)
+   - Starter: $29/month features
+   - Pro: $97/month capabilities
+   - Enterprise: $297/month full access
+
+5. CALL TO ACTION (120-135 seconds)
+   - Start free trial
+   - Contact support
+   - Begin arbitrage journey
+
+🎯 OUTPUT SPECIFICATIONS:
+- Format: MP4, 1080p, 16:9 aspect ratio
+- Duration: 2 minutes 15 seconds
+- Audio: Professional voiceover + background music
+- Graphics: Modern UI animations, product screenshots
+- Text: Clear typography, brand colors
+- Branding: Consistent Dealvoy visual identity
+
+📊 USAGE INSTRUCTIONS:
+- Mark as required content for homepage hero section
+- Auto-play on homepage load (muted)
+- Include video controls for user interaction
+- Add captions for accessibility
+- Optimize for web streaming
+
+🔒 COMPLIANCE:
+- No external API calls during generation
+- Safe content output only
+- USPTO Patent #63/850,603 compliant
+- Professional business presentation
+
+Generated: ${new Date().toLocaleString()}
+Status: Ready for video production team
+Priority: Homepage integration required
+            `;
+            
+            // Display the prompt
+            alert('DemoVoyager: Welcome video prompt generated!\n\nOutput saved as: welcome_video_prompt.txt\nStatus: Ready for homepage integration\n\nCheck console for full prompt details.');
+            
+            console.log(videoPrompt);
+            
+            // Mark as required on homepage
+            localStorage.setItem('welcomeVideoRequired', 'true');
+            localStorage.setItem('welcomeVideoPrompt', videoPrompt);
+            
+            // In production: Save prompt to file and trigger video generation pipeline
+            // await savePromptToFile('welcome_video_prompt.txt', videoPrompt);
+            // await markForHomepageIntegration();
+            
+            alert('✅ Welcome video marked as REQUIRED for homepage.\n📁 Prompt saved to welcome_video_prompt.txt\n🎬 Ready for video production pipeline');
+        }
+
+        // Agent registry management
+        function addNewAgent(agentName, category, tierAvailability) {
+            console.log(`Adding new agent: ${agentName}`);
+            
+            // Check for duplicates
+            const existingAgent = document.querySelector(`[data-agent="${agentName}"]`);
+            if (existingAgent) {
+                alert(`Agent ${agentName} already exists. No duplicates allowed.`);
+                return false;
+            }
+            
+            // In production: Add to agent registry and update UI
+            alert(`New agent ${agentName} added successfully.\nCategory: ${category}\nTier availability: ${tierAvailability.join(', ')}\nUI will be dynamically updated.`);
+            
+            return true;
+        }
+
+        // Initialize agent detection on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Admin dashboard loaded. Agent control module initialized.');
+            
+            // Check if welcome video is required
+            if (localStorage.getItem('welcomeVideoRequired') === 'true') {
+                const welcomeIndicator = document.createElement('div');
+                welcomeIndicator.style.cssText = `
+                    position: fixed;
+                    top: 80px;
+                    right: 20px;
+                    background: var(--accent-color);
+                    color: var(--text-primary);
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    z-index: 1000;
+                    box-shadow: var(--shadow);
+                `;
+                welcomeIndicator.innerHTML = '🎬 Welcome Video Required for Homepage';
+                document.body.appendChild(welcomeIndicator);
+            }
+            
+            // Auto-detect agents from registry
+            // In production: Load from actual agent registry
+            console.log('Agent registry status: 6 agents detected and loaded');
+        });
+
+        // Additional system control functions
+        function refreshSystemStatus() {
+            // In production: Reload agent data
+        }
+
+        // Toggle Functions
+        function toggleMaintenanceMode(element) {
+            element.classList.toggle('active');
+            const isActive = element.classList.contains('active');
+            alert(`Maintenance mode ${isActive ? 'enabled' : 'disabled'}.`);
+        }
+
+        function toggleAutoScaling(element) {
+            element.classList.toggle('active');
+            const isActive = element.classList.contains('active');
+            alert(`Auto scaling ${isActive ? 'enabled' : 'disabled'}.`);
+        }
+
+        function toggleDebugLogging(element) {
+            element.classList.toggle('active');
+            const isActive = element.classList.contains('active');
+            alert(`Debug logging ${isActive ? 'enabled' : 'disabled'}.`);
+        }
+
+        function toggleMonitoring(element) {
+            element.classList.toggle('active');
+            const isActive = element.classList.contains('active');
+            alert(`Real-time monitoring ${isActive ? 'enabled' : 'disabled'}.`);
+        }
+
+        // Real-time updates
+        function updateMetrics() {
+            // In production: Fetch real-time metrics from API
+            console.log('Updating system metrics...');
+        }
+
+        // Update every 10 seconds for admin dashboard
+        setInterval(updateMetrics, 10000);
+    </script>
+</body>
+</html>
+</body>
+</html>

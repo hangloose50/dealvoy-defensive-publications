@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Dealvoy AI Platform</title>
+    <meta name="description" content="Create your Dealvoy account and start using 46 AI agents for e-commerce optimization.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
+            --danger-color: #F44336;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), #0052a3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .signup-container {
+            background: var(--background-white);
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 700px;
+        }
+
+        /* Left Panel - Branding */
+        .brand-panel {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .brand-logo .material-icons {
+            font-size: 48px;
+        }
+
+        .brand-title {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .brand-description {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .brand-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+            width: 100%;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .patent-notice {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            opacity: 0.7;
+            text-align: center;
+        }
+
+        /* Right Panel - Signup Form */
+        .signup-panel {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .signup-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .signup-subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .signup-form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            background: var(--background-white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-input.error {
+            border-color: var(--danger-color);
+        }
+
+        .form-input.success {
+            border-color: var(--secondary-color);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            background: var(--background-white);
+            cursor: pointer;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .input-with-icon {
+            padding-left: 44px;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .password-strength {
+            margin-top: 8px;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .password-strength-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--danger-color);
+            transition: all 0.3s;
+        }
+
+        .password-strength-fill.weak {
+            width: 25%;
+            background: var(--danger-color);
+        }
+
+        .password-strength-fill.fair {
+            width: 50%;
+            background: var(--accent-color);
+        }
+
+        .password-strength-fill.good {
+            width: 75%;
+            background: var(--secondary-color);
+        }
+
+        .password-strength-fill.strong {
+            width: 100%;
+            background: var(--secondary-color);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .checkbox.checked {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1.4;
+        }
+
+        .checkbox-label a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .checkbox-label a:hover {
+            text-decoration: underline;
+        }
+
+        .signup-button {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .signup-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+        }
+
+        .signup-button:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .trial-notice {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .trial-notice .material-icons {
+            color: var(--secondary-color);
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .trial-text {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .login-link {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: var(--danger-color);
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .success-message {
+            color: var(--secondary-color);
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+            text-align: center;
+        }
+
+        .loading {
+            display: none;
+            font-size: 14px;
+        }
+
+        .loading.active {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .signup-container {
+                grid-template-columns: 1fr;
+                margin: 10px;
+            }
+            
+            .brand-panel {
+                padding: 40px 30px;
+                min-height: 300px;
+            }
+            
+            .signup-panel {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .brand-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .signup-panel {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Brand Panel -->
+        <div class="brand-panel">
+            <div class="brand-logo">
+                <span class="material-icons">smart_toy</span>
+                <span class="brand-title">Dealvoy</span>
+            </div>
+            
+            <h2 class="brand-subtitle">Join 10,000+ Sellers</h2>
+            <p class="brand-description">
+                Start your journey with the world's most advanced AI-powered e-commerce optimization platform.
+            </p>
+            
+            <div class="brand-stats">
+                <div class="stat">
+                    <div class="stat-number">46</div>
+                    <div class="stat-label">AI Agents</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">ROI Increase</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+            
+            <div class="patent-notice">
+                Protected by USPTO Patent #63/850,603
+            </div>
+        </div>
+
+        <!-- Signup Panel -->
+        <div class="signup-panel">
+            <div class="signup-header">
+                <h1 class="signup-title">Create Your Account</h1>
+                <p class="signup-subtitle">Start your 30-day free trial today</p>
+            </div>
+            
+            <div class="trial-notice">
+                <span class="material-icons">verified</span>
+                <span class="trial-text">30-day free trial • No credit card required • Cancel anytime</span>
+            </div>
+            
+            <form class="signup-form" id="signupForm" onsubmit="handleSignup(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name *</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            class="form-input" 
+                            placeholder="John"
+                            required
+                        >
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name *</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            class="form-input" 
+                            placeholder="Doe"
+                            required
+                        >
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <div class="input-wrapper">
+                        <span class="material-icons input-icon">email</span>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input input-with-icon" 
+                            placeholder="john@company.com"
+                            required
+                        >
+                    </div>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company" class="form-label">Company Name</label>
+                    <div class="input-wrapper">
+                        <span class="material-icons input-icon">business</span>
+                        <input 
+                            type="text" 
+                            id="company" 
+                            name="company" 
+                            class="form-input input-with-icon" 
+                            placeholder="Your Company Inc."
+                        >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="businessType" class="form-label">Business Type</label>
+                        <select id="businessType" name="businessType" class="form-select">
+                            <option value="">Select type...</option>
+                            <option value="amazon-seller">Amazon Seller</option>
+                            <option value="shopify-store">Shopify Store</option>
+                            <option value="ecommerce-multi">Multi-platform E-commerce</option>
+                            <option value="agency">Marketing Agency</option>
+                            <option value="enterprise">Enterprise</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthlyRevenue" class="form-label">Monthly Revenue</label>
+                        <select id="monthlyRevenue" name="monthlyRevenue" class="form-select">
+                            <option value="">Select range...</option>
+                            <option value="0-10k">$0 - $10k</option>
+                            <option value="10k-50k">$10k - $50k</option>
+                            <option value="50k-100k">$50k - $100k</option>
+                            <option value="100k-500k">$100k - $500k</option>
+                            <option value="500k+">$500k+</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password *</label>
+                    <div class="input-wrapper">
+                        <span class="material-icons input-icon">lock</span>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input input-with-icon" 
+                            placeholder="Create a strong password"
+                            required
+                            oninput="checkPasswordStrength()"
+                        >
+                        <span class="material-icons password-toggle" onclick="togglePassword('password')">visibility</span>
+                    </div>
+                    <div class="password-strength">
+                        <div class="password-strength-fill" id="passwordStrengthFill"></div>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                    <div class="input-wrapper">
+                        <span class="material-icons input-icon">lock</span>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            class="form-input input-with-icon" 
+                            placeholder="Confirm your password"
+                            required
+                        >
+                        <span class="material-icons password-toggle" onclick="togglePassword('confirmPassword')">visibility</span>
+                    </div>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox" id="termsAccepted" onclick="toggleCheckbox('termsAccepted')"></div>
+                    <label for="termsAccepted" class="checkbox-label" onclick="toggleCheckbox('termsAccepted')">
+                        I agree to the <a href="/legal/terms_of_service.md" target="_blank">Terms of Service</a> 
+                        and <a href="/legal/privacy_policy.md" target="_blank">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox" id="marketingConsent" onclick="toggleCheckbox('marketingConsent')"></div>
+                    <label for="marketingConsent" class="checkbox-label" onclick="toggleCheckbox('marketingConsent')">
+                        I'd like to receive product updates and marketing communications
+                    </label>
+                </div>
+                
+                <button type="submit" class="signup-button" id="signupButton">
+                    <span class="material-icons">person_add</span>
+                    Create Account
+                </button>
+                
+                <div class="loading" id="loadingState">
+                    <span class="material-icons">hourglass_empty</span>
+                    Creating your account...
+                </div>
+                
+                <div class="success-message" id="successMessage"></div>
+                <div class="error-message" id="signupError" style="text-align: center;"></div>
+            </form>
+            
+            <div class="login-link">
+                Already have an account? <a href="/pages/login.html">Sign in here</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form validation and submission
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const userData = Object.fromEntries(formData);
+            
+            // Clear previous errors
+            clearErrors();
+            
+            // Validate form
+            if (!validateForm(userData)) {
+                return;
+            }
+            
+            // Show loading state
+            showLoading();
+            
+            // Simulate account creation (in production: call auth API)
+            setTimeout(() => {
+                createAccount(userData);
+            }, 2000);
+        }
+        
+        function validateForm(userData) {
+            let isValid = true;
+            
+            // Name validation
+            if (userData.firstName.length < 2) {
+                showError('firstNameError', 'First name must be at least 2 characters');
+                document.getElementById('firstName').classList.add('error');
+                isValid = false;
+            }
+            
+            if (userData.lastName.length < 2) {
+                showError('lastNameError', 'Last name must be at least 2 characters');
+                document.getElementById('lastName').classList.add('error');
+                isValid = false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(userData.email)) {
+                showError('emailError', 'Please enter a valid email address');
+                document.getElementById('email').classList.add('error');
+                isValid = false;
+            }
+            
+            // Password validation
+            if (userData.password.length < 8) {
+                showError('passwordError', 'Password must be at least 8 characters');
+                document.getElementById('password').classList.add('error');
+                isValid = false;
+            }
+            
+            if (userData.password !== userData.confirmPassword) {
+                showError('confirmPasswordError', 'Passwords do not match');
+                document.getElementById('confirmPassword').classList.add('error');
+                isValid = false;
+            }
+            
+            // Terms acceptance
+            if (!document.getElementById('termsAccepted').classList.contains('checked')) {
+                showError('signupError', 'You must accept the Terms of Service and Privacy Policy');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function createAccount(userData) {
+            hideLoading();
+            
+            // Simulate successful account creation
+            const accountData = {
+                id: 'user_' + Date.now(),
+                email: userData.email,
+                firstName: userData.firstName,
+                lastName: userData.lastName,
+                company: userData.company,
+                businessType: userData.businessType,
+                monthlyRevenue: userData.monthlyRevenue,
+                createdAt: new Date().toISOString(),
+                trialEndDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
+            };
+            
+            // Store account data (demo)
+            localStorage.setItem('dealvoy_account', JSON.stringify(accountData));
+            
+            // Show success message
+            showSuccess('Account created successfully! Redirecting to your dashboard...');
+            
+            // Redirect to dashboard
+            setTimeout(() => {
+                window.location.href = '/pages/dashboard_user.html?welcome=true';
+            }, 2000);
+        }
+        
+        function checkPasswordStrength() {
+            const password = document.getElementById('password').value;
+            const strengthFill = document.getElementById('passwordStrengthFill');
+            
+            let strength = 0;
+            let strengthClass = '';
+            
+            // Length check
+            if (password.length >= 8) strength++;
+            if (password.length >= 12) strength++;
+            
+            // Character variety checks
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            // Set strength class
+            if (strength <= 2) strengthClass = 'weak';
+            else if (strength <= 3) strengthClass = 'fair';
+            else if (strength <= 4) strengthClass = 'good';
+            else strengthClass = 'strong';
+            
+            strengthFill.className = `password-strength-fill ${strengthClass}`;
+        }
+        
+        function togglePassword(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleIcon = passwordInput.nextElementSibling;
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.textContent = 'visibility_off';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.textContent = 'visibility';
+            }
+        }
+        
+        function toggleCheckbox(id) {
+            const checkbox = document.getElementById(id);
+            checkbox.classList.toggle('checked');
+        }
+        
+        // Utility functions
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+        
+        function showSuccess(message) {
+            const successElement = document.getElementById('successMessage');
+            successElement.textContent = message;
+            successElement.style.display = 'block';
+        }
+        
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.style.display = 'none';
+                element.textContent = '';
+            });
+            
+            const inputElements = document.querySelectorAll('.form-input');
+            inputElements.forEach(element => {
+                element.classList.remove('error');
+                element.classList.remove('success');
+            });
+            
+            document.getElementById('successMessage').style.display = 'none';
+        }
+        
+        function showLoading() {
+            document.getElementById('signupButton').style.display = 'none';
+            document.getElementById('loadingState').classList.add('active');
+        }
+        
+        function hideLoading() {
+            document.getElementById('signupButton').style.display = 'flex';
+            document.getElementById('loadingState').classList.remove('active');
+        }
+        
+        // Real-time email validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const email = this.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && emailRegex.test(email)) {
+                this.classList.remove('error');
+                this.classList.add('success');
+                document.getElementById('emailError').style.display = 'none';
+            }
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Signup page loaded - Ready for new user registration');
+        });
+    </script>
+</body>
+</html>

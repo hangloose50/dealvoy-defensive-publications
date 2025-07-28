@@ -1,0 +1,147 @@
+{
+  "agentRegistry": {
+    "version": "2.1.0",
+    "lastUpdated": "2025-07-27T19:45:00.000Z",
+    "totalAgents": 6,
+    "activeAgents": 6,
+    "agents": [
+      {
+        "name": "TrendVoyager",
+        "role": "Product trend scanner and analyzer (weekly batch)",
+        "tiers": ["Starter", "Premium", "Pro", "Elite", "Titan"],
+        "category": "Market Intelligence",
+        "icon": "📈",
+        "weeklyVideoCount": {
+          "Starter": 1,
+          "Premium": 2,
+          "Pro": 3,
+          "Elite": 4,
+          "Titan": 5
+        },
+        "lastRun": "2025-07-20T10:00:00Z",
+        "outputTypes": [".json", ".txt", "trend-analysis.json"],
+        "enabled": true,
+        "safetyLevel": "secure",
+        "archiveEnabled": true
+      },
+      {
+        "name": "VidVoyager",
+        "role": "Video prompt and storyboard generator (Runway-style)",
+        "tiers": ["Premium", "Pro", "Elite", "Titan"],
+        "category": "Video Generation",
+        "icon": "🎥",
+        "weeklyVideoCount": {
+          "Premium": 2,
+          "Pro": 4,
+          "Elite": 6,
+          "Titan": 10
+        },
+        "lastRun": "2025-07-27T08:30:00Z",
+        "outputTypes": [".txt", ".json", "video-prompt.txt"],
+        "enabled": true,
+        "safetyLevel": "secure",
+        "archiveEnabled": true,
+        "autoArchivePath": "/customer_portal/video_library/"
+      },
+      {
+        "name": "RiskSentinel",
+        "role": "IP/brand safety scanner (SafeMatch Alert system)",
+        "tiers": ["Starter", "Premium", "Pro", "Elite", "Titan"],
+        "category": "Risk Management",
+        "icon": "🛡️",
+        "weeklyVideoCount": {
+          "Starter": 1,
+          "Premium": 1,
+          "Pro": 2,
+          "Elite": 2,
+          "Titan": 3
+        },
+        "lastRun": "2025-07-27T09:15:00Z",
+        "outputTypes": [".json", ".txt", "risk-report.json"],
+        "enabled": true,
+        "safetyLevel": "high-security",
+        "archiveEnabled": true
+      },
+      {
+        "name": "ScoutVision",
+        "role": "ROI, Gating, and Buy/Skip evaluator embedded in scanner",
+        "tiers": ["All"],
+        "category": "Product Scouting",
+        "icon": "🔍",
+        "weeklyVideoCount": {
+          "All": 2
+        },
+        "lastRun": "2025-07-27T07:45:00Z",
+        "outputTypes": [".json", ".txt", "scout-evaluation.json"],
+        "enabled": true,
+        "safetyLevel": "secure",
+        "archiveEnabled": true
+      },
+      {
+        "name": "TierScaler",
+        "role": "Controls feature access and automation caps by pricing tier",
+        "tiers": ["All"],
+        "category": "System Management",
+        "icon": "⚖️",
+        "weeklyVideoCount": {
+          "All": 1
+        },
+        "lastRun": "2025-07-27T06:00:00Z",
+        "outputTypes": [".json", ".txt", "tier-config.json"],
+        "enabled": true,
+        "safetyLevel": "system-critical",
+        "archiveEnabled": false
+      },
+      {
+        "name": "DemoVoyager",
+        "role": "Creates onboarding and instructional video prompts",
+        "tiers": ["All"],
+        "category": "Onboarding & Training",
+        "icon": "🎬",
+        "weeklyVideoCount": {
+          "All": 1
+        },
+        "lastRun": "2025-07-27T19:45:00Z",
+        "outputTypes": [".txt", ".json", "welcome-video-prompt.txt"],
+        "enabled": true,
+        "safetyLevel": "secure",
+        "archiveEnabled": true,
+        "special": "instructional-video-generator",
+        "homepageIntegration": true,
+        "persistentOutput": "/onboarding_videos/dealvoy_intro/video_prompt.txt"
+      }
+    ]
+  },
+  "systemConfig": {
+    "executionSafeguards": {
+      "noExternalLogins": true,
+      "localOutputOnly": true,
+      "allowedOutputTypes": [".txt", ".json", "prompt-ready-content"],
+      "preventDuplicateAgents": true
+    },
+    "archiveConfig": {
+      "customerLibraryPath": "/customer_portal/video_library/",
+      "onboardingPath": "/onboarding_videos/dealvoy_intro/",
+      "autoArchiveVidVoyager": true,
+      "maxArchiveSize": 1000,
+      "autoCleanupDays": 90
+    },
+    "weeklySchedule": {
+      "nextRun": "2025-08-03T06:00:00Z",
+      "timezone": "EST",
+      "runDay": "Sunday",
+      "batchGeneration": true
+    },
+    "homepageIntegration": {
+      "welcomeVideoRequired": true,
+      "autoVisibility": true,
+      "fallbackImage": "/assets/dealvoy-hero.jpg"
+    }
+  },
+  "compliance": {
+    "patentNumber": "USPTO #63/850,603",
+    "safetyStandards": "Enterprise-grade",
+    "dataProtection": "GDPR compliant",
+    "accessControl": "Tier-based restrictions"
+  }
+}

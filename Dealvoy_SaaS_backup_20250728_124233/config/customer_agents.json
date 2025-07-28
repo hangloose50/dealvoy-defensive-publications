@@ -1,0 +1,87 @@
+{
+  "customerAgents": {
+    "version": "1.0.0",
+    "description": "Customer-facing AI agents for end users",
+    "agents": [
+      {
+        "name": "Deal Finder AI",
+        "description": "Automatically finds profitable product opportunities",
+        "category": "Deal Discovery",
+        "icon": "💎",
+        "userFriendly": true,
+        "tiers": ["Starter", "Pro", "Enterprise", "Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Finds trending products", "Analyzes profit margins", "Real-time alerts"]
+      },
+      {
+        "name": "Price Optimizer",
+        "description": "Automatically adjusts your product prices for maximum profit",
+        "category": "Pricing",
+        "icon": "💰",
+        "userFriendly": true,
+        "tiers": ["Pro", "Enterprise", "Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Competitive pricing", "Profit optimization", "Dynamic adjustments"]
+      },
+      {
+        "name": "Trend Analyzer",
+        "description": "Tracks market trends and predicts demand shifts",
+        "category": "Market Intelligence",
+        "icon": "📈",
+        "userFriendly": true,
+        "tiers": ["Starter", "Pro", "Enterprise", "Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Trend forecasting", "Demand prediction", "Market insights"]
+      },
+      {
+        "name": "Inventory Optimizer",
+        "description": "Manages stock levels and prevents stockouts",
+        "category": "Inventory",
+        "icon": "📦",
+        "userFriendly": true,
+        "tiers": ["Pro", "Enterprise", "Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Stock optimization", "Prevents stockouts", "Cost reduction"]
+      },
+      {
+        "name": "Video Creator AI",
+        "description": "Creates product videos and marketing content",
+        "category": "Content Creation",
+        "icon": "🎥",
+        "userFriendly": true,
+        "tiers": ["Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Auto video creation", "Marketing content", "Product showcases"]
+      },
+      {
+        "name": "Market Scanner",
+        "description": "Monitors competitor pricing and availability",
+        "category": "Competition Analysis",
+        "icon": "🔍",
+        "userFriendly": true,
+        "tiers": ["Pro", "Enterprise", "Titan", "Odyssey", "Vanguard"],
+        "benefits": ["Competitor tracking", "Price monitoring", "Market analysis"]
+      }
+    ]
+  },
+  "adminOnlyAgents": {
+    "description": "System administration and backend agents (hidden from customers)",
+    "agents": [
+      {
+        "name": "System Monitor",
+        "category": "System Administration",
+        "adminOnly": true
+      },
+      {
+        "name": "Database Manager",
+        "category": "System Administration", 
+        "adminOnly": true
+      },
+      {
+        "name": "API Rate Limiter",
+        "category": "System Administration",
+        "adminOnly": true
+      },
+      {
+        "name": "Security Scanner",
+        "category": "System Administration",
+        "adminOnly": true
+      }
+    ]
+  }
+}
