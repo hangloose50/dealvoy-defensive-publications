@@ -6,4 +6,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amazonscrapertoolkit"
 version = "0.1.0"
-packages = ["amazonscrapertoolkit", "amazonscrapertoolkit.app", "amazonscrapertoolkit.app.archive", "utils"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "utils*"]
