@@ -617,6 +617,124 @@
             font-weight: 600;
             margin-left: 8px;
         }
+
+        /* Upgrade Alert Styling */
+        .upgrade-alert {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 2px solid var(--warning-color);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 24px 0;
+            position: relative;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .alert-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #92400E;
+            font-weight: 600;
+        }
+
+        .alert-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .alert-text {
+            flex: 1;
+        }
+
+        .alert-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #92400E;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s ease;
+        }
+
+        .alert-close:hover {
+            background: rgba(146, 64, 14, 0.1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Pricing Cards for Scan Usage Integration */
+        .scan-limit-highlight {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            color: #92400E;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .unlimited-badge {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+
+        .pricing-card.recommended {
+            position: relative;
+            overflow: visible;
+        }
+
+        .pricing-card.recommended::after {
+            content: '👑 RECOMMENDED FOR YOU';
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        /* Hidden class for better control */
+        .hidden {
+            display: none !important;
+        }
+
+        .annual-price {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -646,6 +764,14 @@
                 <p class="subtitle">
                     Start free and scale up as your business grows. All plans include our core AI agents with increasing capabilities and support levels.
                 </p>
+                <!-- Upgrade Alert (shown when coming from scan usage enhancement) -->
+                <div id="upgradeAlert" class="upgrade-alert hidden">
+                    <div class="alert-content">
+                        <span class="alert-icon">⚠️</span>
+                        <span class="alert-text">You're approaching your scan limit. Upgrade now to continue discovering deals!</span>
+                        <button class="alert-close" onclick="hideUpgradeAlert()">&times;</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -676,10 +802,11 @@
                         <div class="plan-name">Starter</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$10</span>
-                            <span class="price-amount annual-price" style="display: none;">$8</span>
+                            <span class="price-amount annual-price">$8</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">7-day free trial included</div>
+                        <div class="scan-limit-highlight">100 Product Scans/month</div>
                         <div class="trial-badge">🎯 FREE TRIAL</div>
                     </div>
                     <ul class="plan-features">
@@ -700,10 +827,11 @@
                         <div class="plan-name">Pro</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$29</span>
-                            <span class="price-amount annual-price" style="display: none;">$23</span>
+                            <span class="price-amount annual-price">$23</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">7-day free trial included</div>
+                        <div class="scan-limit-highlight">1,000 Product Scans/month</div>
                         <div class="trial-badge">🎯 FREE TRIAL</div>
                     </div>
                     <ul class="plan-features">
@@ -724,10 +852,11 @@
                         <div class="plan-name">Enterprise</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$79</span>
-                            <span class="price-amount annual-price" style="display: none;">$63</span>
+                            <span class="price-amount annual-price">$63</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">7-day free trial included</div>
+                        <div class="scan-limit-highlight">10,000 Product Scans/month</div>
                         <div class="trial-badge">🎯 FREE TRIAL</div>
                     </div>
                     <ul class="plan-features">
@@ -748,10 +877,11 @@
                         <div class="plan-name">Titan</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$159</span>
-                            <span class="price-amount annual-price" style="display: none;">$127</span>
+                            <span class="price-amount annual-price">$127</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">7-day free trial included</div>
+                        <div class="scan-limit-highlight">Unlimited Scans <span class="unlimited-badge">∞</span></div>
                         <div class="trial-badge">🎯 FREE TRIAL</div>
                     </div>
                     <ul class="plan-features">
@@ -772,10 +902,11 @@
                         <div class="plan-name">Odyssey</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$299</span>
-                            <span class="price-amount annual-price" style="display: none;">$239</span>
+                            <span class="price-amount annual-price">$239</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">Professional scaling solution</div>
+                        <div class="scan-limit-highlight">Unlimited Scans <span class="unlimited-badge">∞</span></div>
                     </div>
                     <ul class="plan-features">
                         <li><span class="feature-icon">✓</span> 42 AI Agents</li>
@@ -795,10 +926,11 @@
                         <div class="plan-name">Vanguard</div>
                         <div class="plan-price">
                             <span class="price-amount monthly-price">$599</span>
-                            <span class="price-amount annual-price" style="display: none;">$479</span>
+                            <span class="price-amount annual-price">$479</span>
                             <span class="price-period">/month</span>
                         </div>
                         <div class="price-description">Ultimate enterprise solution</div>
+                        <div class="scan-limit-highlight">Unlimited Scans <span class="unlimited-badge">∞</span></div>
                         <div class="premium-badge">🚀 ULTIMATE</div>
                     </div>
                     <ul class="plan-features">
@@ -809,52 +941,11 @@
                         <li><span class="feature-icon">✓</span> Enterprise Security</li>
                         <li><span class="feature-icon">✓</span> Global Marketplace Access</li>
                         <li><span class="feature-icon">✓</span> Patent-Protected Features</li>
+                        <li><span class="feature-icon">✓</span> Unlimited Product Scans</li>
+                        <li><span class="feature-icon">✓</span> Custom AI Agent Training</li>
+                        <li><span class="feature-icon">✓</span> 24/7 Dedicated Support</li>
                     </ul>
                     <a href="register.html" class="btn btn-premium btn-full">Get Started</a>
-                </div>
-
-                <!-- Professional Plan (OLD - REMOVED) -->
-                    </div>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon premium">✓</span> 25 AI Agents Active</li>
-                        <li><span class="feature-icon premium">✓</span> Advanced Deal Discovery</li>
-                        <li><span class="feature-icon premium">✓</span> Priority Support</li>
-                        <li><span class="feature-icon premium">✓</span> Custom Filters & Alerts</li>
-                        <li><span class="feature-icon premium">✓</span> Advanced Analytics</li>
-                        <li><span class="feature-icon premium">✓</span> API Access</li>
-                        <li><span class="feature-icon premium">✓</span> Automated Repricing</li>
-                        <li><span class="feature-icon premium">✓</span> 10,000 Product Scans/month</li>
-                        <li><span class="feature-icon premium">✓</span> Real-time Notifications</li>
-                        <li><span class="feature-icon premium">✓</span> Multi-platform Integration</li>
-                    </ul>
-                    <a href="register.html" class="btn btn-primary btn-full">Start 7-Day Trial</a>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="pricing-card fade-in">
-                    <div class="plan-header">
-                        <div class="plan-name">Enterprise</div>
-                        <div class="plan-price">
-                            <span class="price-amount monthly-price">$99</span>
-                            <span class="price-amount annual-price" style="display: none;">$79</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <div class="price-description">For established businesses</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon premium">✓</span> All 46 AI Agents</li>
-                        <li><span class="feature-icon premium">✓</span> White-Glove Onboarding</li>
-                        <li><span class="feature-icon premium">✓</span> Dedicated Account Manager</li>
-                        <li><span class="feature-icon premium">✓</span> Custom Integrations</li>
-                        <li><span class="feature-icon premium">✓</span> Advanced Reporting</li>
-                        <li><span class="feature-icon premium">✓</span> Multi-User Access</li>
-                        <li><span class="feature-icon premium">✓</span> Custom Agent Training</li>
-                        <li><span class="feature-icon premium">✓</span> 24/7 Phone Support</li>
-                        <li><span class="feature-icon premium">✓</span> Unlimited Product Scans</li>
-                        <li><span class="feature-icon premium">✓</span> Custom Dashboard</li>
-                        <li><span class="feature-icon premium">✓</span> Priority Processing</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-success btn-full">Contact Sales</a>
                 </div>
             </div>
         </div>
@@ -1073,6 +1164,112 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Dealvoy Pricing Page - Perfect Final Web Deployment v1.0 - Loaded Successfully');
+            
+            // Check for scan usage enhancement integration
+            initializeScanUsageIntegration();
+        });
+
+        // Scan Usage Enhancement Integration
+        function initializeScanUsageIntegration() {
+            // Check URL parameters for upgrade prompts
+            const urlParams = new URLSearchParams(window.location.search);
+            const upgradeParam = urlParams.get('upgrade');
+            const fromDashboard = urlParams.get('from') === 'dashboard';
+            const usageLevel = urlParams.get('usage');
+
+            if (fromDashboard || upgradeParam) {
+                // Show upgrade alert
+                showUpgradeAlert();
+                
+                // Highlight recommended plan based on current tier
+                if (upgradeParam) {
+                    highlightRecommendedPlan(upgradeParam);
+                }
+                
+                // Scroll to pricing section
+                setTimeout(() => {
+                    document.querySelector('.pricing').scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                }, 1000);
+            }
+        }
+
+        function showUpgradeAlert() {
+            const alertElement = document.getElementById('upgradeAlert');
+            if (alertElement) {
+                alertElement.classList.remove('hidden');
+                
+                // Auto-hide after 10 seconds
+                setTimeout(() => {
+                    hideUpgradeAlert();
+                }, 10000);
+            }
+        }
+
+        function hideUpgradeAlert() {
+            const alertElement = document.getElementById('upgradeAlert');
+            if (alertElement) {
+                alertElement.classList.add('hidden');
+            }
+        }
+
+        function highlightRecommendedPlan(recommendedTier) {
+            // Remove existing recommendations
+            document.querySelectorAll('.pricing-card.recommended').forEach(card => {
+                card.classList.remove('recommended');
+            });
+
+            // Map tier to card index (assuming order: starter, pro, enterprise, titan, odyssey, vanguard)
+            const tierMap = {
+                'pro': 1,
+                'enterprise': 2, 
+                'titan': 3,
+                'odyssey': 4,
+                'vanguard': 5
+            };
+
+            const cardIndex = tierMap[recommendedTier.toLowerCase()];
+            if (cardIndex !== undefined) {
+                const cards = document.querySelectorAll('.pricing-card');
+                if (cards[cardIndex]) {
+                    cards[cardIndex].classList.add('recommended');
+                    
+                    // Pulse effect for attention
+                    cards[cardIndex].style.animation = 'pulse 2s infinite';
+                    
+                    setTimeout(() => {
+                        cards[cardIndex].style.animation = '';
+                    }, 6000);
+                }
+            }
+        }
+
+        // Enhanced tracking for scan usage enhancement
+        function trackUpgradeClick(tier, source = 'pricing_page') {
+            // Track upgrade button clicks for analytics
+            console.log(`Upgrade clicked: ${tier} from ${source}`);
+            
+            // You can integrate with analytics here
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'upgrade_click', {
+                    'tier': tier,
+                    'source': source,
+                    'page': 'pricing'
+                });
+            }
+        }
+
+        // Add click tracking to all upgrade buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.pricing-card .btn').forEach((btn, index) => {
+                const tiers = ['starter', 'pro', 'enterprise', 'titan', 'odyssey', 'vanguard'];
+                const tier = tiers[index] || 'unknown';
+                
+                btn.addEventListener('click', function() {
+                    trackUpgradeClick(tier);
+                });
+            });
         });
     </script>
 

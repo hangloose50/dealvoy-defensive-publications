@@ -1,0 +1,487 @@
+{
+  "summary": {
+    "PASS": 43,
+    "FAIL": 2,
+    "WARNING": 8,
+    "INFO": 0
+  },
+  "results": [
+    {
+      "component": "Tier System",
+      "test_name": "TierLevel Enum",
+      "status": "\u2705 PASS",
+      "message": "TierLevel enum properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "Agent Registry",
+      "status": "\u274c FAIL",
+      "message": "Agent registry not found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "MarketShiftForecasterAI Registration",
+      "status": "\u2705 PASS",
+      "message": "MarketShiftForecasterAI found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "ProductMatcherAI Registration",
+      "status": "\u2705 PASS",
+      "message": "ProductMatcherAI found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "UPCBlacklistDetector Registration",
+      "status": "\u2705 PASS",
+      "message": "UPCBlacklistDetector found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "IPFlaggingAgent Registration",
+      "status": "\u2705 PASS",
+      "message": "IPFlaggingAgent found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "GatedProductAdvisorAI Registration",
+      "status": "\u2705 PASS",
+      "message": "GatedProductAdvisorAI found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Tier System",
+      "test_name": "BundleProfitEstimator Registration",
+      "status": "\u2705 PASS",
+      "message": "BundleProfitEstimator found in agent registry",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/tier_enforcement_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Dashboard Integration",
+      "test_name": "Customer HTML Generation",
+      "status": "\u2705 PASS",
+      "message": "Customer dashboard HTML generation implemented",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/dashboard_integration_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Dashboard Integration",
+      "test_name": "Admin HTML Generation",
+      "status": "\u2705 PASS",
+      "message": "Admin dashboard HTML generation implemented",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/dashboard_integration_system.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "MarketShiftForecasterAI Integration",
+      "status": "\u2705 PASS",
+      "message": "MarketShiftForecasterAI found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "ProductMatcherAI Integration",
+      "status": "\u2705 PASS",
+      "message": "ProductMatcherAI found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "UPCBlacklistDetector Integration",
+      "status": "\u2705 PASS",
+      "message": "UPCBlacklistDetector found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "IPFlaggingAgent Integration",
+      "status": "\u2705 PASS",
+      "message": "IPFlaggingAgent found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "GatedProductAdvisorAI Integration",
+      "status": "\u2705 PASS",
+      "message": "GatedProductAdvisorAI found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "BundleProfitEstimator Integration",
+      "status": "\u2705 PASS",
+      "message": "BundleProfitEstimator found in customer dashboard",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "Tier Badges",
+      "status": "\u2705 PASS",
+      "message": "Found 14 tier badges",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Customer Dashboard",
+      "test_name": "Upgrade Prompts",
+      "status": "\u2705 PASS",
+      "message": "Upgrade prompts implemented",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "MarketShiftForecasterAI Control",
+      "status": "\u2705 PASS",
+      "message": "MarketShiftForecasterAI admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "ProductMatcherAI Control",
+      "status": "\u2705 PASS",
+      "message": "ProductMatcherAI admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "UPCBlacklistDetector Control",
+      "status": "\u2705 PASS",
+      "message": "UPCBlacklistDetector admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "IPFlaggingAgent Control",
+      "status": "\u2705 PASS",
+      "message": "IPFlaggingAgent admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "GatedProductAdvisorAI Control",
+      "status": "\u2705 PASS",
+      "message": "GatedProductAdvisorAI admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "BundleProfitEstimator Control",
+      "status": "\u2705 PASS",
+      "message": "BundleProfitEstimator admin control found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "Toggle Switches",
+      "status": "\u2705 PASS",
+      "message": "Found 20 toggle switches",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Admin Dashboard",
+      "test_name": "Demo Functions",
+      "status": "\u2705 PASS",
+      "message": "All 6 demo functions implemented",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "MarketShiftForecasterAI Class",
+      "status": "\u2705 PASS",
+      "message": "MarketShiftForecasterAI class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/MarketShiftForecasterAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "MarketShiftForecasterAI Info Method",
+      "status": "\u2705 PASS",
+      "message": "MarketShiftForecasterAI get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/MarketShiftForecasterAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "MarketShiftForecasterAI Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "MarketShiftForecasterAI demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/MarketShiftForecasterAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "ProductMatcherAI Class",
+      "status": "\u2705 PASS",
+      "message": "ProductMatcherAI class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/ProductMatcherAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "ProductMatcherAI Info Method",
+      "status": "\u2705 PASS",
+      "message": "ProductMatcherAI get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/ProductMatcherAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "ProductMatcherAI Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "ProductMatcherAI demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/ProductMatcherAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "UPCBlacklistDetector Class",
+      "status": "\u2705 PASS",
+      "message": "UPCBlacklistDetector class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/UPCBlacklistDetector.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "UPCBlacklistDetector Info Method",
+      "status": "\u2705 PASS",
+      "message": "UPCBlacklistDetector get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/UPCBlacklistDetector.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "UPCBlacklistDetector Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "UPCBlacklistDetector demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/UPCBlacklistDetector.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "IPFlaggingAgent Class",
+      "status": "\u2705 PASS",
+      "message": "IPFlaggingAgent class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/IPFlaggingAgent.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "IPFlaggingAgent Info Method",
+      "status": "\u2705 PASS",
+      "message": "IPFlaggingAgent get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/IPFlaggingAgent.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "IPFlaggingAgent Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "IPFlaggingAgent demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/IPFlaggingAgent.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "GatedProductAdvisorAI Class",
+      "status": "\u2705 PASS",
+      "message": "GatedProductAdvisorAI class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/GatedProductAdvisorAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "GatedProductAdvisorAI Info Method",
+      "status": "\u2705 PASS",
+      "message": "GatedProductAdvisorAI get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/GatedProductAdvisorAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "GatedProductAdvisorAI Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "GatedProductAdvisorAI demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/GatedProductAdvisorAI.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "BundleProfitEstimator Class",
+      "status": "\u2705 PASS",
+      "message": "BundleProfitEstimator class properly defined",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/BundleProfitEstimator.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "BundleProfitEstimator Info Method",
+      "status": "\u2705 PASS",
+      "message": "BundleProfitEstimator get_agent_info method found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/BundleProfitEstimator.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Agent Files",
+      "test_name": "BundleProfitEstimator Demo",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "BundleProfitEstimator demo function missing",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/ai_agents/BundleProfitEstimator.py",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "CSS Consistency",
+      "test_name": "Dealvoy_SaaS/pages/dashboard_user.html Tier Classes",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "Only 0 tier classes found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "CSS Consistency",
+      "test_name": "Dealvoy_SaaS/pages/dashboard_user.html Agent Cards",
+      "status": "\u2705 PASS",
+      "message": "Agent card styles present",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "CSS Consistency",
+      "test_name": "Dealvoy_SaaS/pages/dashboard_admin.html Tier Classes",
+      "status": "\u2705 PASS",
+      "message": "Found 3 tier classes",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "CSS Consistency",
+      "test_name": "Dealvoy_SaaS/pages/dashboard_admin.html Agent Cards",
+      "status": "\u2705 PASS",
+      "message": "Agent card styles present",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "CSS Consistency",
+      "test_name": "Dealvoy_SaaS/pages/pricing.html Tier Classes",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "Only 0 tier classes found",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/pricing.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "JavaScript",
+      "test_name": "Customer Functions",
+      "status": "\u2705 PASS",
+      "message": "Found 2 JavaScript functions",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_user.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "JavaScript",
+      "test_name": "Admin Functions",
+      "status": "\u2705 PASS",
+      "message": "Found 3 admin functions",
+      "file_path": "/Users/dusti1/OneDrive/Documents/AmazonScraperToolkit/Dealvoy_SaaS/pages/dashboard_admin.html",
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Launch Readiness",
+      "test_name": "Critical Files",
+      "status": "\u2705 PASS",
+      "message": "All critical files present",
+      "file_path": null,
+      "line_number": null,
+      "fix_suggestion": null
+    },
+    {
+      "component": "Launch Readiness",
+      "test_name": "Agent Completion",
+      "status": "\u274c FAIL",
+      "message": "Agent implementation only 50.0% complete",
+      "file_path": null,
+      "line_number": null,
+      "fix_suggestion": null
+    }
+  ]
+}

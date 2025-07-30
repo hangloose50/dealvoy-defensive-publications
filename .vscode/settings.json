@@ -1,0 +1,55 @@
+{
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "vim.statusBarColors.easymotionmode": "",
+
+  // 🧠 ENABLE FULL AUTONOMOUS AGENT LOGIC
+  "copilot-chat.agent.experimental.thinkingToolDeniedCommands": {},
+  "copilot-chat.agent.experimental.thinkingToolAllowedCommands": {
+    "rm": true,
+    "rmdir": true,
+    "del": true,
+    "kill": true,
+    "curl": true,
+    "wget": true,
+    "eval": true,
+    "chmod": true,
+    "chown": true,
+    "Remove-Item": true,
+
+    // 🔁 Agent-style autonomy
+    "loop": true,
+    "retry": true,
+    "chunk": true,
+    "resume": true,
+    "save": true,
+    "step": true,
+    "analyze": true,
+    "summarize": true,
+    "continue": true,
+    "log": true,
+    "checkpoint": true,
+    "plan": true,
+    "optimize": true,
+    "refactor": true,
+    "split": true,
+    "extract": true,
+    "scan": true,
+    "transform": true,
+    "validate": true,
+    "build": true,
+    "compile": true,
+    "test": true,
+    "deploy": true,
+    "monitor": true,
+    "fallback": true,
+    "resume-task": true,
+    "auto-fix": true
+  },
+
+  // 🧠 Turn on agent mode globally
+  "github.copilot.chat.agent.experimental.thinkingToolEnabled": true,
+  "github.copilot.chat.agent.experimental.thinkingToolEnabledForAll": true,
+"github.copilot.chat.agent.experimental.thinkingToolEnabledForAllInWorkspace": true,
+"chat.agent.maxRequests": 2000
+}

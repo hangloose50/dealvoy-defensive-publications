@@ -1,0 +1,118 @@
+{
+  "inspection_date": "2025-07-28T17:22:27.036182",
+  "platform_readiness": 75.0,
+  "component_status": {
+    "mobile_simulation": "NOT_FOUND",
+    "web_pages": {
+      "home.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      },
+      "pricing.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      },
+      "contact.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      },
+      "dashboard_user.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      },
+      "dashboard_products.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      },
+      "sales_rank_tracker.html": {
+        "status": "FUNCTIONAL",
+        "score": 100.0,
+        "checks": {
+          "HTML structure": true,
+          "CSS styling": true,
+          "JavaScript": true,
+          "Navigation": true,
+          "Content sections": true
+        }
+      }
+    },
+    "tier_enforcement": "OPERATIONAL",
+    "agent_toggles": "FUNCTIONAL",
+    "ai_agent_demos": {
+      "MarketShiftForecasterAI": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      },
+      "ProductMatcherAI": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      },
+      "UPCBlacklistDetector": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      },
+      "IPFlaggingAgent": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      },
+      "GatedProductAdvisorAI": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      },
+      "BundleProfitEstimator": {
+        "status": "FUNCTIONAL",
+        "score": 100.0
+      }
+    },
+    "stripe_flows": "FUNCTIONAL",
+    "usage_tracker": "FUNCTIONAL",
+    "additional_checks": {
+      "slogan": true,
+      "navigation": 49,
+      "legal_pages": 0,
+      "demo_videos": true
+    }
+  },
+  "inspection_status": "\u26a0\ufe0f MINOR ADJUSTMENTS NEEDED",
+  "recommendations": [
+    "Continue with launch preparation if readiness >= 90%",
+    "Address missing components if readiness < 90%",
+    "Validate all agent demos are working",
+    "Confirm tier enforcement is properly functional"
+  ]
+}

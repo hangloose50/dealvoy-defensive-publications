@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "total": 5,
+    "ok": 0,
+    "errors": 5,
+    "field_issues": 0,
+    "anti_bot": 0
+  },
+  "results": {
+    "cvs_scraper.py": {
+      "status": "error",
+      "fields": {},
+      "http_status": null,
+      "rate_limit": null,
+      "anti_bot": false,
+      "error": "No products returned"
+    },
+    "bestbuy_scraper.py": {
+      "status": "error",
+      "fields": {},
+      "http_status": null,
+      "rate_limit": null,
+      "anti_bot": false,
+      "error": "No products returned"
+    },
+    "lowes_scraper.py": {
+      "status": "error",
+      "fields": {},
+      "http_status": null,
+      "rate_limit": null,
+      "anti_bot": false,
+      "error": "No products returned"
+    },
+    "homedepot_scraper.py": {
+      "status": "error",
+      "fields": {},
+      "http_status": null,
+      "rate_limit": null,
+      "anti_bot": false,
+      "error": "No products returned"
+    },
+    "target_scraper.py": {
+      "status": "error",
+      "fields": {},
+      "http_status": null,
+      "rate_limit": null,
+      "anti_bot": false,
+      "error": "No products returned"
+    }
+  }
+}

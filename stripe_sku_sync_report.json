@@ -1,0 +1,345 @@
+{
+  "sync_timestamp": "2025-07-28T17:39:12.299939",
+  "stripe_config": {
+    "mode": "test",
+    "api_version": "2023-10-16",
+    "webhook_endpoint": "https://dealvoy.com/webhook/stripe"
+  },
+  "tier_summary": {
+    "total_tiers": 6,
+    "free_tiers": 1,
+    "paid_tiers": 5,
+    "products_generated": 12,
+    "prices_generated": 10
+  },
+  "validation_results": {
+    "validation_passed": true,
+    "issues": [],
+    "warnings": [
+      "professional: Annual price $239.99 doesn't match 33% savings (expected $241.12)",
+      "enterprise: Annual price $639.99 doesn't match 33% savings (expected $643.12)",
+      "titan: Annual price $1279.99 doesn't match 33% savings (expected $1286.32)",
+      "odyssey: Annual price $2399.99 doesn't match 33% savings (expected $2411.92)",
+      "vanguard: Annual price $4799.99 doesn't match 33% savings (expected $4823.92)"
+    ],
+    "total_tiers": 6,
+    "pricing_tiers": 5
+  },
+  "products": {
+    "starter_monthly": {
+      "id": "prod_starter_monthly",
+      "name": "Dealvoy Starter - Monthly",
+      "description": "Starter plan with 5 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "starter",
+        "billing": "monthly",
+        "agents": 5,
+        "scan_limit": 100
+      }
+    },
+    "starter_annual": {
+      "id": "prod_starter_annual",
+      "name": "Dealvoy Starter - Annual",
+      "description": "Starter plan with 5 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "starter",
+        "billing": "annual",
+        "agents": 5,
+        "scan_limit": 100
+      }
+    },
+    "professional_monthly": {
+      "id": "prod_professional_monthly",
+      "name": "Dealvoy Professional - Monthly",
+      "description": "Professional plan with 15 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "professional",
+        "billing": "monthly",
+        "agents": 15,
+        "scan_limit": 1000
+      }
+    },
+    "professional_annual": {
+      "id": "prod_professional_annual",
+      "name": "Dealvoy Professional - Annual",
+      "description": "Professional plan with 15 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "professional",
+        "billing": "annual",
+        "agents": 15,
+        "scan_limit": 1000
+      }
+    },
+    "enterprise_monthly": {
+      "id": "prod_enterprise_monthly",
+      "name": "Dealvoy Enterprise - Monthly",
+      "description": "Enterprise plan with 25 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "enterprise",
+        "billing": "monthly",
+        "agents": 25,
+        "scan_limit": 10000
+      }
+    },
+    "enterprise_annual": {
+      "id": "prod_enterprise_annual",
+      "name": "Dealvoy Enterprise - Annual",
+      "description": "Enterprise plan with 25 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "enterprise",
+        "billing": "annual",
+        "agents": 25,
+        "scan_limit": 10000
+      }
+    },
+    "titan_monthly": {
+      "id": "prod_titan_monthly",
+      "name": "Dealvoy Titan - Monthly",
+      "description": "Titan plan with 35 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "titan",
+        "billing": "monthly",
+        "agents": 35,
+        "scan_limit": -1
+      }
+    },
+    "titan_annual": {
+      "id": "prod_titan_annual",
+      "name": "Dealvoy Titan - Annual",
+      "description": "Titan plan with 35 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "titan",
+        "billing": "annual",
+        "agents": 35,
+        "scan_limit": -1
+      }
+    },
+    "odyssey_monthly": {
+      "id": "prod_odyssey_monthly",
+      "name": "Dealvoy Odyssey - Monthly",
+      "description": "Odyssey plan with 42 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "odyssey",
+        "billing": "monthly",
+        "agents": 42,
+        "scan_limit": -1
+      }
+    },
+    "odyssey_annual": {
+      "id": "prod_odyssey_annual",
+      "name": "Dealvoy Odyssey - Annual",
+      "description": "Odyssey plan with 42 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "odyssey",
+        "billing": "annual",
+        "agents": 42,
+        "scan_limit": -1
+      }
+    },
+    "vanguard_monthly": {
+      "id": "prod_vanguard_monthly",
+      "name": "Dealvoy Vanguard - Monthly",
+      "description": "Vanguard plan with 46 AI agents",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "vanguard",
+        "billing": "monthly",
+        "agents": 46,
+        "scan_limit": -1
+      }
+    },
+    "vanguard_annual": {
+      "id": "prod_vanguard_annual",
+      "name": "Dealvoy Vanguard - Annual",
+      "description": "Vanguard plan with 46 AI agents (33% savings)",
+      "type": "service",
+      "active": true,
+      "metadata": {
+        "tier": "vanguard",
+        "billing": "annual",
+        "agents": 46,
+        "scan_limit": -1
+      }
+    }
+  },
+  "prices": {
+    "professional_monthly": {
+      "id": "price_professional_monthly",
+      "product": "prod_professional_monthly",
+      "unit_amount": 2999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "month",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "professional",
+        "billing": "monthly"
+      }
+    },
+    "professional_annual": {
+      "id": "price_professional_annual",
+      "product": "prod_professional_annual",
+      "unit_amount": 23999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "year",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "professional",
+        "billing": "annual"
+      }
+    },
+    "enterprise_monthly": {
+      "id": "price_enterprise_monthly",
+      "product": "prod_enterprise_monthly",
+      "unit_amount": 7998,
+      "currency": "usd",
+      "recurring": {
+        "interval": "month",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "enterprise",
+        "billing": "monthly"
+      }
+    },
+    "enterprise_annual": {
+      "id": "price_enterprise_annual",
+      "product": "prod_enterprise_annual",
+      "unit_amount": 63999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "year",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "enterprise",
+        "billing": "annual"
+      }
+    },
+    "titan_monthly": {
+      "id": "price_titan_monthly",
+      "product": "prod_titan_monthly",
+      "unit_amount": 15999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "month",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "titan",
+        "billing": "monthly"
+      }
+    },
+    "titan_annual": {
+      "id": "price_titan_annual",
+      "product": "prod_titan_annual",
+      "unit_amount": 127999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "year",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "titan",
+        "billing": "annual"
+      }
+    },
+    "odyssey_monthly": {
+      "id": "price_odyssey_monthly",
+      "product": "prod_odyssey_monthly",
+      "unit_amount": 29999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "month",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "odyssey",
+        "billing": "monthly"
+      }
+    },
+    "odyssey_annual": {
+      "id": "price_odyssey_annual",
+      "product": "prod_odyssey_annual",
+      "unit_amount": 239998,
+      "currency": "usd",
+      "recurring": {
+        "interval": "year",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "odyssey",
+        "billing": "annual"
+      }
+    },
+    "vanguard_monthly": {
+      "id": "price_vanguard_monthly",
+      "product": "prod_vanguard_monthly",
+      "unit_amount": 59999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "month",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "vanguard",
+        "billing": "monthly"
+      }
+    },
+    "vanguard_annual": {
+      "id": "price_vanguard_annual",
+      "product": "prod_vanguard_annual",
+      "unit_amount": 479999,
+      "currency": "usd",
+      "recurring": {
+        "interval": "year",
+        "interval_count": 1
+      },
+      "active": true,
+      "metadata": {
+        "tier": "vanguard",
+        "billing": "annual"
+      }
+    }
+  },
+  "recommended_actions": [
+    "Update Stripe dashboard with new products",
+    "Configure webhook endpoints",
+    "Test payment flows",
+    "Update pricing page with corrected tiers",
+    "Validate trial flows"
+  ]
+}

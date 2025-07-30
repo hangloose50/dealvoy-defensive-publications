@@ -1,0 +1,333 @@
+{
+  "scan_logs": [
+    {
+      "id": "scan_001",
+      "timestamp": "2024-12-19T10:15:23Z",
+      "user_email": "john.doe@example.com",
+      "user_tier": "enterprise",
+      "agent_name": "DealFinderAI",
+      "scan_type": "product_search",
+      "outcome": "success",
+      "products_found": 24,
+      "processing_time_ms": 1247,
+      "ip_address": "192.168.1.100",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "scan_parameters": {
+        "search_query": "wireless headphones",
+        "price_range": "50-200",
+        "category": "electronics"
+      }
+    },
+    {
+      "id": "scan_002", 
+      "timestamp": "2024-12-19T10:12:15Z",
+      "user_email": "sarah.wilson@example.com",
+      "user_tier": "pro",
+      "agent_name": "PriceTrackerAI",
+      "scan_type": "price_monitoring",
+      "outcome": "success",
+      "products_found": 12,
+      "processing_time_ms": 892,
+      "ip_address": "10.0.1.45",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "scan_parameters": {
+        "asin": "B08N5WRWNW",
+        "tracking_duration": "7_days"
+      }
+    },
+    {
+      "id": "scan_003",
+      "timestamp": "2024-12-19T10:08:47Z",
+      "user_email": "mike.brown@example.com", 
+      "user_tier": "titan",
+      "agent_name": "TrendAnalyzerAI",
+      "scan_type": "market_analysis",
+      "outcome": "success",
+      "products_found": 156,
+      "processing_time_ms": 3421,
+      "ip_address": "172.16.0.23",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64)",
+      "scan_parameters": {
+        "category": "home_garden",
+        "analysis_depth": "comprehensive",
+        "time_range": "30_days"
+      }
+    },
+    {
+      "id": "scan_004",
+      "timestamp": "2024-12-19T10:05:12Z",
+      "user_email": "anna.davis@example.com",
+      "user_tier": "pro", 
+      "agent_name": "ReviewAnalyzerAI",
+      "scan_type": "sentiment_analysis",
+      "outcome": "partial_success",
+      "products_found": 8,
+      "processing_time_ms": 1876,
+      "ip_address": "203.0.113.42",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0)",
+      "scan_parameters": {
+        "product_id": "B07XJ8C8F5",
+        "review_count": 500,
+        "sentiment_filter": "negative"
+      }
+    },
+    {
+      "id": "scan_005",
+      "timestamp": "2024-12-19T10:02:33Z",
+      "user_email": "tom.chen@example.com",
+      "user_tier": "starter",
+      "agent_name": "DealFinderAI", 
+      "scan_type": "product_search",
+      "outcome": "success",
+      "products_found": 18,
+      "processing_time_ms": 967,
+      "ip_address": "198.51.100.78",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "scan_parameters": {
+        "search_query": "gaming chair",
+        "price_range": "100-300",
+        "min_rating": "4.0"
+      }
+    },
+    {
+      "id": "scan_006",
+      "timestamp": "2024-12-19T09:58:19Z",
+      "user_email": "lisa.johnson@example.com",
+      "user_tier": "enterprise",
+      "agent_name": "CompetitorAnalyzerAI",
+      "scan_type": "competitive_analysis",
+      "outcome": "success", 
+      "products_found": 87,
+      "processing_time_ms": 2134,
+      "ip_address": "192.0.2.146",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "scan_parameters": {
+        "brand": "Sony",
+        "category": "electronics",
+        "comparison_metrics": ["price", "rating", "reviews"]
+      }
+    },
+    {
+      "id": "scan_007",
+      "timestamp": "2024-12-19T09:55:07Z",
+      "user_email": "robert.white@example.com",
+      "user_tier": "pro",
+      "agent_name": "InventoryTrackerAI",
+      "scan_type": "stock_monitoring",
+      "outcome": "error",
+      "products_found": 0,
+      "processing_time_ms": 234,
+      "ip_address": "203.0.113.195",
+      "user_agent": "Mozilla/5.0 (iPad; CPU OS 15_0)",
+      "scan_parameters": {
+        "product_list": ["B08N5WRWNW", "B07XJ8C8F5"],
+        "stock_threshold": 5
+      },
+      "error_details": {
+        "error_code": "RATE_LIMIT_EXCEEDED",
+        "error_message": "Amazon API rate limit exceeded"
+      }
+    },
+    {
+      "id": "scan_008",
+      "timestamp": "2024-12-19T09:51:42Z", 
+      "user_email": "karen.lee@example.com",
+      "user_tier": "starter",
+      "agent_name": "DealFinderAI",
+      "scan_type": "product_search",
+      "outcome": "success",
+      "products_found": 31,
+      "processing_time_ms": 1543,
+      "ip_address": "198.51.100.210",
+      "user_agent": "Mozilla/5.0 (Android 12; Mobile)",
+      "scan_parameters": {
+        "search_query": "bluetooth speaker",
+        "price_range": "25-75",
+        "brand_filter": "JBL,Bose,Sony"
+      }
+    },
+    {
+      "id": "scan_009",
+      "timestamp": "2024-12-19T09:47:28Z",
+      "user_email": "david.miller@example.com",
+      "user_tier": "odyssey",
+      "agent_name": "BulkAnalyzerAI",
+      "scan_type": "bulk_analysis",
+      "outcome": "success",
+      "products_found": 2341,
+      "processing_time_ms": 8923,
+      "ip_address": "172.16.254.1",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "scan_parameters": {
+        "category_list": ["electronics", "home_garden", "sports"],
+        "analysis_type": "price_trends",
+        "data_points": 10000
+      }
+    },
+    {
+      "id": "scan_010",
+      "timestamp": "2024-12-19T09:43:15Z",
+      "user_email": "emily.garcia@example.com",
+      "user_tier": "pro",
+      "agent_name": "WishlistMonitorAI",
+      "scan_type": "wishlist_tracking",
+      "outcome": "success",
+      "products_found": 15,
+      "processing_time_ms": 756,
+      "ip_address": "10.0.0.198",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "scan_parameters": {
+        "wishlist_id": "user_wishlist_456",
+        "price_drop_threshold": "10_percent",
+        "notification_enabled": true
+      }
+    }
+  ],
+  "daily_summary": {
+    "date": "2024-12-19",
+    "total_scans": 3247,
+    "successful_scans": 2891,
+    "failed_scans": 356,
+    "unique_users": 247,
+    "top_agents": [
+      {
+        "name": "DealFinderAI",
+        "usage_count": 1205,
+        "success_rate": 94.2
+      },
+      {
+        "name": "PriceTrackerAI", 
+        "usage_count": 892,
+        "success_rate": 98.1
+      },
+      {
+        "name": "TrendAnalyzerAI",
+        "usage_count": 634,
+        "success_rate": 89.7
+      },
+      {
+        "name": "ReviewAnalyzerAI",
+        "usage_count": 316,
+        "success_rate": 92.4
+      },
+      {
+        "name": "CompetitorAnalyzerAI",
+        "usage_count": 200,
+        "success_rate": 87.5
+      }
+    ],
+    "tier_usage": {
+      "starter": {
+        "users": 247,
+        "total_scans": 1234,
+        "avg_scans_per_user": 5.0,
+        "users_near_limit": 23
+      },
+      "pro": {
+        "users": 89,
+        "total_scans": 1147,
+        "avg_scans_per_user": 12.9,
+        "users_near_limit": 8
+      },
+      "enterprise": {
+        "users": 34,
+        "total_scans": 756,
+        "avg_scans_per_user": 22.2,
+        "users_near_limit": 2
+      },
+      "titan": {
+        "users": 12,
+        "total_scans": 534,
+        "avg_scans_per_user": 44.5,
+        "users_near_limit": 0
+      },
+      "odyssey": {
+        "users": 8,
+        "total_scans": 423,
+        "avg_scans_per_user": 52.9,
+        "users_near_limit": 0
+      },
+      "vanguard": {
+        "users": 3,
+        "total_scans": 153,
+        "avg_scans_per_user": 51.0,
+        "users_near_limit": 0
+      }
+    },
+    "hourly_breakdown": [
+      {"hour": "00", "scans": 45},
+      {"hour": "01", "scans": 32},
+      {"hour": "02", "scans": 28},
+      {"hour": "03", "scans": 23},
+      {"hour": "04", "scans": 31},
+      {"hour": "05", "scans": 47},
+      {"hour": "06", "scans": 89},
+      {"hour": "07", "scans": 156},
+      {"hour": "08", "scans": 234},
+      {"hour": "09", "scans": 312},
+      {"hour": "10", "scans": 356},
+      {"hour": "11", "scans": 298},
+      {"hour": "12", "scans": 267},
+      {"hour": "13", "scans": 234},
+      {"hour": "14", "scans": 289},
+      {"hour": "15", "scans": 324},
+      {"hour": "16", "scans": 298},
+      {"hour": "17", "scans": 245},
+      {"hour": "18", "scans": 189},
+      {"hour": "19", "scans": 156},
+      {"hour": "20", "scans": 134},
+      {"hour": "21", "scans": 98},
+      {"hour": "22", "scans": 76},
+      {"hour": "23", "scans": 54}
+    ]
+  },
+  "usage_alerts": [
+    {
+      "user_email": "john.doe@example.com",
+      "tier": "enterprise",
+      "current_usage": 9847,
+      "usage_limit": 10000,
+      "usage_percentage": 98.47,
+      "alert_level": "critical",
+      "alert_message": "User approaching scan limit",
+      "suggested_action": "Send upgrade notification to Titan tier"
+    },
+    {
+      "user_email": "tom.chen@example.com",
+      "tier": "starter", 
+      "current_usage": 94,
+      "usage_limit": 100,
+      "usage_percentage": 94.0,
+      "alert_level": "high",
+      "alert_message": "User at 94% of scan limit",
+      "suggested_action": "Send Pro tier upgrade prompt"
+    },
+    {
+      "user_email": "sarah.wilson@example.com",
+      "tier": "pro",
+      "current_usage": 847,
+      "usage_limit": 1000,
+      "usage_percentage": 84.7,
+      "alert_level": "medium",
+      "alert_message": "User approaching scan limit",
+      "suggested_action": "Show upgrade suggestion for Enterprise tier"
+    }
+  ],
+  "revenue_projections": {
+    "monthly_recurring_revenue": 12847,
+    "projected_upgrades": {
+      "starter_to_pro": 15,
+      "pro_to_enterprise": 8,
+      "enterprise_to_titan": 3
+    },
+    "upgrade_revenue_potential": 2340,
+    "churn_risk_users": [
+      {
+        "email": "inactive.user@example.com",
+        "tier": "pro",
+        "days_since_last_scan": 28,
+        "risk_level": "high"
+      }
+    ]
+  }
+}

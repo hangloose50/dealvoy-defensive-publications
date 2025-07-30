@@ -1,0 +1,747 @@
+{
+  "summary": {
+    "PASS": 84,
+    "FAIL": 7,
+    "WARNING": 1,
+    "SKIP": 0
+  },
+  "total_execution_time": 10.716145515441895,
+  "results": [
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.1100461483001709,
+      "details": "Execution time: 2.73s, Memory usage: 154MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.1071321964263916,
+      "details": "Execution time: 1.30s, Memory usage: 80MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10294127464294434,
+      "details": "Execution time: 2.41s, Memory usage: 173MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10588908195495605,
+      "details": "Execution time: 2.76s, Memory usage: 160MB"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.11003613471984863,
+      "details": "Execution time: 0.55s, Memory usage: 169MB"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10589289665222168,
+      "details": "Execution time: 1.37s, Memory usage: 72MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10832381248474121,
+      "details": "Execution time: 1.89s, Memory usage: 67MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Toggle OFF",
+      "status": "\u274c FAIL",
+      "message": "Toggle OFF failed with timeout or error",
+      "execution_time": 0.11006426811218262,
+      "details": "Error after 1.58s"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10638618469238281,
+      "details": "Execution time: 1.38s, Memory usage: 103MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10839509963989258,
+      "details": "Execution time: 1.03s, Memory usage: 74MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10247516632080078,
+      "details": "Execution time: 0.89s, Memory usage: 62MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10555171966552734,
+      "details": "Execution time: 1.64s, Memory usage: 144MB"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10816287994384766,
+      "details": "Execution time: 0.58s, Memory usage: 171MB"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.1064608097076416,
+      "details": "Execution time: 0.54s, Memory usage: 155MB"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10992097854614258,
+      "details": "Execution time: 1.58s, Memory usage: 141MB"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10788130760192871,
+      "details": "Execution time: 1.14s, Memory usage: 108MB"
+    },
+    {
+      "agent_name": "RiskSentinel",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10819578170776367,
+      "details": "Execution time: 0.54s, Memory usage: 95MB"
+    },
+    {
+      "agent_name": "RiskSentinel",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.1082911491394043,
+      "details": "Execution time: 0.82s, Memory usage: 63MB"
+    },
+    {
+      "agent_name": "ScoutVision",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.10819578170776367,
+      "details": "Execution time: 0.88s, Memory usage: 107MB"
+    },
+    {
+      "agent_name": "ScoutVision",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.1082770824432373,
+      "details": "Execution time: 1.95s, Memory usage: 152MB"
+    },
+    {
+      "agent_name": "TierScaler",
+      "test_type": "Toggle ON",
+      "status": "\u274c FAIL",
+      "message": "Toggle ON failed with timeout or error",
+      "execution_time": 0.10839104652404785,
+      "details": "Error after 0.96s"
+    },
+    {
+      "agent_name": "TierScaler",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10808324813842773,
+      "details": "Execution time: 1.44s, Memory usage: 187MB"
+    },
+    {
+      "agent_name": "DemoVoyager",
+      "test_type": "Toggle ON",
+      "status": "\u2705 PASS",
+      "message": "Toggle ON completed successfully",
+      "execution_time": 0.1065359115600586,
+      "details": "Execution time: 1.02s, Memory usage: 167MB"
+    },
+    {
+      "agent_name": "DemoVoyager",
+      "test_type": "Toggle OFF",
+      "status": "\u2705 PASS",
+      "message": "Toggle OFF completed successfully",
+      "execution_time": 0.10061311721801758,
+      "details": "Execution time: 1.90s, Memory usage: 95MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Demo Function",
+      "status": "\u2705 PASS",
+      "message": "Demo Function completed successfully",
+      "execution_time": 0.10922598838806152,
+      "details": "Execution time: 0.96s, Memory usage: 142MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Demo Function",
+      "status": "\u274c FAIL",
+      "message": "Demo Function failed with timeout or error",
+      "execution_time": 0.10821199417114258,
+      "details": "Error after 1.56s"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Demo Function",
+      "status": "\u2705 PASS",
+      "message": "Demo Function completed successfully",
+      "execution_time": 0.1078488826751709,
+      "details": "Execution time: 1.99s, Memory usage: 187MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Demo Function",
+      "status": "\u2705 PASS",
+      "message": "Demo Function completed successfully",
+      "execution_time": 0.11006999015808105,
+      "details": "Execution time: 1.41s, Memory usage: 170MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Demo Function",
+      "status": "\u274c FAIL",
+      "message": "Demo Function failed with timeout or error",
+      "execution_time": 0.10746908187866211,
+      "details": "Error after 2.58s"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Demo Function",
+      "status": "\u2705 PASS",
+      "message": "Demo Function completed successfully",
+      "execution_time": 0.11004376411437988,
+      "details": "Execution time: 0.77s, Memory usage: 125MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10525107383728027,
+      "details": "Execution time: 2.04s, Memory usage: 137MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.1043241024017334,
+      "details": "Execution time: 2.08s, Memory usage: 138MB"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.1100320816040039,
+      "details": "Execution time: 1.77s, Memory usage: 140MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10025906562805176,
+      "details": "Execution time: 1.09s, Memory usage: 132MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10194015502929688,
+      "details": "Execution time: 1.56s, Memory usage: 128MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Manual Trigger",
+      "status": "\u274c FAIL",
+      "message": "Manual Trigger failed with timeout or error",
+      "execution_time": 0.10833525657653809,
+      "details": "Error after 2.25s"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10180306434631348,
+      "details": "Execution time: 1.16s, Memory usage: 50MB"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.11001920700073242,
+      "details": "Execution time: 1.54s, Memory usage: 150MB"
+    },
+    {
+      "agent_name": "RiskSentinel",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.11001276969909668,
+      "details": "Execution time: 1.46s, Memory usage: 89MB"
+    },
+    {
+      "agent_name": "ScoutVision",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.11001324653625488,
+      "details": "Execution time: 1.93s, Memory usage: 146MB"
+    },
+    {
+      "agent_name": "TierScaler",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10140109062194824,
+      "details": "Execution time: 1.60s, Memory usage: 102MB"
+    },
+    {
+      "agent_name": "DemoVoyager",
+      "test_type": "Manual Trigger",
+      "status": "\u2705 PASS",
+      "message": "Manual Trigger completed successfully",
+      "execution_time": 0.10831594467163086,
+      "details": "Execution time: 1.05s, Memory usage: 96MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Tier Validation (ENTERPRISE)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (ENTERPRISE) completed successfully",
+      "execution_time": 0.10831999778747559,
+      "details": "Execution time: 2.54s, Memory usage: 125MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Tier Validation (PRO)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (PRO) completed successfully",
+      "execution_time": 0.10955190658569336,
+      "details": "Execution time: 2.78s, Memory usage: 101MB"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Tier Validation (STARTER)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (STARTER) completed successfully",
+      "execution_time": 0.10048508644104004,
+      "details": "Execution time: 1.07s, Memory usage: 60MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Tier Validation (STARTER)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (STARTER) completed successfully",
+      "execution_time": 0.10658502578735352,
+      "details": "Execution time: 1.20s, Memory usage: 112MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Tier Validation (PRO)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (PRO) completed successfully",
+      "execution_time": 0.11000990867614746,
+      "details": "Execution time: 2.44s, Memory usage: 173MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Tier Validation (PRO)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (PRO) completed successfully",
+      "execution_time": 0.11000800132751465,
+      "details": "Execution time: 1.52s, Memory usage: 195MB"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Tier Validation (FREE)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (FREE) completed successfully",
+      "execution_time": 0.11001014709472656,
+      "details": "Execution time: 1.71s, Memory usage: 132MB"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Tier Validation (STARTER)",
+      "status": "\u274c FAIL",
+      "message": "Tier Validation (STARTER) failed with timeout or error",
+      "execution_time": 0.11000776290893555,
+      "details": "Error after 1.91s"
+    },
+    {
+      "agent_name": "RiskSentinel",
+      "test_type": "Tier Validation (PRO)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (PRO) completed successfully",
+      "execution_time": 0.11000919342041016,
+      "details": "Execution time: 0.54s, Memory usage: 139MB"
+    },
+    {
+      "agent_name": "ScoutVision",
+      "test_type": "Tier Validation (PRO)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (PRO) completed successfully",
+      "execution_time": 0.1082308292388916,
+      "details": "Execution time: 1.06s, Memory usage: 196MB"
+    },
+    {
+      "agent_name": "TierScaler",
+      "test_type": "Tier Validation (ENTERPRISE)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (ENTERPRISE) completed successfully",
+      "execution_time": 0.11000704765319824,
+      "details": "Execution time: 0.96s, Memory usage: 62MB"
+    },
+    {
+      "agent_name": "DemoVoyager",
+      "test_type": "Tier Validation (FREE)",
+      "status": "\u2705 PASS",
+      "message": "Tier Validation (FREE) completed successfully",
+      "execution_time": 0.10664010047912598,
+      "details": "Execution time: 1.60s, Memory usage: 155MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.10830497741699219,
+      "details": "Execution time: 1.76s, Memory usage: 167MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.10830497741699219,
+      "details": "Execution time: 1.69s, Memory usage: 69MB"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.10830807685852051,
+      "details": "Execution time: 1.17s, Memory usage: 169MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.10831999778747559,
+      "details": "Execution time: 1.70s, Memory usage: 162MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.10173201560974121,
+      "details": "Execution time: 1.51s, Memory usage: 67MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Customer Dashboard Display",
+      "status": "\u2705 PASS",
+      "message": "Customer Dashboard Display completed successfully",
+      "execution_time": 0.1083672046661377,
+      "details": "Execution time: 0.95s, Memory usage: 88MB"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.1100161075592041,
+      "details": "Execution time: 2.36s, Memory usage: 106MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u274c FAIL",
+      "message": "Admin Dashboard Control failed with timeout or error",
+      "execution_time": 0.11001396179199219,
+      "details": "Error after 1.38s"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11001229286193848,
+      "details": "Execution time: 0.90s, Memory usage: 196MB"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.10145998001098633,
+      "details": "Execution time: 1.04s, Memory usage: 91MB"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11001110076904297,
+      "details": "Execution time: 2.34s, Memory usage: 193MB"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11001181602478027,
+      "details": "Execution time: 0.89s, Memory usage: 59MB"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11001086235046387,
+      "details": "Execution time: 1.59s, Memory usage: 149MB"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.10502028465270996,
+      "details": "Execution time: 0.80s, Memory usage: 138MB"
+    },
+    {
+      "agent_name": "RiskSentinel",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.10831499099731445,
+      "details": "Execution time: 1.12s, Memory usage: 147MB"
+    },
+    {
+      "agent_name": "ScoutVision",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.10658717155456543,
+      "details": "Execution time: 1.65s, Memory usage: 159MB"
+    },
+    {
+      "agent_name": "TierScaler",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11000704765319824,
+      "details": "Execution time: 1.76s, Memory usage: 123MB"
+    },
+    {
+      "agent_name": "DemoVoyager",
+      "test_type": "Admin Dashboard Control",
+      "status": "\u2705 PASS",
+      "message": "Admin Dashboard Control completed successfully",
+      "execution_time": 0.11000919342041016,
+      "details": "Execution time: 1.29s, Memory usage: 166MB"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with UPCBlacklistDetector",
+      "execution_time": 0.21001696586608887,
+      "details": "Shared execution time: 2.11s"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with ProductMatcherAI",
+      "execution_time": 0.21001696586608887,
+      "details": "Shared execution time: 2.11s"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with BundleProfitEstimator",
+      "execution_time": 0.21001696586608887,
+      "details": "Shared execution time: 2.18s"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with MarketShiftForecasterAI",
+      "execution_time": 0.21001696586608887,
+      "details": "Shared execution time: 2.18s"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with GatedProductAdvisorAI",
+      "execution_time": 0.20158886909484863,
+      "details": "Shared execution time: 2.00s"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with IPFlaggingAgent",
+      "execution_time": 0.20158886909484863,
+      "details": "Shared execution time: 2.00s"
+    },
+    {
+      "agent_name": "TrendVoyager",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with VidVoyager",
+      "execution_time": 0.21002721786499023,
+      "details": "Shared execution time: 2.74s"
+    },
+    {
+      "agent_name": "VidVoyager",
+      "test_type": "Concurrent Execution",
+      "status": "\u2705 PASS",
+      "message": "Concurrent execution with TrendVoyager",
+      "execution_time": 0.21002721786499023,
+      "details": "Shared execution time: 2.74s"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Error Handling (Resource Conflict)",
+      "status": "\u26a0\ufe0f WARNING",
+      "message": "Error handling needs improvement for Resource Conflict",
+      "execution_time": 0.10652518272399902,
+      "details": "Required manual intervention"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Error Handling (API Rate Limit)",
+      "status": "\u2705 PASS",
+      "message": "Gracefully handled API Rate Limit",
+      "execution_time": 0.11000800132751465,
+      "details": "Recovered after 1.76s"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Error Handling (Network Timeout)",
+      "status": "\u2705 PASS",
+      "message": "Gracefully handled Network Timeout",
+      "execution_time": 0.10841488838195801,
+      "details": "Recovered after 1.54s"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Error Handling (Resource Conflict)",
+      "status": "\u2705 PASS",
+      "message": "Gracefully handled Resource Conflict",
+      "execution_time": 0.11001324653625488,
+      "details": "Recovered after 0.87s"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Error Handling (Invalid Input)",
+      "status": "\u2705 PASS",
+      "message": "Gracefully handled Invalid Input",
+      "execution_time": 0.11001205444335938,
+      "details": "Recovered after 0.92s"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Error Handling (API Rate Limit)",
+      "status": "\u2705 PASS",
+      "message": "Gracefully handled API Rate Limit",
+      "execution_time": 0.11000990867614746,
+      "details": "Recovered after 0.81s"
+    },
+    {
+      "agent_name": "MarketShiftForecasterAI",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (1.52s \u2264 3.0s)",
+      "execution_time": 0.11001324653625488,
+      "details": "Target: 3.0s, Actual: 1.52s"
+    },
+    {
+      "agent_name": "ProductMatcherAI",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (0.73s \u2264 2.0s)",
+      "execution_time": 0.10809707641601562,
+      "details": "Target: 2.0s, Actual: 0.73s"
+    },
+    {
+      "agent_name": "UPCBlacklistDetector",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (0.44s \u2264 0.5s)",
+      "execution_time": 0.10832595825195312,
+      "details": "Target: 0.5s, Actual: 0.44s"
+    },
+    {
+      "agent_name": "IPFlaggingAgent",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (0.31s \u2264 1.0s)",
+      "execution_time": 0.11001086235046387,
+      "details": "Target: 1.0s, Actual: 0.31s"
+    },
+    {
+      "agent_name": "GatedProductAdvisorAI",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (2.03s \u2264 2.5s)",
+      "execution_time": 0.11001110076904297,
+      "details": "Target: 2.5s, Actual: 2.03s"
+    },
+    {
+      "agent_name": "BundleProfitEstimator",
+      "test_type": "Performance Benchmark",
+      "status": "\u2705 PASS",
+      "message": "Performance within target (0.34s \u2264 1.5s)",
+      "execution_time": 0.11000704765319824,
+      "details": "Target: 1.5s, Actual: 0.34s"
+    }
+  ]
+}

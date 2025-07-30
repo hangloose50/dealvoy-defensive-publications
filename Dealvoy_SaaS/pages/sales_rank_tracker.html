@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Rank Tracker - Dealvoy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tier-badge {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .rank-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .rank-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .rank-trend-up {
+            color: #28a745;
+        }
+        
+        .rank-trend-down {
+            color: #dc3545;
+        }
+        
+        .rank-trend-stable {
+            color: #ffc107;
+        }
+        
+        .chart-container {
+            height: 200px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        
+        .add-tracker-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .add-tracker-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .upgrade-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .upgrade-btn {
+            background: white;
+            color: #ff6b6b;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <i class="fas fa-chart-line me-2"></i>Dealvoy
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="tier-badge me-3">STARTER</span>
+                <div class="dropdown">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-2"></i>Dashboard
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dashboard_user.html">User Dashboard</a></li>
+                        <li><a class="dropdown-item" href="dashboard_products.html">Products</a></li>
+                        <li><a class="dropdown-item" href="sales_rank_tracker.html">Sales Rank Tracker</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="pricing.html">Upgrade Plan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h2><i class="fas fa-chart-line text-primary me-2"></i>Sales Rank Tracker</h2>
+                        <p class="text-muted">Monitor Amazon sales ranks for your tracked products</p>
+                    </div>
+                    <button class="btn add-tracker-btn" data-bs-toggle="modal" data-bs-target="#addTrackerModal">
+                        <i class="fas fa-plus me-2"></i>Add Product
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card rank-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-eye text-primary fs-3 mb-2"></i>
+                        <h5 class="card-title">Products Tracked</h5>
+                        <h3 class="text-primary mb-0">12</h3>
+                        <small class="text-muted">of 25 max</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card rank-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-arrow-up rank-trend-up fs-3 mb-2"></i>
+                        <h5 class="card-title">Improving Ranks</h5>
+                        <h3 class="rank-trend-up mb-0">8</h3>
+                        <small class="text-muted">trending up</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card rank-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-arrow-down rank-trend-down fs-3 mb-2"></i>
+                        <h5 class="card-title">Declining Ranks</h5>
+                        <h3 class="rank-trend-down mb-0">3</h3>
+                        <small class="text-muted">trending down</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card rank-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-minus rank-trend-stable fs-3 mb-2"></i>
+                        <h5 class="card-title">Stable Ranks</h5>
+                        <h3 class="rank-trend-stable mb-0">1</h3>
+                        <small class="text-muted">no change</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tracked Products -->
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-6 mb-4">
+                <div class="card rank-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0">Wireless Bluetooth Headphones</h6>
+                        <span class="badge bg-success">TRACKING</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <small class="text-muted">Current Rank</small>
+                                <h4 class="rank-trend-up">#2,847</h4>
+                                <small class="rank-trend-up"><i class="fas fa-arrow-up"></i> +1,203 from yesterday</small>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted">Category</small>
+                                <p class="mb-1">Electronics</p>
+                                <small class="text-muted">ASIN: B08XYZ123</small>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <i class="fas fa-chart-line text-muted fs-1"></i>
+                            <span class="text-muted ms-2">7-day rank trend</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            <button class="btn btn-sm btn-outline-danger">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-6 mb-4">
+                <div class="card rank-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0">Coffee Maker - 12 Cup</h6>
+                        <span class="badge bg-success">TRACKING</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <small class="text-muted">Current Rank</small>
+                                <h4 class="rank-trend-down">#5,672</h4>
+                                <small class="rank-trend-down"><i class="fas fa-arrow-down"></i> -892 from yesterday</small>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted">Category</small>
+                                <p class="mb-1">Home & Kitchen</p>
+                                <small class="text-muted">ASIN: B08ABC456</small>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <i class="fas fa-chart-line text-muted fs-1"></i>
+                            <span class="text-muted ms-2">7-day rank trend</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            <button class="btn btn-sm btn-outline-danger">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-6 mb-4">
+                <div class="card rank-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0">Fitness Tracker Watch</h6>
+                        <span class="badge bg-success">TRACKING</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <small class="text-muted">Current Rank</small>
+                                <h4 class="rank-trend-up">#1,234</h4>
+                                <small class="rank-trend-up"><i class="fas fa-arrow-up"></i> +567 from yesterday</small>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted">Category</small>
+                                <p class="mb-1">Sports & Outdoors</p>
+                                <small class="text-muted">ASIN: B08DEF789</small>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <i class="fas fa-chart-line text-muted fs-1"></i>
+                            <span class="text-muted ms-2">7-day rank trend</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            <button class="btn btn-sm btn-outline-danger">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upgrade Banner -->
+            <div class="col-lg-6 mb-4">
+                <div class="upgrade-banner h-100 d-flex flex-column justify-content-center">
+                    <i class="fas fa-lock fs-1 mb-3"></i>
+                    <h5>Track More Products</h5>
+                    <p class="mb-3">Upgrade to PRO to track unlimited products with advanced analytics</p>
+                    <div>
+                        <button class="upgrade-btn">Upgrade Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Alerts -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-bell text-warning me-2"></i>Recent Rank Alerts</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Wireless Bluetooth Headphones</strong> rank improved by 1,203
+                                    <br><small class="text-muted">2 hours ago</small>
+                                </div>
+                                <span class="badge bg-success rounded-pill">Rank Up</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Coffee Maker</strong> rank dropped by 892
+                                    <br><small class="text-muted">5 hours ago</small>
+                                </div>
+                                <span class="badge bg-danger rounded-pill">Rank Down</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Fitness Tracker Watch</strong> entered top 1,500
+                                    <br><small class="text-muted">1 day ago</small>
+                                </div>
+                                <span class="badge bg-primary rounded-pill">Milestone</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Tracker Modal -->
+    <div class="modal fade" id="addTrackerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Product to Track</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="productUrl" class="form-label">Amazon Product URL or ASIN</label>
+                            <input type="text" class="form-control" id="productUrl" placeholder="https://amazon.com/product or B08XYZ123">
+                        </div>
+                        <div class="mb-3">
+                            <label for="alertThreshold" class="form-label">Rank Change Alert Threshold</label>
+                            <select class="form-select" id="alertThreshold">
+                                <option value="500">±500 rank change</option>
+                                <option value="1000" selected>±1,000 rank change</option>
+                                <option value="2000">±2,000 rank change</option>
+                                <option value="5000">±5,000 rank change</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="emailAlerts" checked>
+                                <label class="form-check-label" for="emailAlerts">
+                                    Send email alerts for rank changes
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn add-tracker-btn">Add Tracker</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-1">&copy; 2024 Dealvoy. Decode. Discover. Dominate.</p>
+                    <p class="text-muted mb-0">Amazon sales rank tracking made simple.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="contact.html" class="text-decoration-none me-3">Support</a>
+                    <a href="pricing.html" class="text-decoration-none">Upgrade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simulate real-time rank updates
+        function updateRanks() {
+            const rankElements = document.querySelectorAll('.rank-trend-up h4, .rank-trend-down h4');
+            rankElements.forEach(element => {
+                if (Math.random() > 0.9) { // 10% chance to update
+                    const currentRank = parseInt(element.textContent.replace('#', '').replace(',', ''));
+                    const change = Math.floor(Math.random() * 200) - 100; // ±100 change
+                    const newRank = Math.max(1, currentRank + change);
+                    element.textContent = '#' + newRank.toLocaleString();
+                }
+            });
+        }
+
+        // Update ranks every 30 seconds (demo purpose)
+        setInterval(updateRanks, 30000);
+
+        // Handle add tracker form
+        document.querySelector('.modal-footer .add-tracker-btn').addEventListener('click', function() {
+            const url = document.getElementById('productUrl').value;
+            if (url) {
+                alert('Product tracker added successfully! (Demo mode)');
+                document.getElementById('addTrackerModal').querySelector('.btn-close').click();
+                document.getElementById('productUrl').value = '';
+            } else {
+                alert('Please enter a valid Amazon URL or ASIN');
+            }
+        });
+    </script>
+</body>
+</html>
