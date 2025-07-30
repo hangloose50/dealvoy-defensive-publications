@@ -1,0 +1,52 @@
+/* Scraper Dashboard Alerts & Health Styles */
+.red-banner {
+  background: #e74c3c;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px #e74c3c33;
+}
+.status-fail {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.status-pass {
+  color: #27ae60;
+  font-weight: bold;
+}
+.status-rate-limited {
+  color: #f39c12;
+  font-weight: bold;
+}
+tr.broken-row {
+  background: #fff0f0;
+}
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.95em;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

@@ -93,8 +93,52 @@ def test_individual_scrapers():
             'function': scrape_lowes,
             'query': 'appliances',
             'expected_source': 'Lowes'
+        },
+        # New batch for expansion
+        {
+            'name': 'FoodLion',
+            'scraper_class': None,  # To be imported below
+            'function': None,
+            'query': 'milk',
+            'expected_source': 'Food Lion'
+        },
+        {
+            'name': 'Giant',
+            'scraper_class': None,
+            'function': None,
+            'query': 'bread',
+            'expected_source': 'Giant Food'
+        },
+        {
+            'name': 'WorldMarket',
+            'scraper_class': None,
+            'function': None,
+            'query': 'coffee',
+            'expected_source': 'Cost Plus World Market'
         }
     ]
+
+    # Import new scrapers for test cases
+    try:
+        from foodlion_scraper import FoodLionScraper
+        from giant_scraper import GiantScraper
+        from worldmarket_scraper import WorldMarketScraper
+        from foodlion_scraper import scrape_foodlion
+        from giant_scraper import scrape_giant
+        from worldmarket_scraper import scrape_worldmarket
+        # Patch test cases with actual classes/functions
+        for tc in test_cases:
+            if tc['name'] == 'FoodLion':
+                tc['scraper_class'] = FoodLionScraper
+                tc['function'] = scrape_foodlion
+            elif tc['name'] == 'Giant':
+                tc['scraper_class'] = GiantScraper
+                tc['function'] = scrape_giant
+            elif tc['name'] == 'WorldMarket':
+                tc['scraper_class'] = WorldMarketScraper
+                tc['function'] = scrape_worldmarket
+    except Exception as e:
+        print(f"⚠️ Could not import new batch scrapers: {e}")
     
     results = []
     

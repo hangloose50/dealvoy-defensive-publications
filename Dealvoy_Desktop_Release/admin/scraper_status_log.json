@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Target",
+    "domain": "target.com",
+    "status": "pass",
+    "last_success": "2025-07-30T10:12:00Z",
+    "last_fail": null,
+    "fail_count": 0,
+    "last_error": null,
+    "exec_time": 1.2
+  },
+  {
+    "name": "World Market",
+    "domain": "worldmarket.com",
+    "status": "fail",
+    "last_success": "2025-07-28T18:00:00Z",
+    "last_fail": "2025-07-30T09:55:00Z",
+    "fail_count": 4,
+    "last_error": "Captcha triggered",
+    "exec_time": 2.8
+  },
+  {
+    "name": "Costco",
+    "domain": "costco.com",
+    "status": "fail",
+    "last_success": "2025-07-27T15:00:00Z",
+    "last_fail": "2025-07-30T09:50:00Z",
+    "fail_count": 5,
+    "last_error": "IP ban",
+    "exec_time": 3.1
+  },
+  {
+    "name": "BestBuy",
+    "domain": "bestbuy.com",
+    "status": "pass",
+    "last_success": "2025-07-30T10:10:00Z",
+    "last_fail": null,
+    "fail_count": 0,
+    "last_error": null,
+    "exec_time": 1.0
+  }
+]

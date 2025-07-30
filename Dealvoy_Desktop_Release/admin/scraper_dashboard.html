@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="scraper_alerts.css">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fa; margin: 0; }
+        .dashboard-container { max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #0001; padding: 32px; }
+        h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+        .stats-grid { display: flex; gap: 32px; margin-bottom: 32px; }
+        .stat-card { flex: 1; background: #f0f4f8; border-radius: 10px; padding: 24px; text-align: center; box-shadow: 0 1px 4px #0001; }
+        .stat-card h2 { margin: 0.2em 0 0.1em; font-size: 2.1em; }
+        .stat-label { color: #666; font-size: 1.1em; }
+        .toggle-tabs { display: flex; gap: 12px; margin-bottom: 24px; }
+        .toggle-tab { padding: 10px 22px; border-radius: 8px 8px 0 0; background: #e9eef2; cursor: pointer; font-weight: 500; }
+        .toggle-tab.active { background: #fff; border-bottom: 2px solid #3498db; color: #3498db; }
+        .table-container { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px #0001; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 10px; text-align: left; }
+        th { background: #f5f7fa; }
+        tr:nth-child(even) { background: #f9fbfc; }
+        .status-live { color: #27ae60; font-weight: bold; }
+        .status-blocked { color: #e74c3c; font-weight: bold; }
+        .category-badge { display: inline-block; padding: 2px 10px; border-radius: 6px; background: #e3eaf3; color: #2d3e50; font-size: 0.95em; margin-right: 4px; }
+        .fa { margin-right: 6px; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1><i class="fa fa-robot"></i> Scraper Dashboard</h1>
+        <div id="alert-banner" class="red-banner" style="display:none;"></div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2 id="scraper-count">--</h2>
+                <div class="stat-label"><i class="fa fa-list"></i> Registered Scrapers</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="qa-pass-rate">--%</h2>
+                <div class="stat-label"><i class="fa fa-vial"></i> QA Pass Rate</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="live-count">--</h2>
+                <div class="stat-label"><i class="fa fa-check-circle"></i> Live Sources</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="blocked-count">--</h2>
+                <div class="stat-label"><i class="fa fa-ban"></i> Blocked/Flagged</div>
+            </div>
+        </div>
+        <div style="max-width: 400px; margin: 0 auto 24px auto;">
+            <canvas id="qaChart"></canvas>
+        </div>
+        <div class="toggle-tabs">
+            <div class="toggle-tab active" onclick="showTab('overview')">Overview</div>
+            <div class="toggle-tab" onclick="showTab('categories')">Categories</div>
+            <div class="toggle-tab" onclick="showTab('details')">Details</div>
+        </div>
+        <div id="tab-overview" class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Scraper</th><th>Status</th><th>Category</th><th>QA</th></tr>
+                </thead>
+                <tbody id="overview-table">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-categories" class="table-container" style="display:none;">
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Count</th></tr>
+                </thead>
+                <tbody id="categories-table">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-details" class="table-container" style="display:none;">
+            <table>
+                <thead>
+                    <tr><th>Scraper</th><th>Status</th><th>QA</th><th>Last Run</th><th>Notes</th></tr>
+                </thead>
+                <tbody id="details-table">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Live integration: fetch status log and render
+        let scrapers = [];
+        async function fetchStatus() {
+            try {
+                const resp = await fetch('scraper_status_log.json');
+                scrapers = await resp.json();
+            } catch (e) {
+                scrapers = [];
+            }
+        }
+        function updateStats() {
+            document.getElementById('scraper-count').textContent = scrapers.length;
+            const passCount = scrapers.filter(s => s.status === 'pass').length;
+            document.getElementById('qa-pass-rate').textContent = scrapers.length ? Math.round((passCount/scrapers.length)*100) + '%' : '--';
+            document.getElementById('live-count').textContent = scrapers.filter(s => s.status === 'pass').length;
+            document.getElementById('blocked-count').textContent = scrapers.filter(s => s.status === 'fail').length;
+        }
+        function renderOverview() {
+            const tbody = document.getElementById('overview-table');
+            tbody.innerHTML = '';
+            scrapers.forEach(s => {
+                const failClass = s.status === 'fail' && s.fail_count > 3 ? 'broken-row' : '';
+                const tooltip = s.last_error ? `<span class="tooltiptext">${s.last_error}<br>Last pass: ${s.last_success ? new Date(s.last_success).toLocaleString() : 'Never'}<br>Contact: admin@dealvoy.com</span>` : '';
+                tbody.innerHTML += `<tr class="${failClass}"><td>${s.name}</td><td class="status-${s.status} tooltip">${s.status === 'pass' ? '✅' : '❌'}${tooltip ? `<span class='tooltip'>ℹ️${tooltip}</span>` : ''}</td><td><span class="category-badge">${s.category || ''}</span></td><td>${s.status === 'pass' ? '✅' : '❌'}</td></tr>`;
+            });
+        }
+        function renderCategories() {
+            const tbody = document.getElementById('categories-table');
+            tbody.innerHTML = '';
+            const catMap = {};
+            scrapers.forEach(s => { catMap[s.category || 'Uncategorized'] = (catMap[s.category || 'Uncategorized']||0)+1; });
+            Object.entries(catMap).forEach(([cat, count]) => {
+                tbody.innerHTML += `<tr><td><span class="category-badge">${cat}</span></td><td>${count}</td></tr>`;
+            });
+        }
+        function renderDetails() {
+            const tbody = document.getElementById('details-table');
+            tbody.innerHTML = '';
+            scrapers.forEach(s => {
+                const failClass = s.status === 'fail' && s.fail_count > 3 ? 'broken-row' : '';
+                const tooltip = s.last_error ? `<span class="tooltiptext">${s.last_error}<br>Last pass: ${s.last_success ? new Date(s.last_success).toLocaleString() : 'Never'}<br>Contact: admin@dealvoy.com</span>` : '';
+                tbody.innerHTML += `<tr class="${failClass}"><td>${s.name}</td><td class="status-${s.status} tooltip">${s.status === 'pass' ? '✅' : '❌'}${tooltip ? `<span class='tooltip'>ℹ️${tooltip}</span>` : ''}</td><td>${s.status === 'pass' ? '✅' : '❌'}</td><td>${s.last_success ? new Date(s.last_success).toLocaleString() : ''}</td><td>${s.last_error || ''}</td></tr>`;
+            });
+        }
+        function showTab(tab) {
+            document.querySelectorAll('.toggle-tab').forEach((el, i) => {
+                el.classList.toggle('active', el.textContent.toLowerCase().includes(tab));
+            });
+            document.getElementById('tab-overview').style.display = tab === 'overview' ? '' : 'none';
+            document.getElementById('tab-categories').style.display = tab === 'categories' ? '' : 'none';
+            document.getElementById('tab-details').style.display = tab === 'details' ? '' : 'none';
+        }
+        function showAlertBanner() {
+            const broken = scrapers.filter(s => s.status === 'fail' && s.fail_count > 3);
+            const banner = document.getElementById('alert-banner');
+            if (broken.length) {
+                banner.style.display = '';
+                banner.textContent = `🚨 ${broken.length} scrapers have failed more than 3 times in 72h. Check error tooltips for details.`;
+            } else {
+                banner.style.display = 'none';
+            }
+        }
+        async function renderAll() {
+            await fetchStatus();
+            updateStats();
+            renderOverview();
+            renderCategories();
+            renderDetails();
+            showAlertBanner();
+            renderQAChart();
+        }
+        // QA Chart
+        function renderQAChart() {
+            if (!window.Chart) return;
+            const ctx = document.getElementById('qaChart').getContext('2d');
+            const pass = scrapers.filter(s => s.status === 'pass').length;
+            const fail = scrapers.filter(s => s.status === 'fail').length;
+            if (window.qaChartObj) window.qaChartObj.destroy();
+            window.qaChartObj = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Pass', 'Fail'],
+                    datasets: [{
+                        data: [pass, fail],
+                        backgroundColor: ['#27ae60', '#e74c3c']
+                    }]
+                },
+                options: { plugins: { legend: { position: 'bottom' } } }
+            });
+        }
+        // Load Chart.js
+        (function(){
+            var s=document.createElement('script');
+            s.src='https://cdn.jsdelivr.net/npm/chart.js';
+            s.onload=renderAll;
+            document.head.appendChild(s);
+        })();
+    </script>
+</body>
+</html>

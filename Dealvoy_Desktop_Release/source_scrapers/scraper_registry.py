@@ -242,6 +242,30 @@ class ScraperRegistry:
                 'description': 'Safeway.com - Groceries, pharmacy, deli'
             },
             {
+                'name': 'foodlion',
+                'module': 'foodlion_scraper',
+                'class': 'FoodLionScraper',
+                'function': 'scrape_foodlion',
+                'category': 'Grocery',
+                'description': 'FoodLion.com - Groceries, fresh food, bakery'
+            },
+            {
+                'name': 'giant',
+                'module': 'giant_scraper',
+                'class': 'GiantScraper',
+                'function': 'scrape_giant',
+                'category': 'Grocery',
+                'description': 'GiantFood.com - Groceries, deli, bakery'
+            },
+            {
+                'name': 'worldmarket',
+                'module': 'worldmarket_scraper',
+                'class': 'WorldMarketScraper',
+                'function': 'scrape_worldmarket',
+                'category': 'Grocery',
+                'description': 'WorldMarket.com - International foods, home goods'
+            },
+            {
                 'name': 'wholefoods',
                 'module': 'wholefoods_scraper',
                 'class': 'WholeFoodsScraper',
