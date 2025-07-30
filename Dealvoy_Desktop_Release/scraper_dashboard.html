@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fa; margin: 0; }
+        .dashboard-container { max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #0001; padding: 32px; }
+        h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+        .stats-grid { display: flex; gap: 32px; margin-bottom: 32px; }
+        .stat-card { flex: 1; background: #f0f4f8; border-radius: 10px; padding: 24px; text-align: center; box-shadow: 0 1px 4px #0001; }
+        .stat-card h2 { margin: 0.2em 0 0.1em; font-size: 2.1em; }
+        .stat-label { color: #666; font-size: 1.1em; }
+        .toggle-tabs { display: flex; gap: 12px; margin-bottom: 24px; }
+        .toggle-tab { padding: 10px 22px; border-radius: 8px 8px 0 0; background: #e9eef2; cursor: pointer; font-weight: 500; }
+        .toggle-tab.active { background: #fff; border-bottom: 2px solid #3498db; color: #3498db; }
+        .table-container { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px #0001; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 10px; text-align: left; }
+        th { background: #f5f7fa; }
+        tr:nth-child(even) { background: #f9fbfc; }
+        .status-pass { color: #27ae60; font-weight: bold; }
+        .status-fail { color: #e74c3c; font-weight: bold; }
+        .category-badge { display: inline-block; padding: 2px 10px; border-radius: 6px; background: #e3eaf3; color: #2d3e50; font-size: 0.95em; margin-right: 4px; }
+        .red-banner { background: #e74c3c; color: #fff; padding: 12px 0; text-align: center; font-weight: bold; font-size: 1.1em; border-radius: 8px; margin-bottom: 18px; box-shadow: 0 2px 8px #e74c3c33; }
+        .broken-row { background: #fff0f0; }
+        .tooltip { position: relative; cursor: pointer; }
+        .tooltip .tooltiptext { visibility: hidden; width: 220px; background-color: #333; color: #fff; text-align: left; border-radius: 6px; padding: 8px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -110px; opacity: 0; transition: opacity 0.3s; font-size: 0.95em; }
+        .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>🧑‍💻 Scraper Dashboard</h1>
+        <div id="alert-banner" class="red-banner" style="display:none;"></div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2 id="scraper-count">--</h2>
+                <div class="stat-label">Registered Scrapers</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="qa-pass-rate">--%</h2>
+                <div class="stat-label">QA Pass Rate</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="live-count">--</h2>
+                <div class="stat-label">Live Sources</div>
+            </div>
+            <div class="stat-card">
+                <h2 id="blocked-count">--</h2>
+                <div class="stat-label">Blocked/Flagged</div>
+            </div>
+        </div>
+        <div class="toggle-tabs">
+            <div class="toggle-tab active" onclick="showTab('overview')">Overview</div>
+            <div class="toggle-tab" onclick="showTab('qa')">QA Status</div>
+            <div class="toggle-tab" onclick="showTab('categories')">Categories</div>
+        </div>
+        <div id="tab-overview" class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Scraper</th><th>Status</th><th>Category</th><th>QA</th></tr>
+                </thead>
+                <tbody id="overview-table"></tbody>
+            </table>
+        </div>
+        <div id="tab-qa" class="table-container" style="display:none;">
+            <table>
+                <thead>
+                    <tr><th>Scraper</th><th>QA Status</th><th>Last Success</th><th>Last Fail</th><th>Exec Time (s)</th></tr>
+                </thead>
+                <tbody id="qa-table"></tbody>
+            </table>
+        </div>
+        <div id="tab-categories" class="table-container" style="display:none;">
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Count</th></tr>
+                </thead>
+                <tbody id="categories-table"></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        let scrapers = [];
+        async function fetchStatus() {
+            try {
+                const resp = await fetch('admin/scraper_status_log.json');
+                scrapers = await resp.json();
+            } catch (e) { scrapers = []; }
+        }
+        function updateStats() {
+            document.getElementById('scraper-count').textContent = scrapers.length;
+            const passCount = scrapers.filter(s => s.status === 'pass').length;
+            document.getElementById('qa-pass-rate').textContent = scrapers.length ? Math.round((passCount/scrapers.length)*100) + '%' : '--';
+            document.getElementById('live-count').textContent = passCount;
+            document.getElementById('blocked-count').textContent = scrapers.filter(s => s.status === 'fail').length;
+        }
+        function renderOverview() {
+            const tbody = document.getElementById('overview-table');
+            tbody.innerHTML = '';
+            scrapers.forEach(s => {
+                const failClass = s.status === 'fail' && s.fail_count > 3 ? 'broken-row' : '';
+                const tooltip = s.last_error ? `<span class=\"tooltiptext\">${s.last_error}<br>Last pass: ${s.last_success ? new Date(s.last_success).toLocaleString() : 'Never'}<br>Contact: admin@dealvoy.com</span>` : '';
+                tbody.innerHTML += `<tr class=\"${failClass}\"><td>${s.name}</td><td class=\"status-${s.status} tooltip\">${s.status === 'pass' ? '✅' : '❌'}${tooltip ? `<span class='tooltip'>ℹ️${tooltip}</span>` : ''}</td><td><span class=\"category-badge\">${s.category || ''}</span></td><td>${s.status === 'pass' ? '✅' : '❌'}</td></tr>`;
+            });
+        }
+        function renderQATab() {
+            const tbody = document.getElementById('qa-table');
+            tbody.innerHTML = '';
+            scrapers.forEach(s => {
+                tbody.innerHTML += `<tr><td>${s.name}</td><td class=\"status-${s.status}\">${s.status === 'pass' ? '✅' : '❌'}</td><td>${s.last_success ? new Date(s.last_success).toLocaleString() : ''}</td><td>${s.last_fail ? new Date(s.last_fail).toLocaleString() : ''}</td><td>${s.exec_time || ''}</td></tr>`;
+            });
+        }
+        function renderCategories() {
+            const tbody = document.getElementById('categories-table');
+            tbody.innerHTML = '';
+            const catMap = {};
+            scrapers.forEach(s => { catMap[s.category || 'Uncategorized'] = (catMap[s.category || 'Uncategorized']||0)+1; });
+            Object.entries(catMap).forEach(([cat, count]) => {
+                tbody.innerHTML += `<tr><td><span class=\"category-badge\">${cat}</span></td><td>${count}</td></tr>`;
+            });
+        }
+        function showTab(tab) {
+            document.querySelectorAll('.toggle-tab').forEach((el, i) => {
+                el.classList.toggle('active', el.textContent.toLowerCase().includes(tab));
+            });
+            document.getElementById('tab-overview').style.display = tab === 'overview' ? '' : 'none';
+            document.getElementById('tab-qa').style.display = tab === 'qa' ? '' : 'none';
+            document.getElementById('tab-categories').style.display = tab === 'categories' ? '' : 'none';
+        }
+        function showAlertBanner() {
+            const broken = scrapers.filter(s => s.status === 'fail' && s.fail_count > 3);
+            const banner = document.getElementById('alert-banner');
+            if (broken.length) {
+                banner.style.display = '';
+                banner.textContent = `🚨 ${broken.length} scrapers have failed more than 3 times in 72h. Check error tooltips for details.`;
+            } else {
+                banner.style.display = 'none';
+            }
+        }
+        async function renderAll() {
+            await fetchStatus();
+            updateStats();
+            renderOverview();
+            renderQATab();
+            renderCategories();
+            showAlertBanner();
+        }
+        window.onload = renderAll;
+    </script>
+    <div style="max-width:700px;margin:40px auto 0 auto;font-size:1em;color:#888;">
+        <b>Preview Guidance:</b> If local scripts are blocked, run:<br>
+        <code>cd Dealvoy_Desktop_Release &amp;&amp; python3 -m http.server 8000</code><br>
+        Then open <a href="http://localhost:8000/scraper_dashboard.html">http://localhost:8000/scraper_dashboard.html</a>
+    </div>
+</body>
+</html>
